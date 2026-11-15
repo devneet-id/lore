@@ -1,6 +1,6 @@
 # Glossary
  
-The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — they map to real constructs across the realms. Read this before any code. Grouped by realm; everything ultimately centers on Rune.
+The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — they map to real constructs across the realms. Read this before any code. Grouped by realm; everything ultimately centers on Rune. Rune's complete glossary lives in [realms/rune/reference/glossary.md](realms/rune/reference/glossary.md).
  
 ## Shared
  
@@ -11,19 +11,21 @@ The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — 
 ## Rune
  
 - **Rune** — a modular unit of the framework; "something not yet known" until invoked.
-- **Ethereal** — the bootstrap surface (`Rune\Ethereal`).
+- **Ethereal** — the bootstrap surface (`Rune\Ethereal`): awakening and the three modes.
 - **Ether** — truth that does not change but always has meaning (constants / config).
 - **Essence** — what changes over time (state / flow).
 - **Entity** — what makes other things change (behaviour / logic). Entities call other entities — this is how runes interconnect.
 - **Manifest** — connects things so they work together; forwards calls to entities.
 - **Phantasm** — the living contract that replaces Reflection (version, user, note, mark, link, node).
 - **Awakening** — starting from anywhere (`Ethereal::awakening()`).
-- **Liberation** — creating your own runes beside the origin ones (`@liberations/`).
+- **Evolution** — creating your own runes beside the origin ones (`@evolution/`); caption *The Evolution of Eidos*.
+- **Federation** — keeping your own reliquary and its relics (`@federation/`); caption *The Federation of Fides*.
+- **Liberation** — keeping your own PHP runtime (`@liberation/php@<version>/`); caption *The Liberation of Forte*.
 - **Echoes** — persisted memory in `.echoes/` (kept by Keeper).
 - **Arcane** — the phased process log recorded by Aether.
-- **Bindrune** — built-in casts in `@bindrune/` (rune, grimoire, artefact, sentinel).
+- **Runite (built-in)** — the runites Rune carries in `@runite/`: awakening, rune (the main hall), grimoire, reliquary, sentinel. Once called *Bindrune*.
 - **Grimoire** — live system inspection (`php cast grimoire`).
-- **Sentinel** — a guard that engraves/removes runes in a runite.
+- **Sentinel** — the guard of a runite: unlocks the modes, inserts/removes runes, shapes your own runes, keeps a PHP runtime.
 - **cast** — the app file, and a registered command.
 - **runite** — a `cast` app (any project built on Rune).
 - **spell** — a command option (`--name` or `--name=value`).
@@ -31,9 +33,9 @@ The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — 
 - **zero trust** — a guarded execution mode for breaking changes.
 ## Reliquary
  
-- **Artefact** — the act/result of sealing a runite.
+- **Artefact** — the old name of a relic (older `.rune` files carry an `ARTEFACT` block).
 - **Relic** — a `.rune` file: a sealed snapshot of a runite (code + echoes + shards). Like a Docker image.
-- **Shard** — a small piece of a relic / a project item packaged alone.
+- **Shard** — a file carried by a relic, listed with `Keeper::shard()` (nothing becomes a shard on its own).
 - **Reliquary** — a federated registry recording where relics rest and their seals.
 - **Seal** — the sha256 of a `.rune` at the time it was listed.
 - **Nexus** — the map of a reliquary's forks (`nexus.json`).

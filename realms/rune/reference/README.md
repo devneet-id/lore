@@ -1,15 +1,12 @@
 # Rune — Reference
 
-The technical detail of Rune. The narrative lives in [../lore/](../lore/).
+The technical detail of Rune. The narrative lives in [lore/](../lore/README.md).
 
-> **Skeleton.** Fill these from source. Detailed drafts already exist and can be dropped in here.
-
-## Planned pages
-
-- `architecture.md` — the triad (Ether/Essence/Entity), Manifest, Phantasm, the Aether flow, versioning (`major.sum`).
-- `runes.md` — the ten origin runes (Aether, Chanter, Whisper, Weaver, Forger, Cipher, Keeper, Crafter, Specter, Minister) with their methods.
-- `cli.md` — casts, spells, echoes; how to write commands; examples.
-- `lifecycle.md` — awakening, liberation, artefact/relic, sentinel.
+- **[Runes](runes/README.md)** — the ten origin runes, node by node (generated from each Phantasm).
+- **[Runites](runites/README.md)** — the built-in runites: [Awakening](runites/awakening.md), the [main hall](runites/rune.md), [Grimoire](runites/grimoire.md), [Reliquary](runites/reliquary.md), [Sentinel](runites/sentinel.md) — and the shape of your own.
+- **[Modes](modes.md)** — Evolution, Federation, Liberation: what each one unlocks, its folder and its record.
+- **[Glossary](glossary.md)** — every Rune word with its technical meaning.
+- Inside the package: [Anatomy](../lore/acts/4-the-beyond/anatomy.md) · [Laws](../lore/acts/4-the-beyond/laws.md) · [Versioning](../lore/acts/4-the-beyond/versioning.md) · [Decisions](../lore/acts/4-the-beyond/decisions.md).
 
 ## Laws of the Rune (invariants)
 
@@ -19,4 +16,6 @@ The technical detail of Rune. The narrative lives in [../lore/](../lore/).
 4. Phantasm is the contract (replaces Reflection).
 5. Aether flows everywhere; runes awaken together in one flow.
 6. Every change raises the Phantasm version of the rune that changed.
-7. A liberation rune never replaces an origin rune.
+7. An evolution rune never replaces an origin rune.
+
+The full list, with the reason for each, is in [Laws](../lore/acts/4-the-beyond/laws.md).

@@ -12,7 +12,7 @@ Three axes, plus a shared vocabulary:
 
 - **[atlas/](atlas/)** — *space*: the maps. Diagrams only — the org-scale map and one map per realm.
 - **[chronicle/](chronicle/)** — *time*: the running activity log (a lightweight stand-in for issues & PRs).
-- **[realms/](realms/)** — *depth*: one folder per project, each split into **story/** (narrative) and **reference/** (technical).
+- **[realms/](realms/)** — *depth*: one folder per project, each split into **lore/** (story & teaching) and **reference/** (technical).
 - **[glossary.md](glossary.md)** — the lore vocabulary. The names are load-bearing; read it before any code.
 
 > Rule of thumb: **space → atlas, time → chronicle, depth → realms, words → glossary.**
