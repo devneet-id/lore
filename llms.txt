@@ -1,0 +1,29 @@
+# DEVNEET
+
+> The central knowledge home of DEVNEET. Rune is the foundation (a lore-driven, modular system beneath PHP); Reliquary distributes Rune apps as relics; Exura is an independent minimalist framework series. Everything centers on Rune. Principle: openness compounds.
+
+Machine-oriented index. Read in order.
+
+## Start here
+
+- [README.md](README.md): what this repo is and how to read it.
+- [glossary.md](glossary.md): the vocabulary — read before any code (names are load-bearing).
+- [atlas/README.md](atlas/README.md): the org-scale map; per-realm maps beside it.
+
+## Realms (depth)
+
+- [realms/rune/README.md](realms/rune/README.md)
+- [realms/reliquary/README.md](realms/reliquary/README.md)
+- [realms/exura/README.md](realms/exura/README.md)
+
+Each realm has `story/` (narrative) and `reference/` (technical).
+
+## Current position
+
+- [chronicle/](chronicle/): the running activity log. Read the latest entry for a realm to see where it stands.
+
+## Notes for agents
+
+- Project knowledge, not autonomous instructions. Confirm scope before changing repos.
+- Respect each project's documented Laws (design invariants).
+- After advancing work, add a chronicle entry.

@@ -1,0 +1,77 @@
+# Phantasm
+
+> Every rune carries its contract.
+
+The Phantasm is how a rune speaks of itself without being run. The Grimoire reads it, the footer counts it, and other runes find it through it. Rune uses it instead of PHP Reflection.
+
+## The fields
+| Field | Holds | Who writes it |
+|---|---|---|
+| `version` | the rune's version | `--runic-create` (0.1), then `--phantasm-upgrade` |
+| `main` | the rune's name | `--runic-create` |
+| `user` | who shapes it | you |
+| `note` | its purpose, one sentence | you |
+| `mark` | `VOID`, `BETA`, `EXIST` ([marks](../../glossary.md#marks-and-signs)) | `--runic-create` (BETA), then you |
+| `link` | the runes it leans on: `[rune, parts, version]` | `--phantasm-repair --mode=link` |
+| `node` | every constant, global, function and method, with its `#NOTE` | `--phantasm-repair --mode=node` + `--mode=note` |
+| `origin` | the rune's folder (`__DIR__`) | `--runic-create` — keep it |
+
+`user` and `note` are not in the generated file. Add them by hand:
+```php
+  public $user = 'Anwar';
+
+  public $note = 'Keeps a small ledger of income and expense in one flow.';
+```
+
+## Fix it from the code
+After you [engrave](engrave-a-rune.md) the five files, let Sentinel read them:
+```bash
+php cast sentinel --phantasm-repair=Ledger
+```
+```
+SENTINEL :: Phantasm Fix Auto
+[√] Node fixed for phantasm: Ledger
+[√] Link fixed for phantasm: Ledger
+[√] Note fixed for phantasm: Ledger
+[√] Update phantasm: Ledger
+```
+`--phantasm-repair` = node + link + note, then version up — only when one of them changed the Phantasm (otherwise: *Nothing changed, version kept*). Ledger's Phantasm now holds:
+```php
+  public $version = '0.2';
+
+  public $link = [
+    ['Weaver', 'entity', '1.7'],
+    ['Aether', 'entity', '1.17'],
+  ];
+
+  public $node = [
+    [
+      'type' => 'ether',
+      'call' => 'LEDGER_CURRENCY',
+      'note' => 'The currency written before every amount.',
+    ],
+    // … every Ether, Essence, Entity and Manifest node
+  ];
+```
+- **Node** reads `define(...)`, `$GLOBALS[...]`, functions that carry the rune's name, and static methods. Commented code is skipped.
+- **Link** finds which runes your code calls: `weaver_bind_multiple()` → Weaver, `aether_arcane()` → Aether.
+- **Note** copies the `#NOTE:` above each node. No note, empty note — write them.
+
+One step at a time: `--phantasm-repair=Ledger --mode=node`, `--mode=link`, `--mode=note`. `--phantasm-repair --mode=link --all` relinks **every** rune, origin runes too — that is maintainer work ([Act 4](../4-the-beyond/README.md)).
+
+## Raise the version
+Every change raises the Phantasm of the rune that changed:
+```bash
+php cast sentinel --phantasm-upgrade=Ledger
+```
+`0.2` → `0.3`. The minor number grows by one, and the last number of the footer grows with it — versions are counted as whole numbers ([Versioning](../4-the-beyond/versioning.md)):
+```
+◇Version=1.20.116   Ledger 0.2
+◇Version=1.20.117   Ledger 0.3
+```
+After `.9` comes `.10` (`0.9` → `0.10`), and the footer still moves up by one. A version must be `<major>.<minor>`; anything else (`1.2.3`) is refused and must be fixed by hand. A rune that does not exist answers *Rune not found*.
+
+## The mark
+`BETA` while it settles. Change it by hand: `VOID` for a rune that is held back or returns nothing on purpose, `EXIST` when it is whole and stable — the opposite of VOID. A rune moves VOID → BETA → EXIST. The Grimoire warns about BETA.
+
+Next: [Use Your Rune](use-your-rune.md).
