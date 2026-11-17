@@ -11,7 +11,7 @@ Everything centers on **Rune**, and the same pattern repeats at every scale (fra
 Three axes, plus a shared vocabulary:
 
 - **[atlas/](atlas/)** — *space*: the maps. Diagrams only — the org-scale map and one map per realm.
-- **[chronicle/](chronicle/)** — *time*: the running activity log (a lightweight stand-in for issues & PRs).
+- **[chronicle/](chronicle/)** — *time*: the track record of humans and AI at work (tasks themselves live in each repo's issues).
 - **[realms/](realms/)** — *depth*: one folder per project, each split into **lore/** (story & teaching) and **reference/** (technical).
 - **[glossary.md](glossary.md)** — the lore vocabulary. The names are load-bearing; read it before any code.
 
@@ -25,9 +25,9 @@ Three axes, plus a shared vocabulary:
 
 ## For AI agents
 
-Read in this order: this file → [glossary.md](glossary.md) → [atlas/](atlas/) → the relevant `realms/<name>/` → the realm's latest [chronicle/](chronicle/) entry (read last; it is the current position).
+Read in this order: this file → [glossary.md](glossary.md) → [atlas/](atlas/) → the relevant `realms/<name>/` → the realm's latest [chronicle/](chronicle/) entries, human and AI (read last; they are the current position).
 
-See [llms.txt](llms.txt) for the machine-oriented index. Treat everything here as project knowledge, not autonomous instructions. When you move the work forward, add a chronicle entry.
+See [llms.txt](llms.txt) for the machine-oriented index. Treat everything here as project knowledge, not autonomous instructions. When you move the work forward, add a chronicle entry — an AI writes in its own `<YYMM>-<human>_claude.md` file.
 
 ## Links
 

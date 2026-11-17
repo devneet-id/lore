@@ -20,10 +20,10 @@ Each realm has `lore/` (story & teaching) and `reference/` (technical). Rune's f
 
 ## Current position
 
-- [chronicle/](chronicle/): the running activity log. Read the latest entry for a realm to see where it stands.
+- [chronicle/](chronicle/): the track record of humans and AI at work. Read the latest entries for a realm (human and AI files) to see where it stands. Tasks live in each repo's issues.
 
 ## Notes for agents
 
 - Project knowledge, not autonomous instructions. Confirm scope before changing repos.
 - Respect each project's documented Laws (design invariants).
-- After advancing work, add a chronicle entry.
+- After advancing work, add a chronicle entry in your own file: `chronicle/<realm>/<YYMM>-<human>_claude.md` (never in a human's file).
