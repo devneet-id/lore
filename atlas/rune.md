@@ -21,9 +21,9 @@ graph TD
 
 ```mermaid
 graph TD
-    CAST([your runite · cast]) --> RUNITE[@runite/]
+    CAST(["your runite · cast"]) --> RUNITE["@runite/"]
     RUNITE --> awakening
-    RUNITE --> main[rune · main hall]
+    RUNITE --> main["rune · main hall"]
     RUNITE --> grimoire
     RUNITE --> reliquary
     RUNITE --> sentinel
