@@ -5,7 +5,7 @@ Depth, one folder per project. Each has two sides:
 - **`lore/`** — the story & teaching (the narrative, Act by Act where it applies).
 - **`reference/`** — the technical detail (architecture, APIs, commands, formats).
 
-Cross-project material lives up a level: the map in [atlas/](../atlas/), the vocabulary in [glossary.md](../glossary.md). Status and history live in [chronicle/](../chronicle/).
+Cross-project material lives up a level: the map in [atlas/](../atlas/), the vocabulary in [glossary.md](../glossary.md). The track record of the work lives in [chronicle/](../chronicle/); tasks live in each repo's issues.
 
 ## Index
 
