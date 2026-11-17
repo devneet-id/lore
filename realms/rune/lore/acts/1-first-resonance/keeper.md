@@ -85,6 +85,6 @@ php notes/cast notes
 …reads the same `notes/.echoes/cast/` — the same memory, no second `.echoes` in the parent.
 
 ## Trap
-Known issue: writing with `Keeper::echo()` glitches. Use `Keeper::item()` for data, and [Forger](forger.md) for plain files.
+`Keeper::echo('note.txt', 'text')` writes a plain file in the echoes; `Keeper::echo('note.txt')` reads it back. Use `Keeper::item()` for data.
 
 Next: [Forger](forger.md).

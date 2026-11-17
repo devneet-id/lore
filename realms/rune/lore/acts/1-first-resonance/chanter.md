@@ -109,6 +109,6 @@ The whole CRUD works — inside one run.
 
 ## Traps
 - A spell set from code, `Chanter::spell('x', 'v')`, is read on the **next** cast. By design.
-- Known issue: `chanter_cast_has()` always returns `false`. Don't rely on it yet.
+- `chanter_cast_has('build')` tells whether a cast is registered.
 
 Next: [Whisper](whisper.md).

@@ -6,7 +6,7 @@ Weaver turns raw data into text. It binds values into `{{tokens}}`, remembers th
 
 | | |
 |---|---|
-| **Version** | `1.7` |
+| **Version** | `1.8` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 0 · The Void |
@@ -91,7 +91,6 @@ Globals — state that changes as the flow goes on.
 - A token matches in lower case or upper case (`{{name}}` and `{{NAME}}`), not in mixed case.
 - Every bind is remembered in the bond. To bind values for one use only, call `weaver_bind_multiple($template, $data, false)`.
 - `Weaver::bond()` needs its second argument: pass `null` to read.
-- Known issue: `weaver_item($file, [...])` with data glitches; bind the result with `Weaver::bind()` instead.
 
 ---
-*Generated from `Weaver/Phantasm.php` (version 1.7). Read it live with `php cast grimoire --runic=Weaver`.*
+*Generated from `Weaver/Phantasm.php` (version 1.8). Read it live with `php cast grimoire --runic=Weaver`.*

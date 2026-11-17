@@ -6,7 +6,7 @@ Chanter is the gate of the command line. A **cast** is a command, a **spell** is
 
 | | |
 |---|---|
-| **Version** | `1.15` |
+| **Version** | `1.16` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 0 · The Void |
@@ -101,7 +101,6 @@ Globals — state that changes as the flow goes on.
 - Spell values keep `0` and `+`; use quotes or `%20` for spaces.
 - A spell set from code (`Chanter::spell('x', 'v')`) is read on the next cast — by design.
 - `--zero-trust` runs the cast with the arcane off and the output drained.
-- Known issue: `chanter_cast_has()` always returns false.
 
 ---
-*Generated from `Chanter/Phantasm.php` (version 1.15). Read it live with `php cast grimoire --runic=Chanter`.*
+*Generated from `Chanter/Phantasm.php` (version 1.16). Read it live with `php cast grimoire --runic=Chanter`.*

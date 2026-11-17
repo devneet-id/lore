@@ -64,6 +64,7 @@ Modes can be open together. The caption of the highest wins: **Liberation > Fede
 ```
 @liberation/
 ├── php@8.3.36/        php / php.exe, ext/, php.ini
+├── node@22/           any runtime taken with --runtime-url
 ├── liberation.json
 └── README.md
 ```
@@ -71,10 +72,14 @@ Modes can be open together. The caption of the highest wins: **Liberation > Fede
 { "updated": "…",
   "php": { "version": "8.3.36", "os": "windows", "arch": "x86_64", "extensions": ["mbstring", "openssl"], "source": "…" } }
 ```
-- Sentinel opens the **LIBERATION** spells: `--runtime-install[=php@<version>]` (`--os=windows|linux|macos`, `--arch=x86_64|aarch64`), `--runtime-list`, `--runtime-remove=php@<version>` ([Sentinel](runites/sentinel.md)).
-- **Windows** builds come from windows.php.net (NTS x64, sha256 checked); a small `php.ini` is written with `extension_dir = "ext"` and the extensions Rune reaches for (curl, fileinfo, mbstring, openssl, zip — when present).
+- Sentinel opens the **LIBERATION** spells ([Sentinel](runites/sentinel.md)):
+  - `--runtime-install[=php@<version>]` (`--os=windows|linux|macos`, `--arch=x86_64|aarch64`); empty takes the version you run now, `--from=local` copies the PHP you run now;
+  - `--runtime-url=<archive url> --name=<runtime>@<version> [--sha256=]` — any runtime Rune does not know, from a zip, tar.gz, tar.bz2, tar or a single file;
+  - `--runtime-list` (what Rune knows, what you keep), `--runtime-use=<runtime>@<version>`, `--runtime-remove=<runtime>@<version>`, `--runtime-launcher`.
+- Rune knows one runtime today: **php**. Downloads show a progress bar.
+- **Windows** builds come from windows.php.net (NTS x64, sha256 checked); a small `php.ini` is written with `extension_dir = "ext"` and the extensions Rune reaches for (curl, fileinfo, mbstring, openssl, phar, zip — when present).
 - **Linux and macOS** builds are static PHP cli builds from static-php (`dl.static-php.dev`); give the full version (`php@8.3.14`) unless it is the PHP you are running.
-- Empty `--runtime-install` takes the PHP you are running now.
-- `liberation.json` records the runtime in use; `--runtime-remove` clears it when that one is removed.
-- Run your runite with it: `@liberation/php@<version>/php cast` (or `php.exe` on Windows).
+- `liberation.json` records the runtime in use, one key per runtime; removing it hands the place to the newest kept version of that runtime.
+- Run your runite with it: `--runtime-launcher` writes `cast.bat` (Windows) or `cast.sh`; or call `@liberation/php@<version>/php cast` yourself.
+- A relic made in liberation mode records `::runtime=php@<version>`; opening it where that runtime is missing tells you how to take it.
 - Learn it in [Liberation](../lore/acts/4-the-beyond/liberation.md).

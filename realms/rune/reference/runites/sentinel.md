@@ -28,10 +28,14 @@ Sentinel guards your runite. It unlocks the modes, writes runes into the runite 
 ### LIBERATION (liberation mode only)
 | Spell | Does |
 |---|---|
-| `sentinel --runtime-install` | keeps the PHP you are running now in `@liberation/php@<version>/` |
+| `sentinel --runtime-install` | downloads the PHP version you are running now into `@liberation/php@<version>/` (with a progress bar) |
+| `sentinel --runtime-install --from=local` | copies the PHP you are running now |
 | `sentinel --runtime-install=php@8.3` | another version; `--os=windows\|linux\|macos`, `--arch=x86_64\|aarch64` for another system (Windows: windows.php.net, sha256 checked; Linux/macOS: static-php, full version) |
-| `sentinel --runtime-list` | the runtimes in `@liberation/`, and the one in use (`liberation.json`) |
-| `sentinel --runtime-remove=php@8.3.36` | removes a runtime |
+| `sentinel --runtime-url=<url> --name=node@22` | any runtime from a link (zip, tar.gz, tar.bz2, tar, single file); `--sha256=` to check it |
+| `sentinel --runtime-list` | the runtimes Rune knows (php), the ones in `@liberation/`, and the one in use (`liberation.json`) |
+| `sentinel --runtime-use=php@8.3.6` | makes a kept runtime the one in use |
+| `sentinel --runtime-remove=php@8.3.36` | removes a runtime; the newest kept version of it takes its place |
+| `sentinel --runtime-launcher` | writes `cast.bat` (Windows) or `cast.sh` that runs the runite with the PHP in use |
 
 The `.gitignore` block, written again (not added twice) on every run; your own lines are kept:
 ```

@@ -7,9 +7,6 @@ Rune is not finished. These are the issues found by the trials and by reading th
 ## Bugs
 | Issue | Where | What happens |
 |---|---|---|
-| `chanter_cast_has()` is always `false` | `Chanter/Entity.php` | It reads `$CHANTER_CAST` without `global $CHANTER_CAST`. |
-| `Keeper::echo()` cannot write | `Keeper/Entity.php` · `keeper_echo_set()` | It passes one path map to `forger_fix()`, which expects a list → glitch. Reading works. |
-| `weaver_item($file, [...])` with data glitches | `Weaver/Entity.php` · `weaver_item()` | It calls `weaver_bind()` instead of `weaver_bind_multiple()` → "Array to string conversion". Bind the result with `Weaver::bind()` meanwhile. |
 | Exura relics on Linux | the Exura relics (made on Windows) | Shards are stored with Windows paths (`src/exura/\exura.*`); opening them on Linux writes odd file names. Re-seal them on any OS with forward slashes. |
 
 ## Sentinel

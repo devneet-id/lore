@@ -8,13 +8,13 @@ Every rune is a folder of five files: **Ether** (constants), **Essence** (global
 |---|---|---|---|---|---|
 | [Aether](aether.md) | Represents the foundational flow that permeates all components | Act 0 · The Void | `1.20` | `VOID` | 52 |
 | [Whisper](whisper.md) | Handles user-facing output through styled messages, prompts, and echoes | Act 0 · The Void | `1.13` | `VOID` | 34 |
-| [Weaver](weaver.md) | Built for advanced string manipulation, data binding, and template weaving | Act 0 · The Void | `1.7` | `VOID` | 27 |
-| [Chanter](chanter.md) | Encapsulates processes and CLI-style operations to maintain immutability | Act 0 · The Void | `1.15` | `VOID` | 33 |
+| [Weaver](weaver.md) | Built for advanced string manipulation, data binding, and template weaving | Act 0 · The Void | `1.8` | `VOID` | 27 |
+| [Chanter](chanter.md) | Encapsulates processes and CLI-style operations to maintain immutability | Act 0 · The Void | `1.16` | `VOID` | 33 |
 | [Forger](forger.md) | Built for structured file and directory operations such as tracing, scanning, fixing, moving, and cloning | Act 1 · First Resonance | `1.16` | `VOID` | 28 |
 | [Cipher](cipher.md) | Keeps secrets and identities of the system | Act 1 · First Resonance | `1.6` | `VOID` | 15 |
-| [Keeper](keeper.md) | Handles persistent message tracking, data logging, and structured memory management | Act 1 · First Resonance | `1.13` | `VOID` | 36 |
+| [Keeper](keeper.md) | Handles persistent message tracking, data logging, and structured memory management | Act 1 · First Resonance | `1.14` | `VOID` | 36 |
 | [Crafter](crafter.md) | Focused on dynamic creation and composition | Act 2 · Understanding Its Flow | `1.15` | `VOID` | 36 |
 | [Specter](specter.md) | Enables out-of-process operations through soul-like abstractions | Act 3 · Evolution of Eidos | `1.9` | `VOID` | 30 |
 | [Minister](minister.md) | Speaks with a familiar (an AI spirit) on behalf of the runite | Act 3 · Evolution of Eidos | `0.3` | `DEVELOPMENT` | 9 |
 
-**Version=** in the footer of every cast: the major of `AETHER_VERSION`, then its minor plus the sum of the rune majors, then the sum of the rune minors — all whole numbers (`1.21.117` today). See [Versioning](../../lore/acts/4-the-beyond/versioning.md).
+**Version=** in the footer of every cast: the major of `AETHER_VERSION`, then its minor plus the sum of the rune majors, then the sum of the rune minors — all whole numbers (`1.21.120` today). See [Versioning](../../lore/acts/4-the-beyond/versioning.md).

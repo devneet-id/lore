@@ -20,7 +20,7 @@ Only a spell, no cast — so `Chanter::end()` runs the `rune` cast (the main hal
 {
   "FILE": "cast",
   "REPO": "_act2",
-  "VERSION": "1.21.117",
+  "VERSION": "1.21.120",
   "CAST": {
     "grimoire": ["grimoire", "grimoire", "Read the runes and the arcane of this runite."],
     "reliquary": ["reliquary", "reliquary", "Make, open and share relics (runite ⇄ .rune)."],

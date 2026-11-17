@@ -45,6 +45,6 @@ Weaver::bond('note-text', null);   // 'Call mom'
 Because the bond is shared, give your tokens specific names (`note-text`, not `text`) and avoid Whisper's own names (`nl`, `tab`, `end`, `bold`, `php`).
 
 ## Trap
-Known issue: `weaver_item($file, [...])` with data glitches. Load with `Weaver::item()`, then fill with `Weaver::bind()` — as above.
+`Weaver::item($file, ['name'=> 'Rune'])` loads and fills in one step.
 
 Next: [Aether](aether.md).
