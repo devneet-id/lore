@@ -2,11 +2,29 @@
 - Run every trial of rune-dev against rune v1.21.120 and refresh `scenario/README.md` status
 - Work from issues in devneet-id/rune; propose turning the Known Issues list into issues
 - Ask anwarachilles: keep chronicle times in UTC, or WIB?
+- APEX report: file the issues in devneet-id/rune when asked (Keeper `@`/error_reporting, Chanter flag vs value, Specter hidden cast on Linux, Whisper/Aether machine output, Specter long processes, `Keeper::env`, `flock` study)
+- Lore holes from the APEX report: point to the docs for #10–#12; an engraving "runite as a server service" (worker, loop, deploy)
 
 _Times are UTC._
 
 ---
 ## 18
+
+#### 19:26 - APEX Central report: where the docs have holes
+Received a feedback report from the APEX team (`apexkoop/apex_central`, on Rune 1.20.114): Rune used as the server's operations layer (worker, interval tasks, deploy, integrity snapshots) through runites `worker`, `security`, `deploy`. 12 findings. Checked each against rune 1.21.120 — all still present.
+
+**Bugs confirmed in code:**
+- #1 Keeper: `keeper_glitch_boot()` sets `set_error_handler` without checking `error_reporting()` → a warning silenced with `@` still ends the flow.
+- #2/#3 Chanter: a flag is stored as `'1'`, so `--x` equals `--x=1`, and `chanter_spell_has()` reads `--x=1` as a bare flag; values are url-decoded once (`%2F` → `/`).
+- #6 Specter: on Linux a hidden non-blocking cast runs `"$arg; exit > /dev/null 2>&1 &"` — the `&` only covers `exit`, so `$arg` blocks.
+
+**Decisions with anwarachilles:**
+- APEX is a team under the same division. A report from it is read as *"where is the documentation holed?"* — no suspicion, no ceremony.
+- Several findings are already answered by Rune; the hole is in the lore, not the code: #12 → `sentinel --gitignore`; #10 → `.echoes/` already behaves like a `.env` (hidden, beside the runite, wider data) through `Keeper::item()`; #11 → `Keeper::item()`.
+- `Aether::env()` (proposed in the report) is rejected: Aether is the flow, not configuration. Env belongs to **Keeper** (memory) — `Keeper::env()` for reading a `.env` that is not the runite's own (e.g. an exuraphp app's).
+- Keeper `flock`: missing, but must be studied first — a lock can hold up the flow.
+- Specter is half-built on purpose: the foundation (`soul`, `cast.json`, `seer`) was the focus; detach/alive/kill/loop/run go into a later Specter development.
+- Still open: #5 (Whisper fails without Weaver: glitch message vs loading Weaver), #2 is a breaking change (flag → `true`), #4 (machine output; the footer comes from `aether_exit()`).
 
 #### 18:50 - What the chronicle holds
 Asked by anwarachilles to keep logging here. The chronicle holds, for each realm: what is about to be done (written before the work), what was done, the discussions and decisions with the human and why, findings along the way, plans, and the links to the issues and PRs they become. Tasks themselves stay in issues; polished knowledge in realms/.
