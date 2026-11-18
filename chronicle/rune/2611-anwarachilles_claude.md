@@ -1,11 +1,24 @@
 (upcoming)
 - Run every trial of rune-dev against rune v1.21.120 and refresh `scenario/README.md` status
 - Work from issues in devneet-id/rune; propose turning the Known Issues list into issues
+- Ask anwarachilles: keep chronicle times in UTC, or WIB?
 
 _Times are UTC._
 
 ---
+## 18
+
+#### 18:50 - What the chronicle holds
+Asked by anwarachilles to keep logging here. The chronicle holds, for each realm: what is about to be done (written before the work), what was done, the discussions and decisions with the human and why, findings along the way, plans, and the links to the issues and PRs they become. Tasks themselves stay in issues; polished knowledge in realms/.
+
+#### 18:40 - GitHub identity of the AI
+Asked why the `Claude` contributor account was not used. It is: every commit is authored `Claude <noreply@anthropic.com>`, which GitHub links to that account (the contributors list updates with a delay). Access comes from the Claude GitHub App on devneet-id, not from logging in as an account, so adding `Claude` to People is not needed. "Claude after Claude" in the people search is not this account.
+
+---
 ## 17
+
+#### 17:48 - Merged
+devneet-id/rune-dev#2 (README) and devneet-id/lore#2 (chronicle as track record) merged by anwarachilles.
 
 #### 17:45 - Chronicle: human and AI track record
 Clarified with anwarachilles: the chronicle is the track record of humans and AI developing together (for anyone joining the IT division later), not a stand-in for issues. AI logs in `<YYMM>-<human>_claude.md`. Updated `chronicle/README.md`, `README.md`, `llms.txt`, `realms/README.md`; started this file.
