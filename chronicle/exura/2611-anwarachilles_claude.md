@@ -1,11 +1,14 @@
 (upcoming)
-- Fix in exuracss: tinted cards (`card="NAME:N"`) always use fixed-light text — unreadable light tints on a light page
+- Release exuracss with the tint fix, then drop the `todo` of the tint test in exura-dev
 - Rune: `aether_exit()` exits with a bare `exit` — a runite always returns 0; propose an issue in devneet-id/rune
 
 _Times are UTC._
 
 ---
 ## 18
+
+#### 16:05 - exuracss: readable tints in light and dark
+anwarachilles: "warnanya ngawur". Every `card="NAME:N"` used one fixed ink for all ten shades (contrast down to 1.0 in both modes). The exuracss build now picks the ink per tint and per page (light/dark) by WCAG contrast over the blended surface, as `--ink-NAME-N`; lowest contrast 1.0 → 4.1, +0.6KB gzip. AnwarAchilles/exuracss#1; the exura-dev test now covers all 70 tints × both modes (todo until release): devneet-id/exura-dev#2.
 
 #### 15:45 - exura-dev fetches Exura with `php exura`
 anwarachilles opened `main` with a new runite, `exura`, that fetches exuracss, exurajs and exuraphp from the CDN (a tag or a branch) and dropped the GitHub Actions workflow — no CI. Reshaped the workbench around it: no submodules; `playground/` → `src/`, the fetched files in `src/vessel/` (not committed, served as `/vessel/`); `cast` is development only — `serve` and `test`. 37 tests pass (1 todo). devneet-id/exura-dev#1.
