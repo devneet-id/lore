@@ -1,11 +1,20 @@
 (upcoming)
-- Release exuracss with the tint fix, then drop the `todo` of the tint test in exura-dev
+- Work the issues when anwarachilles asks: fix → version → release → `php exura setup --tags=<new>` → the scenarios turn ✓
+- Tint fix: move AnwarAchilles/exuracss#1 to a branch of devneet-id/exuracss for devneet-id/exuracss#4, then close the fork PR
 - Rune: `aether_exit()` exits with a bare `exit` — a runite always returns 0; propose an issue in devneet-id/rune
 
 _Times are UTC._
 
 ---
 ## 18
+
+#### 17:27 - 10 issues filed in the package repos
+New session on the devneet-id repositories (the last one could reach only the AnwarAchilles forks, whose issues are off). Checked each finding against `main`, then filed the drafts from exura-dev HANDOFF.md:
+- exuracss: devneet-id/exuracss#4 (tint ink), devneet-id/exuracss#5 (red strong/em), devneet-id/exuracss#6 (`transition: all`)
+- exurajs: devneet-id/exurajs#2 (CRLF/LF build diff)
+- exuraphp: devneet-id/exuraphp#3 (JSON null), devneet-id/exuraphp#4 (big ints), devneet-id/exuraphp#5 (multipart PUT/PATCH), devneet-id/exuraphp#6 (scalar JSON + query → 500), devneet-id/exuraphp#7 (broken JSON → 400), devneet-id/exuraphp#8 (validation)
+
+Not worked on yet — they wait until asked. The Rune finding stays upcoming: devneet-id/rune is outside this session.
 
 #### 17:10 - Findings go to issues; method() probed
 anwarachilles set the rule: a finding becomes an issue in the package's own repo (devneet-id/exuracss, exurajs, exuraphp), not a direct fix, and exura-dev holds no issues — recorded in exura-dev AGENTS.md. Probed `Exura::method()` over HTTP in a new scenario, `exuraphp-method-values` (devneet-id/exura-dev#6): JSON types hold; JSON null → default, big ints lose digits, multipart PUT unread, scalar JSON + query → empty 500, broken JSON read as a form. 10 issues drafted (3 exuracss, 1 exurajs, 6 exuraphp); not filed yet — the session can only reach the forks (AnwarAchilles/*), whose issues are disabled.
