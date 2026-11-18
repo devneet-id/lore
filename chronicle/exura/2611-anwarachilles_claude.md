@@ -1,7 +1,7 @@
 (upcoming)
 - Work the issues when anwarachilles asks: fix → version → release → `php exura setup --tags=<new>` → the scenarios turn ✓
 - Tint fix: move AnwarAchilles/exuracss#1 to a branch of devneet-id/exuracss for devneet-id/exuracss#4, then close the fork PR
-- Mode plan (below, 18:10): file one issue in devneet-id/exurajs and one in devneet-id/exuraphp, linking this entry
+- Mode plan (18:10): worked when asked — devneet-id/exurajs#3, devneet-id/exuraphp#9; decide `console.clear()`
 - Rune: `aether_exit()` exits with a bare `exit` — a runite always returns 0; propose an issue in devneet-id/rune
 
 _Times are UTC._
@@ -45,6 +45,8 @@ Approved by anwarachilles.
 **Open.** `console.clear()` of the old banner: proposed to drop it (it wipes errors logged before Exura loads) — not decided yet.
 
 **Proof.** exura-dev `exurajs-mode` / `exuraphp-mode` check that `configure()` exists (✗ on 1.1.0); their checks per mode come with the issues.
+
+**Issues.** devneet-id/exurajs#3, devneet-id/exuraphp#9.
 
 **Also.** anwarachilles: changes to lore go straight to `main` (no branch, no PR) — for lore only; every other repo keeps branches and draft PRs.
 
