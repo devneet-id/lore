@@ -1,13 +1,14 @@
 (upcoming)
 - Fix in exuracss: tinted cards (`card="NAME:N"`) always use fixed-light text — unreadable light tints on a light page
-- Decide whether exura-dev keeps the GitHub Actions workflow (rune-dev chose none)
 - Rune: `aether_exit()` exits with a bare `exit` — a runite always returns 0; propose an issue in devneet-id/rune
-- `tools/docs-sync` (exura-dev → exura docs and `realms/exura/reference/`) and a release check
 
 _Times are UTC._
 
 ---
 ## 18
+
+#### 15:45 - exura-dev fetches Exura with `php exura`
+anwarachilles opened `main` with a new runite, `exura`, that fetches exuracss, exurajs and exuraphp from the CDN (a tag or a branch) and dropped the GitHub Actions workflow — no CI. Reshaped the workbench around it: no submodules; `playground/` → `src/`, the fetched files in `src/vessel/` (not committed, served as `/vessel/`); `cast` is development only — `serve` and `test`. 37 tests pass (1 todo). devneet-id/exura-dev#1.
 
 #### 15:22 - exura-dev runs on Rune
 At anwarachilles' request the workbench CLI became a runite: `php dev` → `php cast` (`setup`, `serve` through Specter's devserver, `build --css --js --php`, `test --php --js --css --integration`, `size`, `status`), on devneet/rune 1.21.117. Found that a runite always exits 0 (`aether_exit()` ends with a bare `exit`); the `cast` sets the real code from a shutdown function so CI can fail. `serve` now refuses to start when a submodule is empty — anwarachilles' playground had loaded without exuracss, most likely from an empty `packages/`.
