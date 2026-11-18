@@ -7,6 +7,9 @@ _Times are UTC._
 ---
 ## 18
 
+#### 17:10 - Findings go to issues; method() probed
+anwarachilles set the rule: a finding becomes an issue in the package's own repo (devneet-id/exuracss, exurajs, exuraphp), not a direct fix, and exura-dev holds no issues — recorded in exura-dev AGENTS.md. Probed `Exura::method()` over HTTP in a new scenario, `exuraphp-method-values` (devneet-id/exura-dev#6): JSON types hold; JSON null → default, big ints lose digits, multipart PUT unread, scalar JSON + query → empty 500, broken JSON read as a form. 10 issues drafted (3 exuracss, 1 exurajs, 6 exuraphp); not filed yet — the session can only reach the forks (AnwarAchilles/*), whose issues are disabled.
+
 #### 16:25 - exura-dev reshaped like rune-dev
 anwarachilles: exura-dev reads like docs, not a workshop — reshape it like rune-dev, without tests. Now `core/` (fetched by `php exura`), `exploration/` (every component of the three packages + `app/`, a complete notes CRUD and its API) and `scenario/` (16 standalone possibilities; exurajs/exuraphp ones check themselves in the page with ✓/✗). `php cast` serves one folder: `exploration`, `scenario --name`, `serve --path`. Tests and Playwright removed. Also seen: exuracss 1.1.0 paints every `strong`/`em` red. devneet-id/exura-dev#4.
 
