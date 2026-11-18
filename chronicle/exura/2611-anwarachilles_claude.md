@@ -1,12 +1,52 @@
 (upcoming)
 - Work the issues when anwarachilles asks: fix → version → release → `php exura setup --tags=<new>` → the scenarios turn ✓
 - Tint fix: move AnwarAchilles/exuracss#1 to a branch of devneet-id/exuracss for devneet-id/exuracss#4, then close the fork PR
+- Mode plan (below, 18:10): file one issue in devneet-id/exurajs and one in devneet-id/exuraphp, linking this entry
 - Rune: `aether_exit()` exits with a bare `exit` — a runite always returns 0; propose an issue in devneet-id/rune
 
 _Times are UTC._
 
 ---
 ## 18
+
+#### 18:10 - Plan: development and production mode through configure()
+Discussed with anwarachilles after he added the drafts `scenario/exurajs-mode` and `scenario/exuraphp-mode` to exura-dev (structure fixed in devneet-id/exura-dev#7).
+
+**The idea.** `configure()` — not `environment()` — overrides ("rebases") the settings of each package; its main use is the mode. Both packages are in **development** by default; `mode: 'production'` removes the trace output.
+- exurajs: `Exura.configure({ mode: 'production' })` — merges into `ExuraEnvironment.configure` (`mode`, `url`, …). Today `Exura.environment()` is an empty stub and the default is `production`.
+- exuraphp: `Exura::configure(['mode' => 'production'])` — does not exist yet.
+
+**History.** exurajs once had a development output, commented out since `init` (bece238): a banner `E X U R A - <version> //////` (`console.debug`), a note when a service already exists on `window`, and a tracking of clashing module names (recalled by anwarachilles, not in the history). exuraphp still carries leftovers of that development mode — the `"E X U R A - <version>"` trace in every answer — but incomplete.
+
+**exurajs — development (default):**
+```
+E X U R A - 1.1.1 ////// development
+EXURA · module cart()  ✓
+⚠ EXURA · module cart() already exists — the new one replaces it
+⚠ EXURA · service router() already exists on window — the page's own is kept
+⚠ EXURA · ghost(): <exura-ghost> not found, render() does nothing
+⚠ EXURA · shop(): watch target [more] not found
+```
+**exurajs — production:** a clean console (no banner, no warnings).
+
+**exuraphp — development (default):** as today, completed — the trace `"E X U R A - <version>": { url, state, route, method, request, referer, notice }`, full errors (`type`, `code`, `message`, `file`, `line`), plus the request time.
+```json
+{ "E X U R A - 1.1.0": { "url": "…/api/", "state": 200, "route": "user/42", "method": [], "request": "GET", "referer": "" },
+  "state": 200, "data": { "id": 42, "name": "Anwar" } }
+```
+**exuraphp — production:** no trace, no notices, no paths; an exception answers a general message.
+```json
+{ "state": 200, "data": { "id": 42, "name": "Anwar" } }
+{ "state": 500, "error": { "message": "Internal Server Error" } }
+{ "error": { "message": "Route not found" }, "state": 404 }
+```
+Approved by anwarachilles.
+
+**Open.** `console.clear()` of the old banner: proposed to drop it (it wipes errors logged before Exura loads) — not decided yet.
+
+**Proof.** exura-dev `exurajs-mode` / `exuraphp-mode` check that `configure()` exists (✗ on 1.1.0); their checks per mode come with the issues.
+
+**Also.** anwarachilles: changes to lore go straight to `main` (no branch, no PR) — for lore only; every other repo keeps branches and draft PRs.
 
 #### 17:27 - 10 issues filed in the package repos
 New session on the devneet-id repositories (the last one could reach only the AnwarAchilles forks, whose issues are off). Checked each finding against `main`, then filed the drafts from exura-dev HANDOFF.md:
