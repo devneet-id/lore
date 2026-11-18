@@ -7,6 +7,9 @@ _Times are UTC._
 ---
 ## 18
 
+#### 16:25 - exura-dev reshaped like rune-dev
+anwarachilles: exura-dev reads like docs, not a workshop — reshape it like rune-dev, without tests. Now `core/` (fetched by `php exura`), `exploration/` (every component of the three packages + `app/`, a complete notes CRUD and its API) and `scenario/` (16 standalone possibilities; exurajs/exuraphp ones check themselves in the page with ✓/✗). `php cast` serves one folder: `exploration`, `scenario --name`, `serve --path`. Tests and Playwright removed. Also seen: exuracss 1.1.0 paints every `strong`/`em` red. devneet-id/exura-dev#4.
+
 #### 16:05 - exuracss: readable tints in light and dark
 anwarachilles: "warnanya ngawur". Every `card="NAME:N"` used one fixed ink for all ten shades (contrast down to 1.0 in both modes). The exuracss build now picks the ink per tint and per page (light/dark) by WCAG contrast over the blended surface, as `--ink-NAME-N`; lowest contrast 1.0 → 4.1, +0.6KB gzip. AnwarAchilles/exuracss#1; the exura-dev test now covers all 70 tints × both modes (todo until release): devneet-id/exura-dev#2.
 
