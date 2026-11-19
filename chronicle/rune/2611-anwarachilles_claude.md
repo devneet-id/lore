@@ -8,6 +8,12 @@
 _Times are UTC._
 
 ---
+## 19
+
+#### 12:38 - Lore: commit straight to main
+anwarachilles: work on devneet-id/lore is committed directly to `main` — no branch, no PR. rune and rune-dev still go through a branch and a PR.
+
+---
 ## 18
 
 #### 19:26 - APEX Central report: where the docs have holes
