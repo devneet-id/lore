@@ -57,8 +57,25 @@ Rules:
 - **Link the issue or PR** an entry works on, when there is one.
 - **Append, don't rewrite.** Old entries are the memory of *why*.
 
+## When to write
+
+Write an entry on each of these events — don't save them up:
+
+1. **Before starting** — before the first change: what you are about to do, and the issue it serves.
+2. **A human decides** — an instruction, approval, refusal or explanation. Write it right away; it is the *why* that is easiest to lose.
+3. **A piece of work lands** — a commit, a PR opened or merged, an issue filed or closed, a test run finished (with its numbers).
+4. **A finding or a block** — a bug, a failing test, or stopping to wait for a human.
+5. **Before stopping** — end of session, a hand-off, or (for an AI) before its context is compacted. Update `(upcoming)` in the same entry.
+
+**The 1-hour limit:** never go more than **1 hour of active work** without an entry. If none of the events above has happened, write a short progress entry.
+
+**No entry needed** for small steps — reading a file, a single command, a retry. Fold them into the next entry.
+
+- **Times are UTC**, taken from the clock (`date -u +%H:%M`), never guessed.
+- **Commit the entry with the work** it describes, at the latest before you push — the chronicle never lags behind the code.
+
 ## How it's used
 
 1. Pick a realm; open your current month file (`<YYMM>-<you>.md`, or `<YYMM>-<human>_claude.md` for an AI; create it if new month).
 2. Read the realm's files top-down — the humans' and the AI's — to load the current thinking.
-3. Before doing something, write it; log as you work — newest on top.
+3. Before doing something, write it; then log on every event in [When to write](#when-to-write) — newest on top.
