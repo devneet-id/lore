@@ -8,6 +8,12 @@ _Times are UTC._
 ---
 ## 19
 
+#### 18:36 - First `php cast scenario` on Windows
+anwarachilles ran it on Windows (new terminals worked): **166/172**, two failures more than Linux.
+- `craft-single-files-minified` › *php works when required* — a trial bug: `php -r` + `escapeshellarg()` (on Windows `"` becomes a space). Fixed: the code runs from a probe file in `.proof/`.
+- `bundle-a-site` › *build runs store after spark* — a Rune bug: `keeper_shard_set_all()` joins with `DIRECTORY_SEPARATOR`, so shards read `src/site\index.html` on Windows — the root of the "Exura relics on Linux" Known Issue. Filed devneet-id/rune#37; the scenario names it with an explicit check.
+devneet-id/rune-dev#6. Linux now 169/173. Lesson: the trials must be run on Windows too — the bench here is Linux only.
+
 #### 18:28 - `php cast scenario` and `.proof/`
 anwarachilles: no CI — `php cast test` already runs each scenario's casts in a chain and checks the result is whole; the scenario folder must be tidied the ideal way: one runite at the root, `php cast scenario`, that opens each scenario's cast with Specter in a new terminal, one by one (loop the folders, find the casts); and every scenario keeps a git-ignored folder as the **proof** of its result (e.g. the Crafter bundles).
 
