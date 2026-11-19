@@ -8,6 +8,15 @@ _Times are UTC._
 ---
 ## 19
 
+#### 18:09 - Crafter scenarios: single files and a web page by TYPE
+Asked by anwarachilles: scenarios for Crafter — building one file of one language (css like exuracss, js, a php library) with `MINIFIED`, and a web page bundled with `TYPE` plain / function / class. Read `Crafter/Ether.php`, `Entity.php` and the weaver templates first.
+
+Added to rune-dev (devneet-id/rune-dev#4): `craft-single-files-minified` (24 checks) and `craft-web-page-by-type` (21 checks; every bundle is *served* — run with php — and checked whole). All trials: **168/172**; the 4 failures are findings:
+- devneet-id/rune#33 `weaver_min_php()` strips spaces inside strings — a minified php behaves differently.
+- devneet-id/rune#34 no template for LANGUAGE+TYPE → `$templates` undefined → an empty file and "Sparked!!". `plain--html.txt` exists but is not in `CRAFTER_WEAVER`; function/class exist only with php; the language match is order-sensitive.
+- devneet-id/rune#35 `ENCRYPTION gzip` → `gzip_encode()` does not exist (binary gzip in a single-quoted string is a second trap).
+- devneet-id/rune#36 a spark that throws never reaches `crafter_reset()`; the next build in the same flow reuses the failed seed. Found because a check passed for the wrong reason — the trial guard turns warnings into exceptions, so it was re-written to run like a runite.
+
 #### 15:42 - Scenario folders without numbers
 anwarachilles: `scenario/{number}-{scenario}` → `scenario/{scenario}` — the name is the key; make it longer instead. Renamed in rune-dev: greet-and-show-flow, keep-notes, manage-files-in-a-box, seal-secrets, track-todos-with-report, relay-across-runites, nest-runites, bundle-a-site (devneet-id/rune-dev#3). Every trial passes on rune 1.21.120: **127/127**; coverage **62/300 nodes (21%)** — the first numbers toward devneet-id/rune#31. Lore pages naming scenarios updated (The Workshop, Many Runites, Nested).
 
