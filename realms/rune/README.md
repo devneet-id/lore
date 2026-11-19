@@ -24,4 +24,4 @@ New here? Start with [lore/](lore/README.md). Looking something up? Go to [refer
 
 ---
 
-**Next →** [chronicle/README.md](../../chronicle/README.md) — the laws of chronicling. Go deeper into this realm's `lore/` and `reference/` when the work needs it.
+**Next →** [chronicle/README.md](../../chronicle/README.md) — the track record. Go deeper into this realm's `lore/` and `reference/` when the work needs it.

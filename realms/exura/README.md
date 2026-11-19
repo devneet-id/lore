@@ -21,4 +21,4 @@ Independent of Rune; shares DEVNEET's philosophy. Reliquary can `php exura fetch
 
 ---
 
-**Next →** [chronicle/README.md](../../chronicle/README.md) — the laws of chronicling. Go deeper into this realm's `lore/` and `reference/` when the work needs it.
+**Next →** [chronicle/README.md](../../chronicle/README.md) — the track record. Go deeper into this realm's `lore/` and `reference/` when the work needs it.
