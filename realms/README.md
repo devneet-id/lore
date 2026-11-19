@@ -14,3 +14,7 @@ Cross-project material lives up a level: the map in [atlas/](../atlas/), the voc
 - **[exura/](exura/)** — the minimalist framework series (exuraphp, exurajs, exuracss).
 
 > Adding a project? Create `realms/<name>/` with `README.md`, `lore/`, and `reference/`, then link it here and in the root README.
+
+---
+
+**Next →** the README of the realm you work on (above). When you are done there, go on to [chronicle/README.md](../chronicle/README.md).

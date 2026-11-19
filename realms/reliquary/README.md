@@ -18,3 +18,7 @@ A **relic** (`.rune`) is a sealed snapshot of a runite (code + echoes + shards) 
 - Each reliquary publishes a page via GitHub Pages that reads its records live.
 
 See [reference/](reference/) for depth.
+
+---
+
+**Next →** [chronicle/README.md](../../chronicle/README.md) — the track record. Go deeper into this realm's `lore/` and `reference/` when the work needs it.

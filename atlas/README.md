@@ -19,3 +19,7 @@ graph TD
 - [rune.md](rune.md)
 - [reliquary.md](reliquary.md)
 - [exura.md](exura.md)
+
+---
+
+**Next →** [realms/](../realms/README.md) — the projects in depth.

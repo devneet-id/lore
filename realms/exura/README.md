@@ -18,3 +18,7 @@
 | **exuracss** | `devneet-id/exuracss` | CSS | semantic-first styling |
 
 Independent of Rune; shares DEVNEET's philosophy. Reliquary can `php exura fetch` it. See [reference/](reference/) for depth.
+
+---
+
+**Next →** [chronicle/README.md](../../chronicle/README.md) — the track record. Go deeper into this realm's `lore/` and `reference/` when the work needs it.

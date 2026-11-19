@@ -53,4 +53,7 @@ The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — 
 - Relic ≈ Docker image; Reliquary ≈ a federated Docker Hub with no central server.
 - Phantasm ≈ Reflection, but declared and alive.
 - Grimoire ≈ a live, self-describing inspector.
- 
+
+---
+
+**Next →** [atlas/](atlas/README.md) — the maps.
