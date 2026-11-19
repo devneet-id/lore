@@ -24,7 +24,7 @@ php wallet book
 Nothing is mixed: `Keeper::item('entries')` in `wallet` never sees the items of `cast`.
 
 ## Runites that talk
-A runite can cast another runite as a command and read its answer. Scenario `06-multicast` keeps three runites — `cast`, `ember`, `frost` — and relays a text through them:
+A runite can cast another runite as a command and read its answer. Scenario `relay-across-runites` keeps three runites — `cast`, `ember`, `frost` — and relays a text through them:
 ```bash
 php cast relay --text=hello     # cast → ember (upper) → frost (reverse)
 ```

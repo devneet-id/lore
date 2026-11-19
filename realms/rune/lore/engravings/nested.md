@@ -5,7 +5,7 @@
 **Runes:** Keeper · **From:** Act 3
 
 ```
-07-nested/
+nest-runites/
 ├── cast              → .echoes/cast/
 └── realm/
     ├── cast          → realm/.echoes/cast/

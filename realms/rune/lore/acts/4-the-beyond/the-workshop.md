@@ -20,7 +20,7 @@ Run `composer dump-autoload` once (and again only when this file changes). Every
 ## What to keep in it
 | Folder | Use |
 |---|---|
-| `scenario/` | runites from easy to complex, one folder each; every runite has a `test` cast — its **trial** |
+| `scenario/` | runites from easy to complex, one folder each, named after the scenario (`keep-notes`, no number); every runite has a `test` cast — its **trial** |
 | a runner | one runite that runs every trial, and (if you like) counts which Phantasm nodes the scenarios touch |
 | an evolution runite | `Rune\Ethereal::evolution();` — for `sentinel --phantasm-*` on the runes you change |
 
@@ -42,7 +42,7 @@ Chanter::cast('test', function() {
 - A runite can be cast from any folder — Rune keeps `.echoes` next to it.
 
 ```bash
-cd workshop/scenario/01-greeting
+cd workshop/scenario/greet-and-show-flow
 php cast test
 ```
 
@@ -60,6 +60,6 @@ To check what users get, make another folder with its own `composer.json` and `c
 
 ## Rules of the bench
 - Files in `rune` are **CRLF**: keep the line endings, and `php -l` every PHP file you touch.
-- A new scenario: a folder, a `cast` with the shebang, the workshop autoload, a `test` cast.
+- A new scenario: a folder named after what it does (`track-todos-with-report` — the name is the key, no number), a `cast` with the shebang, the workshop autoload, a `test` cast.
 - A fix without a trial is a guess. Add the check first, watch it fail, then fix.
 - Notes, drafts and trials stay in the workshop — never in `rune`.

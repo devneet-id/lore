@@ -8,6 +8,9 @@ _Times are UTC._
 ---
 ## 19
 
+#### 15:42 - Scenario folders without numbers
+anwarachilles: `scenario/{number}-{scenario}` → `scenario/{scenario}` — the name is the key; make it longer instead. Renamed in rune-dev: greet-and-show-flow, keep-notes, manage-files-in-a-box, seal-secrets, track-todos-with-report, relay-across-runites, nest-runites, bundle-a-site (devneet-id/rune-dev#3). Every trial passes on rune 1.21.120: **127/127**; coverage **62/300 nodes (21%)** — the first numbers toward devneet-id/rune#31. Lore pages naming scenarios updated (The Workshop, Many Runites, Nested).
+
 #### 15:30 - rune-skill: build here, test elsewhere
 Agreed with anwarachilles: the test of a skill is an AI writing runites with it. Claude builds rune-skill (with skill-creator) and runs only a short test — a few runites written from the skill, cast with real PHP against rune, checked against the Laws. The wide test is done by another AI (ChatGPT), so the skill must be model-agnostic: plain Markdown, no assumptions about one agent's tools.
 
