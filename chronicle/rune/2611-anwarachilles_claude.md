@@ -8,6 +8,9 @@ _Times are UTC._
 ---
 ## 19
 
+#### 15:30 - rune-skill: build here, test elsewhere
+Agreed with anwarachilles: the test of a skill is an AI writing runites with it. Claude builds rune-skill (with skill-creator) and runs only a short test — a few runites written from the skill, cast with real PHP against rune, checked against the Laws. The wide test is done by another AI (ChatGPT), so the skill must be model-agnostic: plain Markdown, no assumptions about one agent's tools.
+
 #### 13:49 - What a `<project>-skill` repo is
 Explained by anwarachilles. Two kinds of knowledge, two kinds of home:
 - **lore** — the knowledge of the DEVNEET organization: its rules, the Laws, and how humans and agents develop together (chronicle). It will get its own division later.
