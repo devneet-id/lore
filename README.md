@@ -31,8 +31,10 @@ See [llms.txt](llms.txt) for the machine-oriented index. Treat everything here a
 
 ## Changing lore
 
-- **Laws and docs** (any file outside `chronicle/`): through a branch and a **pull request** — the PR records what changed and why, and a human approves it.
-- **Chronicle entries**: commit straight to `main` — they are a log, written while the work happens.
+Lore has two kinds of writers:
+
+- **The laws division** writes the laws — the rules for how humans and agents of every division work (e.g. [chronicle/README.md](chronicle/README.md), this section). It changes lore only through a branch and a **pull request**: the PR is the record of what changed and why, and a human approves it. It writes **no chronicle entries** — the PR is its record.
+- **Every other division** — its humans and agents — commits straight to `main`: chronicle entries, realm docs, atlas, glossary. It **follows the laws but does not edit them**; if a law is wrong or missing, it opens an issue in [devneet-id/lore](https://github.com/devneet-id/lore/issues) for the laws division.
 
 ## Links
 
