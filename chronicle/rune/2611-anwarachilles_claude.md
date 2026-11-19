@@ -8,6 +8,13 @@ _Times are UTC._
 ---
 ## 19
 
+#### 13:49 - What a `<project>-skill` repo is
+Explained by anwarachilles. Two kinds of knowledge, two kinds of home:
+- **lore** — the knowledge of the DEVNEET organization: its rules, the Laws, and how humans and agents develop together (chronicle). It will get its own division later.
+- **`<project>-skill`** (here devneet-id/rune-skill) — one per project, focused on **agents**: what an agent needs to *use* the project right away (for Rune: the five subjects, the Laws that bind code, the shape of a `cast`, the built-in runites, the modes). Not the organization's rules, not the project's history.
+
+So: lore teaches how DEVNEET works; a skill repo teaches an agent how to use one project. The content of rune-skill is to be discussed next.
+
 #### 13:46 - rune-skill joined
 devneet-id/rune-skill added to the session (empty repo, no commits yet). Its purpose will be discussed later with anwarachilles.
 
