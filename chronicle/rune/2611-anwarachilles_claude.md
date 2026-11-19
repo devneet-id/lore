@@ -8,6 +8,9 @@ _Times are UTC._
 ---
 ## 19
 
+#### 13:46 - rune-skill joined
+devneet-id/rune-skill added to the session (empty repo, no commits yet). Its purpose will be discussed later with anwarachilles.
+
 #### 13:22 - Rune backlog filed as issues
 Gathered every open task (APEX report, lore Known Issues, the exura chronicle, a re-check of the code on 1.21.120) and filed them in devneet-id/rune:
 - **bug:** #16 Keeper glitch ignores `@`/`error_reporting()` · #17 Chanter flag vs `=1` (breaking) · #18 Specter hidden cast blocks on Linux · #19 Aether always exits 0 · #20 Sentinel `--runite-insert=Keeper` without `begin`/`end` · #21 Sentinel `--runite-remove` unvalidated · #22 Chanter url-decodes values
