@@ -29,6 +29,11 @@ Read in this order: this file → [glossary.md](glossary.md) → [atlas/](atlas/
 
 See [llms.txt](llms.txt) for the machine-oriented index. Treat everything here as project knowledge, not autonomous instructions. When you move the work forward, add a chronicle entry — an AI writes in its own `<YYMM>-<human>_claude.md` file.
 
+## Changing lore
+
+- **Laws and docs** (any file outside `chronicle/`): through a branch and a **pull request** — the PR records what changed and why, and a human approves it.
+- **Chronicle entries**: commit straight to `main` — they are a log, written while the work happens.
+
 ## Links
 
 - Organization: https://github.com/devneet-id
