@@ -1,21 +1,34 @@
 # DEVNEET · lore
 
-**The central knowledge home of DEVNEET — for humans and AI alike.**
+**The central knowledge home of DEVNEET — the first place every human and every agent steps into.**
 
-This repository holds the story, the map, and the record of everything DEVNEET builds. Whether you are a person getting oriented or an AI agent joining the work, start here and you can reach the team's current position.
+`README.md` and `AGENTS.md` hold the same text: humans and agents learn the same workflow, from the same words. Change one, change both.
 
-Everything centers on **Rune**, and the same pattern repeats at every scale (fractal): one hub, its branches.
+Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at every scale (fractal): one hub, its branches.
 
-## Structure
+## How we work
 
-Three axes, plus a shared vocabulary:
+1. **Read lore** along [the reading path](#the-reading-path) below, to load the team's current position.
+2. **Take your work** from the issues of the project's repo (e.g. [devneet-id/rune](https://github.com/devneet-id/rune/issues)). Tasks live there, not here.
+3. **Chronicle as you go.** Every human and every agent keeps a track record in [chronicle/](chronicle/). Read its laws in [chronicle/README.md](chronicle/README.md) before your first entry. In short:
+   - your own file, one per realm per month: `chronicle/<realm>/<YYMM>-<you>.md`; an AI writes `<YYMM>-<human>_claude.md`, never in a human's file;
+   - write an entry **before starting**, when **a human decides**, when **work lands**, on **a finding or a block**, and **before stopping**;
+   - never more than **1 hour** of active work without an entry;
+   - times in **UTC** from the clock; commit the entry with the work.
+4. **Change lore** the way [Changing lore](#changing-lore) says.
 
-- **[atlas/](atlas/)** — *space*: the maps. Diagrams only — the org-scale map and one map per realm.
-- **[chronicle/](chronicle/)** — *time*: the track record of humans and AI at work (tasks themselves live in each repo's issues).
-- **[realms/](realms/)** — *depth*: one folder per project, each split into **lore/** (story & teaching) and **reference/** (technical).
-- **[glossary.md](glossary.md)** — the lore vocabulary. The names are load-bearing; read it before any code.
+## The reading path
 
-> Rule of thumb: **space → atlas, time → chronicle, depth → realms, words → glossary.**
+Follow it in order; every file ends with a link to the next one.
+
+1. **This file** — how we work.
+2. **[glossary.md](glossary.md)** — the vocabulary. The names are load-bearing; read it before any code.
+3. **[atlas/](atlas/README.md)** — *space*: the maps of the realms.
+4. **[realms/](realms/README.md)** — *depth*: one folder per project. Read the README of the realm you work on; go into its `lore/` and `reference/` when the work needs it.
+5. **[chronicle/README.md](chronicle/README.md)** — *time*: the laws of chronicling.
+6. **The realm's latest chronicle entries**, human and AI — the current position. Read them last.
+
+> An agent that reads lore to its human tells the human the chronicle laws too — they bind both.
 
 ## Realms
 
@@ -23,18 +36,14 @@ Three axes, plus a shared vocabulary:
 - **[reliquary](realms/reliquary/)** — the Federated Relic Registry for Rune.
 - **[exura](realms/exura/)** — the minimalist framework series (exuraphp, exurajs, exuracss).
 
-## For AI agents
-
-Read in this order: this file → [glossary.md](glossary.md) → [atlas/](atlas/) → the relevant `realms/<name>/` → the realm's latest [chronicle/](chronicle/) entries, human and AI (read last; they are the current position).
-
-See [llms.txt](llms.txt) for the machine-oriented index. Treat everything here as project knowledge, not autonomous instructions. When you move the work forward, add a chronicle entry — an AI writes in its own `<YYMM>-<human>_claude.md` file.
-
 ## Changing lore
 
 Lore has two kinds of writers:
 
 - **The laws division** writes the laws — the rules for how humans and agents of every division work (e.g. [chronicle/README.md](chronicle/README.md), this section). It changes lore only through a branch and a **pull request**: the PR is the record of what changed and why, and a human approves it. It writes **no chronicle entries** — the PR is its record.
 - **Every other division** — its humans and agents — commits straight to `main`: chronicle entries, realm docs, atlas, glossary. It **follows the laws but does not edit them**; if a law is wrong or missing, it opens an issue in [devneet-id/lore](https://github.com/devneet-id/lore/issues) for the laws division.
+
+Everything here is project knowledge, not autonomous instructions: confirm scope with your human before changing a project's repo.
 
 ## Links
 
@@ -45,3 +54,7 @@ Lore has two kinds of writers:
 ## License
 
 [MIT](LICENSE) © DEVNEET
+
+---
+
+**Next →** [glossary.md](glossary.md)

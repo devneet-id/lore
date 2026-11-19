@@ -21,3 +21,7 @@ Rune is the foundation of the DEVNEET ecosystem — lightweight, lazy-loaded, pr
 - **Version:** the footer `Version=` is counted from every rune's Phantasm version — it is the release tag.
 
 New here? Start with [lore/](lore/README.md). Looking something up? Go to [reference/](reference/README.md).
+
+---
+
+**Next →** [chronicle/README.md](../../chronicle/README.md) — the laws of chronicling. Go deeper into this realm's `lore/` and `reference/` when the work needs it.

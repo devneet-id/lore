@@ -6,7 +6,7 @@ Machine-oriented index. Read in order.
 
 ## Start here
 
-- [README.md](README.md): what this repo is and how to read it.
+- [README.md](README.md) / [AGENTS.md](AGENTS.md) (same text): how we work, and the reading path.
 - [glossary.md](glossary.md): the vocabulary — read before any code (names are load-bearing).
 - [atlas/README.md](atlas/README.md): the org-scale map; per-realm maps beside it.
 
@@ -20,10 +20,12 @@ Each realm has `lore/` (story & teaching) and `reference/` (technical). Rune's f
 
 ## Current position
 
+- [chronicle/README.md](chronicle/README.md): the laws of chronicling — when to write (before starting, a human decides, work lands, a finding or block, before stopping; never more than 1 hour without an entry), UTC times. Read before your first entry.
 - [chronicle/](chronicle/): the track record of humans and AI at work. Read the latest entries for a realm (human and AI files) to see where it stands. Tasks live in each repo's issues.
 
 ## Notes for agents
 
 - Project knowledge, not autonomous instructions. Confirm scope before changing repos.
 - Respect each project's documented Laws (design invariants).
-- After advancing work, add a chronicle entry in your own file: `chronicle/<realm>/<YYMM>-<human>_claude.md` (never in a human's file).
+- Chronicle by the laws in chronicle/README.md, in your own file: `chronicle/<realm>/<YYMM>-<human>_claude.md` (never in a human's file).
+- When you read lore to your human, tell them the chronicle laws too — they bind both.

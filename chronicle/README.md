@@ -81,3 +81,7 @@ Write an entry on each of these events — don't save them up:
 1. Pick a realm; open your current month file (`<YYMM>-<you>.md`, or `<YYMM>-<human>_claude.md` for an AI; create it if new month).
 2. Read the realm's files top-down — the humans' and the AI's — to load the current thinking.
 3. Before doing something, write it; then log on every event in [When to write](#when-to-write) — newest on top.
+
+---
+
+**Next →** open `chronicle/<realm>/` and read the latest month files, human and AI, newest on top — that is the current position. Then [take your work](../README.md#how-we-work).
