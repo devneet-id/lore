@@ -8,6 +8,15 @@ _Times are UTC._
 ---
 ## 19
 
+#### 18:28 - `php cast scenario` and `.proof/`
+anwarachilles: no CI — `php cast test` already runs each scenario's casts in a chain and checks the result is whole; the scenario folder must be tidied the ideal way: one runite at the root, `php cast scenario`, that opens each scenario's cast with Specter in a new terminal, one by one (loop the folders, find the casts); and every scenario keeps a git-ignored folder as the **proof** of its result (e.g. the Crafter bundles).
+
+Done in devneet-id/rune-dev#5:
+- root `cast` → `php cast scenario [--here] [--only=<name>] [--timeout=<s>]`: `Specter::cast` (blocking) per scenario, then `Specter::seer` waits for its proof — a new window can return before the trial ends, so the proof file is what counts.
+- `trial_report()` writes `.proof/report.txt` + `report.json`; `trial_proof()` / `trial_proof_clean()`; Crafter and todo scenarios keep their output in `.proof/dist`. `.proof/` git-ignored; `coverage` keeps only coverage (one runner).
+- Verified with `--here`: **168/172** (same as before). Without a terminal window (this container has no `gnome-terminal`) the visible mode times out and says so — Specter on Linux knows only gnome-terminal (to add to devneet-id/rune#26).
+- Lore: The Workshop names the runner and `.proof/`.
+
 #### 18:09 - Crafter scenarios: single files and a web page by TYPE
 Asked by anwarachilles: scenarios for Crafter — building one file of one language (css like exuracss, js, a php library) with `MINIFIED`, and a web page bundled with `TYPE` plain / function / class. Read `Crafter/Ether.php`, `Entity.php` and the weaver templates first.
 

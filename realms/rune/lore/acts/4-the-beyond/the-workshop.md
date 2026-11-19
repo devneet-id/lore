@@ -21,7 +21,8 @@ Run `composer dump-autoload` once (and again only when this file changes). Every
 | Folder | Use |
 |---|---|
 | `scenario/` | runites from easy to complex, one folder each, named after the scenario (`keep-notes`, no number); every runite has a `test` cast — its **trial** |
-| a runner | one runite that runs every trial, and (if you like) counts which Phantasm nodes the scenarios touch |
+| a runner | one runite at the root that runs every trial, one by one — in rune-dev: `php cast scenario` (each scenario in a new terminal through Specter, `--here` for the same terminal) — and a coverage runite that counts which Phantasm nodes the scenarios touch |
+| `.proof/` | in every scenario, git-ignored: the proof of its last trial — `report.txt`, `report.json` (read by the runner) and what it made (a Crafter bundle, a report) |
 | an evolution runite | `Rune\Ethereal::evolution();` — for `sentinel --phantasm-*` on the runes you change |
 
 ## Write a trial
@@ -39,6 +40,7 @@ Chanter::cast('test', function() {
 ```
 - Catch PHP warnings as errors (`set_error_handler` → `ErrorException`) so a glitch fails one check instead of ending the run.
 - Back up and restore any data the trial touches.
+- Keep what the trial makes in `.proof/` (git-ignored) — it is the proof, open it after the run.
 - A runite can be cast from any folder — Rune keeps `.echoes` next to it.
 
 ```bash
