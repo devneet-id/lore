@@ -1,14 +1,21 @@
 (upcoming)
-- Run every trial of rune-dev against rune v1.21.120 and refresh `scenario/README.md` status
-- Work from issues in devneet-id/rune; propose turning the Known Issues list into issues
 - Ask anwarachilles: keep chronicle times in UTC, or WIB?
-- APEX report: file the issues in devneet-id/rune when asked (Keeper `@`/error_reporting, Chanter flag vs value, Specter hidden cast on Linux, Whisper/Aether machine output, Specter long processes, `Keeper::env`, `flock` study)
-- Lore holes from the APEX report: point to the docs for #10–#12; an engraving "runite as a server service" (worker, loop, deploy)
+- Start with devneet-id/rune#31 (baseline trials), then the bugs #16–#19, then #28
+- Waiting on decisions: devneet-id/rune#29 (Whisper without Weaver), devneet-id/rune#30 (Awakening and .gitignore)
 
 _Times are UTC._
 
 ---
 ## 19
+
+#### 13:22 - Rune backlog filed as issues
+Gathered every open task (APEX report, lore Known Issues, the exura chronicle, a re-check of the code on 1.21.120) and filed them in devneet-id/rune:
+- **bug:** #16 Keeper glitch ignores `@`/`error_reporting()` · #17 Chanter flag vs `=1` (breaking) · #18 Specter hidden cast blocks on Linux · #19 Aether always exits 0 · #20 Sentinel `--runite-insert=Keeper` without `begin`/`end` · #21 Sentinel `--runite-remove` unvalidated · #22 Chanter url-decodes values
+- **enhancement:** #23 `Keeper::env()` · #24 Keeper `tolerate()`/throw · #25 machine output (NO_COLOR, quiet, footer) · #26 Specter long-running processes · #27 `flock` study · #31 workshop baseline + coverage
+- **documentation:** #28 contract and text · #32 lore holes from the APEX report
+- **question:** #29 Whisper without Weaver · #30 Awakening and `.gitignore`
+
+Also checked: the glitch screen labels (*On Line Number* / *File Location*) are no longer swapped. Order proposed: #31 first (a baseline before any fix), then #16–#19, then #28.
 
 #### 12:38 - Lore: commit straight to main
 anwarachilles: work on devneet-id/lore is committed directly to `main` — no branch, no PR. rune and rune-dev still go through a branch and a PR.
