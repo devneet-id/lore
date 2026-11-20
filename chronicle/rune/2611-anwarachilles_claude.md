@@ -1,6 +1,6 @@
 (upcoming)
 - Waiting: devneet-id/rune-dev#6 to merge (the trials of round 1); a Windows run of `php cast scenario` to confirm #37
-- Ask anwarachilles: Law 18 (rune files are LF, not CRLF); a release tag for 1.21.123?
+- Ask anwarachilles: a release tag for 1.21.123?
 - Round 2 (proposal): #16 Keeper `@` · #19 exit code · #18 Specter Linux · #20/#21 Sentinel — each with its failing trial first
 - Waiting on decisions: devneet-id/rune#29, devneet-id/rune#30
 
@@ -8,6 +8,10 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 14:35 - Line endings: the repo stores LF (Law 18 was a hole)
+anwarachilles: a Law that says CRLF while the code is LF is a hole in the project; "do what you think is best".
+Decision: the rune repo **stores LF** — a `#!/usr/bin/env php` line ending in CRLF breaks every runite on Linux/macOS (`env: 'php\r'`), and CRLF in the repo makes every line a diff. On Windows git may show CRLF in the working copy (`core.autocrlf`) — that is likely where "CRLF" came from. About to: add `.gitattributes` (`* text=auto eol=lf`) to devneet-id/rune by PR, and fix Law 18 and the pages that repeat it (The Workshop, Contributing, Release) — realm docs, so straight to `main` (covenant/changing-lore.md).
 
 #### 11:05 - Round 1 merged; lore follows 1.21.123
 anwarachilles merged devneet-id/rune#38 (11:03) — #33–#37 closed by it. devneet-id/rune-dev#6 (the trials that prove them) is still open.
