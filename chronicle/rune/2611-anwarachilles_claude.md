@@ -1,5 +1,4 @@
 (upcoming)
-- Waiting: devneet-id/rune-dev#7 (setup: dump-autoload) to merge
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
 - Round 3: devneet-id/rune#42 waiting; then lore (Versioning 1.21.133, Liberation words, Known Issues) · next #20 Sentinel · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
@@ -11,6 +10,9 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 21:32 - rune-dev#7 merged
+devneet-id/rune-dev#7 merged by anwarachilles: rune-dev takes Rune from `../rune` only (`composer dump-autoload`, no `require`), plus the round-3 scenarios. Until devneet-id/rune#42 merges, rune-dev `main` against rune `1.x` shows the round-3 checks failing on purpose (measured before the fix: `engrave-with-sentinel` 6/8, `keep-the-contract` 0/6).
 
 #### 21:07 - Round 3 landed: devneet-id/rune#42
 Trials first (on devneet-id/rune-dev#7): `engrave-with-sentinel` (probe runite, insert/remove) 6/8 on 1.x; `keep-the-contract` (marks, legacy hooks, Grimoire header, composer links, Liberation words) 0/6 on 1.x.
