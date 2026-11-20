@@ -3,12 +3,15 @@
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
 - Round 3: #20/#21 Sentinel · then #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
-- Waiting: devneet-id/rune-dev#6 merge; a Windows run; decisions devneet-id/rune#29, #30
+- Waiting: a Windows run; decisions devneet-id/rune#29, #30
 
 _Times are UTC._
 
 ---
 ## 20
+
+#### 18:07 - rune-dev#6 merged
+devneet-id/rune-dev#6 (the trials of rounds 1 and 2) merged by anwarachilles. Until devneet-id/rune#40 merges, rune-dev `main` against rune `1.x` shows the round-2 checks failing on purpose (expected 179/185: #16 ×2, #19, #18 … as measured before the fix).
 
 #### 14:53 - Round 2 landed: devneet-id/rune#40
 Trials first (devneet-id/rune-dev#6): `survive-glitches-and-exit` (probe runites cast in their own process, exit codes read) failed 3/6 on 1.x; `cast-beyond-the-process` (Specter's first scenario) failed 3/4 — the caller waited the full 2 s of a "non-blocking" job.
