@@ -10,6 +10,9 @@ _Times are UTC._
 ---
 ## 20
 
+#### 18:08 - Correction: measured 181/185, not 179
+The 18:07 entry guessed the number before measuring. Measured now — rune-dev `main` against rune `1.x`: **181/185**; the 4 failures are exactly the round-2 checks (`survive-glitches-and-exit` 3/6: #16 ×2, #19; `cast-beyond-the-process` 3/4: #18). Lesson kept: no number goes into the chronicle before it is measured.
+
 #### 18:07 - rune-dev#6 merged
 devneet-id/rune-dev#6 (the trials of rounds 1 and 2) merged by anwarachilles. Until devneet-id/rune#40 merges, rune-dev `main` against rune `1.x` shows the round-2 checks failing on purpose (expected 179/185: #16 ×2, #19, #18 … as measured before the fix).
 
