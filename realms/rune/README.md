@@ -1,6 +1,6 @@
 # Rune
 
-**Repo:** `devneet-id/rune` · **Package:** `devneet/rune` · **Language:** PHP (8.1+) · **License:** MIT · **Current:** v1.21.126
+**Repo:** `devneet-id/rune` · **Package:** `devneet/rune` · **Language:** PHP (8.1+) · **License:** MIT · **Current:** v1.21.133
 
 > A lore-driven, modular concept beneath PHP that responds to development rather than dictating it.
 
@@ -16,7 +16,7 @@ Rune is the foundation of the DEVNEET ecosystem — lightweight, lazy-loaded, pr
 - **Five subjects:** Ether (truth) · Essence (flow) · Entity (behaviour), joined by **Manifest**, described by **Phantasm**.
 - **CLI:** an app is a **runite** (a file named `cast`); commands are **casts**, options are **spells**.
 - **Built-in runites:** Awakening, the main hall (`rune`), Grimoire, Reliquary, Sentinel — in `@runite/`.
-- **Modes:** *The Evolution of Eidos* (runes of your own) · *The Federation of Fides* (your own reliquary) · *The Liberation of Forte* (your own PHP runtime).
+- **Modes:** *The Evolution of Eidos* (runes of your own) · *The Federation of Fides* (your own reliquary) · *The Liberation of Forte* (portable runtimes).
 - **Distribution:** seal a runite into a `.rune` **relic** and share it through a reliquary (see [reliquary](../reliquary/README.md)).
 - **Version:** the footer `Version=` is counted from every rune's Phantasm version — it is the release tag.
 

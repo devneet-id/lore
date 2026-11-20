@@ -14,7 +14,7 @@
 | `reliquary --initiate` / `--discover` / `--retrieve` says *opens with federation* | Not in federation mode | `php cast sentinel --federation` |
 | An old spell answers *`--x` is now `--y`* | The spell was renamed | Use the new one ([Sentinel](../../reference/runites/sentinel.md#old-spells)) |
 | *the seal is broken* | The downloaded relic does not match the reliquary's sha256 | Do not open it; tell the reliquary's owner |
-| `@liberations/` or `@liberation/` runes are gone | Your runes live in `@evolution/` now (`@liberation/` keeps the PHP runtime) | Move the folders, `sentinel --evolution` |
+| `@liberations/` or `@liberation/` runes are gone | Your runes live in `@evolution/` now (`@liberation/` keeps the portable runtimes) | Move the folders, `sentinel --evolution` |
 | `sentinel --runtime-*` says *needs The Liberation of Forte* | Not in liberation mode | `php cast sentinel --liberation` |
 | A relic opens without the files you built | Nothing was listed as a shard (Forger adds none) | List them in a `store` cast with `Keeper::shard([...])` |
 | A Crafter build says `Skipped=<n>` | Those shards are not in the seed's `LANGUAGE` (or are folders) | Add the language to `LANGUAGE`, or leave them out |

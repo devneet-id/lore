@@ -6,7 +6,7 @@ Whisper is the voice of the runite. Everything the user reads passes through it:
 
 | | |
 |---|---|
-| **Version** | `1.13` |
+| **Version** | `1.14` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles, Kuro Kid |
 | **Introduced in** | Act 0 · The Void |
@@ -99,4 +99,4 @@ Globals — state that changes as the flow goes on.
 - Whisper's style values are not kept in the Weaver bond.
 
 ---
-*Generated from `Whisper/Phantasm.php` (version 1.13). Read it live with `php cast grimoire --runic=Whisper`.*
+*Generated from `Whisper/Phantasm.php` (version 1.14). Read it live with `php cast grimoire --runic=Whisper`.*

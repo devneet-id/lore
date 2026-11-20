@@ -6,7 +6,7 @@ Weaver turns raw data into text. It binds values into `{{tokens}}`, remembers th
 
 | | |
 |---|---|
-| **Version** | `1.9` |
+| **Version** | `1.10` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 0 · The Void |
@@ -93,4 +93,4 @@ Globals — state that changes as the flow goes on.
 - `Weaver::bond()` needs its second argument: pass `null` to read.
 
 ---
-*Generated from `Weaver/Phantasm.php` (version 1.9). Read it live with `php cast grimoire --runic=Weaver`.*
+*Generated from `Weaver/Phantasm.php` (version 1.10). Read it live with `php cast grimoire --runic=Weaver`.*

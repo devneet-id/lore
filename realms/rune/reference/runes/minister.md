@@ -6,8 +6,8 @@ Minister speaks with a **familiar** — an AI spirit — on behalf of the runite
 
 | | |
 |---|---|
-| **Version** | `0.3` |
-| **Mark** | `DEVELOPMENT` |
+| **Version** | `0.4` |
+| **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 3 · Evolution of Eidos |
 | **Uses** | [Aether](aether.md) (entity), [Keeper](keeper.md) (ether:entity), [Whisper](whisper.md) (entity) |
@@ -67,4 +67,4 @@ Globals — state that changes as the flow goes on.
 - Minister is still being shaped; its mark will follow the VOID pattern.
 
 ---
-*Generated from `Minister/Phantasm.php` (version 0.3). Read it live with `php cast grimoire --runic=Minister`.*
+*Generated from `Minister/Phantasm.php` (version 0.4). Read it live with `php cast grimoire --runic=Minister`.*

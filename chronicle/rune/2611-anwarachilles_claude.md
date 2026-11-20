@@ -1,6 +1,6 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Round 3: devneet-id/rune#42 waiting; then lore (Versioning 1.21.133, Liberation words, Known Issues) · next #20 Sentinel · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
+- Next round: #20 Sentinel (Keeper begin/end) · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Waiting: decisions devneet-id/rune#29, #30
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -10,6 +10,13 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 22:17 - Round 3 merged; lore follows 1.21.133
+anwarachilles merged devneet-id/rune#42 (22:15) after his Windows run (199/199) — #21 and #28 closed by it; #41 stays open (catalog + Minister).
+Lore on `main`:
+- Versioning: Cipher 1.7, Forger 1.17, Keeper 1.17, Minister 0.4, Specter 1.11, Weaver 1.10, Whisper 1.14 → **1.21.133**; example versions 1.21.126 → 1.21.133 in realms; the seven rune references (versions, Minister mark `VOID`); Sentinel reference (remove refuses).
+- **Liberation = portable runtimes** on every page that said "your own PHP runtime": glossary (both), realm README, paradigm, modes (heading and anchor `#liberation--portable-runtimes`), the Liberation act and its README entry, anatomy, traps, runites README, Sentinel reference — #41's lore checklist done.
+- Known Issues: round 3 fixed; Sentinel row #21 and the whole "Contract and text" section removed (#28 done).
 
 #### 22:14 - Windows run on rune#42: 199/199
 anwarachilles posted his run as a review on devneet-id/rune#42: `php cast scenario`, **each scenario in a new terminal** (Specter's visible mode works on his machine), **199/199**, `Version=1.21.133`. The first full Windows confirmation of rounds 1–3 — including `bundle-a-site` 15/15, so the shard-path fix (#37) holds on Windows, and the round-2/3 scenarios (exit codes, Specter, Sentinel, contract) pass there too.

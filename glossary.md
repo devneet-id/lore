@@ -20,12 +20,12 @@ The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — 
 - **Awakening** — starting from anywhere (`Ethereal::awakening()`).
 - **Evolution** — creating your own runes beside the origin ones (`@evolution/`); caption *The Evolution of Eidos*.
 - **Federation** — keeping your own reliquary and its relics (`@federation/`); caption *The Federation of Fides*.
-- **Liberation** — keeping your own PHP runtime (`@liberation/php@<version>/`); caption *The Liberation of Forte*.
+- **Liberation** — keeping **portable runtimes** next to the runite (`@liberation/<runtime>@<version>/`: PHP, Node, Python…; PHP the first); caption *The Liberation of Forte*. Running several runtimes will be carried by Minister (still being designed).
 - **Echoes** — persisted memory in `.echoes/` (kept by Keeper).
 - **Arcane** — the phased process log recorded by Aether.
 - **Runite (built-in)** — the runites Rune carries in `@runite/`: awakening, rune (the main hall), grimoire, reliquary, sentinel. Once called *Bindrune*.
 - **Grimoire** — live system inspection (`php cast grimoire`).
-- **Sentinel** — the guard of a runite: unlocks the modes, inserts/removes runes, shapes your own runes, keeps a PHP runtime.
+- **Sentinel** — the guard of a runite: unlocks the modes, inserts/removes runes, shapes your own runes, keeps portable runtimes.
 - **cast** — the app file, and a registered command.
 - **runite** — a `cast` app (any project built on Rune).
 - **spell** — a command option (`--name` or `--name=value`).

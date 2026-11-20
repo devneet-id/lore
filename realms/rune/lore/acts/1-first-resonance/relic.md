@@ -45,7 +45,7 @@ The Relic of Runite
 
 [ᚱᚾ] R E L I C
   ::time=1793300128
-  ::version=1.21.126
+  ::version=1.21.133
   ::runic=anglo_saxon_futhorc
   ::encryption=base64
   ::php=8.3.6
@@ -66,8 +66,8 @@ php cast reliquary --runite-inspect=cast.rune
 ```
 ```
  ♦ Rune & PHP Version
-    » 1.21.126 with PHP 8.3.6
-    You » 1.21.126 with PHP 8.3.6
+    » 1.21.133 with PHP 8.3.6
+    You » 1.21.133 with PHP 8.3.6
 
  #  C A S T
  ♦ note --add --edit --remove --text

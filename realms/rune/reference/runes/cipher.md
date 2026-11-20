@@ -6,7 +6,7 @@ Cipher keeps the secrets of the system: unique ids, fast hashes, base64, and the
 
 | | |
 |---|---|
-| **Version** | `1.6` |
+| **Version** | `1.7` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 1 · First Resonance |
@@ -80,4 +80,4 @@ Globals — state that changes as the flow goes on.
 - The runic cipher is a lore seal, not encryption.
 
 ---
-*Generated from `Cipher/Phantasm.php` (version 1.6). Read it live with `php cast grimoire --runic=Cipher`.*
+*Generated from `Cipher/Phantasm.php` (version 1.7). Read it live with `php cast grimoire --runic=Cipher`.*

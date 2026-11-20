@@ -34,7 +34,7 @@ rune/
 - `Ethereal::evolution()` creates `@evolution/` next to the runite (the folder of `SCRIPT_FILENAME`, else `getcwd()`) with a `README.md` (from `@runite/sentinel/evolution.md`), adds a **second** loader for `Rune\` → `@evolution/`, and registers it with `register(false)` — **appended**. Composer asks the origin loader first, so an origin rune always wins.
 - It then defines `EVOLUTION` (the folder path). Sentinel, Grimoire and the footer check this constant. Evolution runes are the PascalCase folders of `@evolution/` (`aether_list_evolution()`).
 - `Ethereal::federation()` only opens `@federation/` (with its README) and defines `FEDERATION`; the Reliquary reads and writes `@federation/federation.json` there.
-- `Ethereal::liberation()` only opens `@liberation/` and defines `LIBERATION`; Sentinel's runtime spells (`@runite/sentinel/runtime.php`) keep PHP runtimes and `liberation.json` there.
+- `Ethereal::liberation()` only opens `@liberation/` and defines `LIBERATION`; Sentinel's runtime spells (`@runite/sentinel/runtime.php`) keep portable runtimes (`<runtime>@<version>/`, PHP the first) and `liberation.json` there.
 
 ## How a cast travels
 `php cast greet --name=Anwar`

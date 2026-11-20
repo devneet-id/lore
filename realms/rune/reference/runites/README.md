@@ -24,7 +24,7 @@ A runite can unlock modes. Each one is a line under the `require` line, written 
 | — | — | — | — | *The Awakening of Void* |
 | Evolution | `sentinel --evolution` | `Rune\Ethereal::evolution();` | `@evolution/` — runes of your own | *The Evolution of Eidos* |
 | Federation | `sentinel --federation` | `Rune\Ethereal::federation();` | `@federation/` — your reliquary and its relics | *The Federation of Fides* |
-| Liberation | `sentinel --liberation` | `Rune\Ethereal::liberation();` | `@liberation/` — your PHP runtime | *The Liberation of Forte* |
+| Liberation | `sentinel --liberation` | `Rune\Ethereal::liberation();` | `@liberation/` — portable runtimes | *The Liberation of Forte* |
 
 Modes can be open together; the caption of the highest wins (Liberation > Federation > Evolution). A mode folder belongs to your project and goes into git. Everything about each mode: [Modes](../modes.md).
 

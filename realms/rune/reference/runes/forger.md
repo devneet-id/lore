@@ -6,7 +6,7 @@ Forger shapes files and folders. It traces a path, fixes what is missing, writes
 
 | | |
 |---|---|
-| **Version** | `1.16` |
+| **Version** | `1.17` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 1 · First Resonance |
@@ -97,4 +97,4 @@ Globals — state that changes as the flow goes on.
 - `scan()` joins its targets with `/` on every OS (`src/exura/exura.css`), so they travel in relics; it returns folders too.
 
 ---
-*Generated from `Forger/Phantasm.php` (version 1.16). Read it live with `php cast grimoire --runic=Forger`.*
+*Generated from `Forger/Phantasm.php` (version 1.17). Read it live with `php cast grimoire --runic=Forger`.*

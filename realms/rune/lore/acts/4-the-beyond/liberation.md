@@ -1,10 +1,10 @@
 # Liberation
 
-> The Liberation of Forte — your app is no longer bound to the PHP of the machine it lands on.
+> The Liberation of Forte — your app is no longer bound to what the machine it lands on has installed.
 
-*Forte* is freedom in ability. A runite needs PHP to run; Liberation lets the project keep its own PHP runtime next to it, so the app runs the same wherever it goes.
+*Forte* is freedom in ability. Liberation keeps **portable runtimes** next to the runite — any runtime that runs from its own folder, the way PHP does: PHP, Node, Python… — so the app runs the same wherever it goes. PHP is the first one Rune finds by version; others come from a link. Running a cast on several runtimes (launchers `cast.bat` / `cast.sh` in `@liberation/`, anchored to the root `.echoes/`) is still ahead, carried by Minister (devneet-id/rune#41).
 
-→ Reference: [Modes](../../../reference/modes.md#liberation--your-own-php-runtime) · [Sentinel](../../../reference/runites/sentinel.md)
+→ Reference: [Modes](../../../reference/modes.md#liberation--portable-runtimes) · [Sentinel](../../../reference/runites/sentinel.md)
 
 ## Unlock it
 ```bash

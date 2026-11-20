@@ -84,7 +84,7 @@ Every block is base64, then sealed with a random runic variant (Cipher). The fir
 
 ## Notes
 - Without Keeper a relic carries the runite only. Engrave Keeper and add shards with `Keeper::shard([...])` to carry files — a file without extension (like `cast`) too. Shard paths are relative to the runite's folder, and opening a relic writes them next to the runite.
-- The header `version=` is the version of Rune from the origin runes (`1.21.126`). A relic made with a newer Rune is refused: *This relic needs Rune X, you have Y.* Rune 1.12.x can not open relics with a `RELIC` block.
+- The header `version=` is the version of Rune from the origin runes (`1.21.133`). A relic made with a newer Rune is refused: *This relic needs Rune X, you have Y.* Rune 1.12.x can not open relics with a `RELIC` block.
 - Echoes come from `.echoes/<runite>/rune.json` (`php cast --resonance`); without it the relic builds them itself.
 - The system line keeps OS, release, version and architecture — never the computer's name.
 - A relic is a runite: open only what you trust — online relics most of all. Inspect first.

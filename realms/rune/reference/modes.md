@@ -58,8 +58,8 @@ Modes can be open together. The caption of the highest wins: **Liberation > Fede
 - Without federation every relic comes from `devneet-id/reliquary` and nothing is recorded.
 - Learn it in [The Reliquary](../lore/acts/4-the-beyond/reliquary.md).
 
-## Liberation — your own PHP runtime
-*Forte* is freedom in ability: your app is no longer bound to the PHP of the machine it lands on.
+## Liberation — portable runtimes
+*Forte* is freedom in ability: your app is no longer bound to what the machine it lands on has installed. Liberation keeps **portable runtimes** — any runtime that runs from its own folder, the way PHP does (PHP, Node, Python…). PHP is the first Rune finds by version (`--runtime-install`); any other comes from a link (`--runtime-url`). Running several runtimes is still ahead, with Minister (devneet-id/rune#41).
 
 ```
 @liberation/

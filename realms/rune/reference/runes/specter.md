@@ -6,7 +6,7 @@ Specter works beyond the main flow. It keeps a **soul** that outlives a run, cas
 
 | | |
 |---|---|
-| **Version** | `1.10` |
+| **Version** | `1.11` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 3 · Evolution of Eidos |
@@ -96,4 +96,4 @@ Globals — state that changes as the flow goes on.
 - The soul lives in `.echoes/<runite>/soul.json`, so Keeper must be engraved.
 
 ---
-*Generated from `Specter/Phantasm.php` (version 1.10). Read it live with `php cast grimoire --runic=Specter`.*
+*Generated from `Specter/Phantasm.php` (version 1.11). Read it live with `php cast grimoire --runic=Specter`.*

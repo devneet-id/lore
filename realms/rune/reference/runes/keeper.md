@@ -6,7 +6,7 @@ Keeper is the memory of a runite. It keeps **echoes** in `.echoes/<runite>/`: it
 
 | | |
 |---|---|
-| **Version** | `1.16` |
+| **Version** | `1.17` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 1 · First Resonance |
@@ -101,4 +101,4 @@ Globals — state that changes as the flow goes on.
 - Arcane states by step time: BURST, FLASH, FLOW, FALL, BREAK, COLLAPSE, OVERCLOCK.
 
 ---
-*Generated from `Keeper/Phantasm.php` (version 1.16). Read it live with `php cast grimoire --runic=Keeper`.*
+*Generated from `Keeper/Phantasm.php` (version 1.17). Read it live with `php cast grimoire --runic=Keeper`.*

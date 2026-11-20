@@ -74,7 +74,7 @@ A runite can unlock three modes, each a step further from the origin:
 |---|---|---|
 | Evolution | *The Evolution of Eidos* | runes of your own in `@evolution/` — *Eidos* is the form behind a thing |
 | Federation | *The Federation of Fides* | your own reliquary and its relics in `@federation/` — *Fides* is trust |
-| Liberation | *The Liberation of Forte* | your own PHP runtime in `@liberation/` — *Forte* is freedom in ability |
+| Liberation | *The Liberation of Forte* | portable runtimes in `@liberation/` (PHP, Node, Python…) — *Forte* is freedom in ability |
 
 Without a mode the caption is *The Awakening of Void*. Details: [Modes](../reference/modes.md).
 

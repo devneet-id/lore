@@ -2,7 +2,7 @@
 
 > Someone or something that guards.
 
-Sentinel guards your runite. It unlocks the modes, writes runes into the runite and takes them out, helps you shape runes of your own (evolution) and keeps a PHP runtime (liberation).
+Sentinel guards your runite. It unlocks the modes, writes runes into the runite and takes them out, helps you shape runes of your own (evolution) and keeps portable runtimes (liberation).
 
 ## Spells
 | Group | Spell | Does |
@@ -13,7 +13,7 @@ Sentinel guards your runite. It unlocks the modes, writes runes into the runite 
 | UNLOCK | `sentinel --liberation` | writes `Rune\Ethereal::liberation();` under the `require` line, opens `@liberation/` |
 | RUNITE | `sentinel --runite-insert=Keeper` | adds `use Rune\Keeper\Manifest as Keeper;` and `Keeper::ether()::essence()::entity();` at the markers |
 | RUNITE | `sentinel --runite-insert=Keeper.entity` | awakens only some parts (`ether`, `essence`, `entity`) |
-| RUNITE | `sentinel --runite-remove=Keeper` | removes them again (`Keeper.essence` removes one part) |
+| RUNITE | `sentinel --runite-remove=Keeper` | removes them again (`Keeper.essence` removes one part); an unknown rune, or one not in the runite, is refused |
 
 ### EVOLUTION (evolution mode only)
 | Spell | Does |
