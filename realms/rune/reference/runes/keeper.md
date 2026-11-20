@@ -6,7 +6,7 @@ Keeper is the memory of a runite. It keeps **echoes** in `.echoes/<runite>/`: it
 
 | | |
 |---|---|
-| **Version** | `1.15` |
+| **Version** | `1.16` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 1 · First Resonance |
@@ -97,7 +97,8 @@ Globals — state that changes as the flow goes on.
 - Every runite has its own folder next to itself: `.echoes/cast/`, `.echoes/ember/`… — the same folder whether it is cast from inside or from a parent folder.
 - Shards are paths relative to the runite's folder (`Keeper::shard(['weaver'])`), stored with `/` on every OS so a relic sealed on Windows opens on Linux; only files inside that folder are carried.
 - `Keeper::shard()` is the only way in: Forger and Crafter never add shards on their own.
+- A warning silenced with `@` (or left out of `error_reporting()`) is not a glitch; any other warning is, and the runite exits with code **1**.
 - Arcane states by step time: BURST, FLASH, FLOW, FALL, BREAK, COLLAPSE, OVERCLOCK.
 
 ---
-*Generated from `Keeper/Phantasm.php` (version 1.15). Read it live with `php cast grimoire --runic=Keeper`.*
+*Generated from `Keeper/Phantasm.php` (version 1.16). Read it live with `php cast grimoire --runic=Keeper`.*

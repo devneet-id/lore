@@ -6,7 +6,7 @@ Specter works beyond the main flow. It keeps a **soul** that outlives a run, cas
 
 | | |
 |---|---|
-| **Version** | `1.9` |
+| **Version** | `1.10` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 3 · Evolution of Eidos |
@@ -91,8 +91,9 @@ Globals — state that changes as the flow goes on.
 
 ## Notes
 - `{{self}}` becomes `php <runite>`.
-- Visible casts open `cmd` on Windows, Terminal on macOS, `gnome-terminal` on Linux.
+- Visible casts open `cmd` on Windows, Terminal on macOS, `gnome-terminal` on Linux (no other Linux terminal yet — devneet-id/rune#26).
+- `'blocking' => false` returns at once; hidden on Linux and macOS the command runs with `nohup sh -c '…' &`, so it goes on when the runite ends.
 - The soul lives in `.echoes/<runite>/soul.json`, so Keeper must be engraved.
 
 ---
-*Generated from `Specter/Phantasm.php` (version 1.9). Read it live with `php cast grimoire --runic=Specter`.*
+*Generated from `Specter/Phantasm.php` (version 1.10). Read it live with `php cast grimoire --runic=Specter`.*

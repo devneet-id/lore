@@ -1,5 +1,5 @@
 (upcoming)
-- Round 2: devneet-id/rune#40 waiting for review/merge; then lore (Known Issues, Versioning 1.21.126, Keeper/Aether/Specter reference)
+- Waiting: devneet-id/rune-dev#7 (setup: dump-autoload) to merge
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
 - Round 3: #20/#21 Sentinel · #41 Liberation words (docs) · then #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
@@ -11,6 +11,11 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 21:01 - Round 2 merged; lore follows 1.21.126
+anwarachilles merged devneet-id/rune#40 (21:00) — #16, #18, #19 closed by it.
+Lore on `main`: Versioning (Aether 1.21, Keeper 1.16, Specter 1.10 → **1.21.126**) and every example version 1.21.123 → 1.21.126 in realms (the covenant's examples are the laws division's, left as they are); Aether reference (`aether_exit($force, $code)`), Keeper reference (`@` is not a glitch, exit 1), Specter reference (hidden non-blocking detaches; Linux visible = gnome-terminal only, #26); Glitch act (exit code 1, `@`); Known Issues (round 2 fixed, open bugs → #17, #22, #20, #21).
+Round 2 is done; release stays for when the issues are clean.
 
 #### 20:57 - Planned: a CLI loader, after redesigning Whisper::flash
 anwarachilles: the CLI needs a **loader** (progress shown while a cast works), built on `Whisper::flash` — and `Whisper::flash` must first be **redesigned** to behave as a real loader and be easy to put in place. Order: redesign `Whisper::flash` → then set up the loaders.

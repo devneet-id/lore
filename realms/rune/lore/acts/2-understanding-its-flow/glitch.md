@@ -44,7 +44,7 @@ $ php cast break
 
  #  T R A C E
 
-◇Version=1.21.123: ϟExecute=0.0095s, ΞMemory=1.09MB - ^1.27MB
+◇Version=1.21.126: ϟExecute=0.0095s, ΞMemory=1.09MB - ^1.27MB
 ```
 
 A warning is a glitch too — and it stops the flow just the same. Errors also carry a **trace**: the path the flow took to get there.
@@ -88,7 +88,9 @@ Every glitch is also written to `.echoes/<runite>/glitch.txt`:
 
 1. The handler writes `glitch.txt`.
 2. It clears the screen and shows the glitch screen.
-3. It prints the footer and **exits**.
+3. It prints the footer and **exits with code 1**, so a shell, cron or supervisor sees the failure (`php cast deploy && …` stops there).
+
+A warning silenced with `@` (e.g. `@mkdir()` on a folder that exists) is **not** a glitch: PHP goes on.
 
 So `Keeper::end()` never runs: the [arcane](arcane.md) of a broken run is **not** written. `arcane.txt` still shows the run before.
 

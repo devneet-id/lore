@@ -6,7 +6,7 @@ Aether is the flow that runs beneath everything. It is the first rune to awaken 
 
 | | |
 |---|---|
-| **Version** | `1.20` |
+| **Version** | `1.21` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 0 · The Void |
@@ -50,7 +50,7 @@ The logic. Other runes call these functions too.
 | `aether_stopwatch()` | Measure elapsed time since $AETHER_STOPWATCH was started (in seconds) |
 | `aether_memoryusage()` | Get current and peak memory usage in bytes |
 | `aether_zero_trust( Mixed $state = "" )` | Gets or sets the zero-trust state of the flow. |
-| `aether_exit( $force = false )` | Exit the program with execution time and memory usage summary (supports pretty output with whisper) |
+| `aether_exit( $force = false, Int $code = 0 )` | Exit the program with execution time and memory usage summary (supports pretty output with whisper); $code is the exit code for the shell (0 = success) |
 | `aether_has_entity( $function )` | Check if a given function (entity) exists in the current environment |
 | `aether_has_ether( $rune )` | Check if a constant (ether) is defined in the runtime |
 | `aether_has_essence( $rune )` | Check if a global variable (essence) is set and exists |
@@ -113,4 +113,4 @@ Globals — state that changes as the flow goes on.
 - Constants `AETHER_LOGS`, `AETHER_ECHOES_RUNE`, `AETHER_ECHOES_INFORMATION`, `AETHER_ECHOES_ARCANE(S)` are legacy (`AETHER_ECHOES_ARTEFACT` is gone) — Keeper owns the echoes now.
 
 ---
-*Generated from `Aether/Phantasm.php` (version 1.20). Read it live with `php cast grimoire --runic=Aether`.*
+*Generated from `Aether/Phantasm.php` (version 1.21). Read it live with `php cast grimoire --runic=Aether`.*
