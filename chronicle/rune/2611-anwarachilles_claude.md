@@ -1,7 +1,7 @@
 (upcoming)
 - Round 2: devneet-id/rune#40 waiting for review/merge; then lore (Known Issues, Versioning 1.21.126, Keeper/Aether/Specter reference)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Round 3: #20/#21 Sentinel · then #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
+- Round 3: #20/#21 Sentinel · #41 Liberation words (docs) · then #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Waiting: a Windows run; decisions devneet-id/rune#29, #30
 
@@ -9,6 +9,11 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 20:39 - Liberation is portable runtimes, not only PHP
+anwarachilles: *The Liberation of Forte* manages **portable runtimes** of any kind (anything that runs like PHP from a binary kept next to the runite), not one PHP runtime; the mode README still says PHP. Checked: `runtime.php` is already generic (`<runtime>@<version>/`, one `liberation.json` entry per runtime, `--runtime-url` for any runtime); only `runtime_catalog()` (php only) and the words are PHP-bound — greeting `liberation.md`, `Ethereal::liberation()` #NOTE, and ~10 lore pages. A misplaced #NOTE in `runtime.php` too. Filed devneet-id/rune#41 (docs first; catalog and running a cast with another runtime to shape later).
+
+Also told anwarachilles how to check a PR locally: his `rune/` was a clone of the fork `AnwarAchilles/rune`, so devneet-id branches were missing — he re-clones from devneet-id.
 
 #### 18:18 - rune-dev setup: dump-autoload, Rune from ../rune only
 anwarachilles found that rune-dev took Rune from Composer: `composer.json` had `psr-4 Rune\ → ../rune/` **and** `require devneet/rune ^1.21`, so `composer install` put Packagist 1.21.117 into `vendor/` as a second source behind `../rune` (checked: `autoload_psr4` listed both; `Rune\Ethereal` loaded from `../rune`, so past trials did test local code — but a class missing locally would have loaded silently from 1.21.117). He tested: without `vendor/` and the lock, `composer dump-autoload` works. He had already removed `composer.lock`.
