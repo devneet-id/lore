@@ -26,4 +26,4 @@ Fixed in 1.21.123 (devneet-id/rune#38): shard paths with `\` on Windows — the 
 ## Not tested yet
 - Specter on macOS (Terminal via `osascript`) — written, never run on a Mac.
 - Minister against a real familiar (URL + token).
-- Windows-only paths (`cls`, `start cmd`) are written by `PHP_OS_FAMILY`; the trials run on Linux.
+- The rune-dev trials run on Linux (the agent's bench) and on Windows (the administrator's, 199/199 on 1.21.133); macOS not yet.
