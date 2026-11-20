@@ -6,6 +6,24 @@
 _Times are UTC._
 
 ---
+## 20
+
+#### 08:20 - Round 1 planned: the bugs the trials already prove
+anwarachilles: work the issues in rounds — pick what fits one round, push the rest to the next — and send the PR.
+
+**Round 1** — the bugs that already have a failing trial (proof first, so each fix is measured):
+- devneet-id/rune#37 Keeper: shard targets with `\` on Windows (normalise to `/`).
+- devneet-id/rune#33 Weaver: `weaver_min_php()` changes strings (use `php_strip_whitespace()`).
+- devneet-id/rune#34 Crafter: no template → empty file + "Sparked" (register `plain--html.txt`, order-free match, glitch instead).
+- devneet-id/rune#35 Crafter: `gzip_encode()` (encode and decode gzip safely).
+- devneet-id/rune#36 Crafter: reset the state even when a spark fails.
+Runes touched: Keeper, Weaver, Crafter → one Phantasm raise each. Done = every trial green on Linux (172/172 expected with rune-dev#6), Windows to be re-run by anwarachilles.
+
+**Round 2+** (not now): #16 Keeper `@`, #17/#22 Chanter spells (breaking, one round), #18 Specter Linux, #19 exit code, #20/#21 Sentinel, #28 contract, then features (#23–#27), decisions (#29, #30), lore (#32).
+
+Found while preparing: the rune files are **LF**, not CRLF as Law 18 says (index and working tree). Kept LF; the Law needs a word with anwarachilles.
+
+---
 ## 19
 
 #### 18:36 - First `php cast scenario` on Windows
