@@ -2,7 +2,7 @@
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
 - Round 3: devneet-id/rune#42 waiting; then lore (Versioning 1.21.133, Liberation words, Known Issues) · next #20 Sentinel · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
-- Waiting: a Windows run; decisions devneet-id/rune#29, #30
+- Waiting: decisions devneet-id/rune#29, #30
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
 - Waiting on anwarachilles: the design of Minister (it will carry Liberation's runtimes; `@liberation/cast.bat` / `cast.sh` anchored to the root `.echoes/`) — still being studied
 
@@ -10,6 +10,9 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 22:14 - Windows run on rune#42: 199/199
+anwarachilles posted his run as a review on devneet-id/rune#42: `php cast scenario`, **each scenario in a new terminal** (Specter's visible mode works on his machine), **199/199**, `Version=1.21.133`. The first full Windows confirmation of rounds 1–3 — including `bundle-a-site` 15/15, so the shard-path fix (#37) holds on Windows, and the round-2/3 scenarios (exit codes, Specter, Sentinel, contract) pass there too.
 
 #### 21:32 - rune-dev#7 merged
 devneet-id/rune-dev#7 merged by anwarachilles: rune-dev takes Rune from `../rune` only (`composer dump-autoload`, no `require`), plus the round-3 scenarios. Until devneet-id/rune#42 merges, rune-dev `main` against rune `1.x` shows the round-3 checks failing on purpose (measured before the fix: `engrave-with-sentinel` 6/8, `keep-the-contract` 0/6).
