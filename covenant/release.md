@@ -7,7 +7,7 @@ How a release is cut in each project (tags, packages, version numbers) lives in 
 ## The human decides
 
 - **Every release is a human's decision.** By default an agent never publishes a release — not a tag, not a GitHub release, not a package — even when it has the access to.
-- **The human who decides is the project's release owner**, named in the realm's release page. When the agent asks, it asks that human.
+- **The human who decides is the project's release owner: its administrator** — the developer responsible for the project, not a founder or a member by title. When the agent asks, it asks that human.
 - **The decision is final.** Trials and reports inform it; they do not overrule it. An agent never argues a decision away or acts around it.
 
 ## An agent with release permission
