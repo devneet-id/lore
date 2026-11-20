@@ -1,6 +1,6 @@
 (upcoming)
 - Waiting: devneet-id/rune-dev#6 to merge (the trials of round 1); a Windows run of `php cast scenario` to confirm #37
-- Ask anwarachilles: a release tag for 1.21.123?
+- Waiting: release yes/no for v1.21.123 (report given 20 · 14:35)
 - Round 2 (proposal): #16 Keeper `@` · #19 exit code · #18 Specter Linux · #20/#21 Sentinel — each with its failing trial first
 - Waiting on decisions: devneet-id/rune#29, devneet-id/rune#30
 
@@ -8,6 +8,9 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 14:50 - rune#39 merged; release report waiting
+devneet-id/rune#39 (`.gitattributes`, LF) merged by anwarachilles. The round-1 release report (v1.21.123) was given in chat — agent's view: not ready until a Windows run of `php cast scenario` (175/175) and devneet-id/rune-dev#6 merged. Waiting on the yes/no.
 
 #### 14:36 - LF landed; covenant release read
 - devneet-id/rune#39 (draft): `.gitattributes` `* text=auto eol=lf` (+ binaries); renormalise changes nothing (104 files already LF).
