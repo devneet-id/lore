@@ -1,7 +1,7 @@
 (upcoming)
 - Waiting: devneet-id/rune-dev#7 (setup: dump-autoload) to merge
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Round 3: #20/#21 Sentinel · #41 Liberation words (docs) · then #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
+- Round 3 in progress: #21, #28, #41 (rune side) · then #20 Sentinel · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Waiting: a Windows run; decisions devneet-id/rune#29, #30
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -11,6 +11,15 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 21:04 - Round 3 planned: the light ones
+anwarachilles: list what is left and take the light ones first.
+Open (14): bugs #17, #22 (Chanter, breaking), #20, #21 (Sentinel) · docs #28 (contract/text), #32 (lore holes), #41 (Liberation words) · features #23–#27 · workshop #31 · decisions #29, #30.
+**Round 3 = #21 + #28 + #41 (rune side)** — small, no behaviour change for users:
+- #21 Sentinel: `--runite-remove` refuses an unknown rune, or one not in the runite.
+- #28: legacy `_arise()` / `_aether_end()` out of Cipher, Forger, Specter, Weaver, Whisper; Minister's mark `DEVELOPMENT` → `VOID` (voided until done — Minister is still being studied); true #NOTEs (Keeper `begin`/`end`, the generic `end()`); the Grimoire header without "DEPRECATED"; `composer.json` support links → devneet-id/rune.
+- #41: the `@liberation` greeting and `Ethereal::liberation()` #NOTE speak of portable runtimes; the misplaced #NOTE in `runtime.php`.
+Trials first: a Sentinel scenario (insert/remove in a probe runite) and a contract scenario (marks, legacy hooks, links, words). Found while looking: only Minister declares `$mark` — every other origin rune inherits `VOID` from `Rune\Phantasm`; noted, not changed (the mark is the administrator's call).
 
 #### 21:01 - Round 2 merged; lore follows 1.21.126
 anwarachilles merged devneet-id/rune#40 (21:00) — #16, #18, #19 closed by it.
