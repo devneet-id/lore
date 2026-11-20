@@ -4,12 +4,17 @@
 - Round 3: #20/#21 Sentinel · #41 Liberation words (docs) · then #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Waiting: a Windows run; decisions devneet-id/rune#29, #30
+- Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
 - Waiting on anwarachilles: the design of Minister (it will carry Liberation's runtimes; `@liberation/cast.bat` / `cast.sh` anchored to the root `.echoes/`) — still being studied
 
 _Times are UTC._
 
 ---
 ## 20
+
+#### 20:57 - Planned: a CLI loader, after redesigning Whisper::flash
+anwarachilles: the CLI needs a **loader** (progress shown while a cast works), built on `Whisper::flash` — and `Whisper::flash` must first be **redesigned** to behave as a real loader and be easy to put in place. Order: redesign `Whisper::flash` → then set up the loaders.
+Today (1.x): `Whisper::flash(Callable $execute)` calls `whisper_flash_start()` and hands the callable three helpers — `animation` (`whisper_flash_run()`, one frame), `stop`, `continue` — so the caller must drive every frame from its own loop (see `exploration/cast` › `flash`: a `for` loop calling `$animation()` 900 times). No issue yet; to file and design with anwarachilles before work.
 
 #### 20:49 - Liberation's pending piece: cast.bat / cast.sh, and Minister
 anwarachilles explained what Liberation still lacks:
