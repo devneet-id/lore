@@ -1,5 +1,6 @@
 (upcoming)
-- Round 2 in progress: #16, #19, #18
+- Round 2: devneet-id/rune#40 waiting for review/merge; then lore (Known Issues, Versioning 1.21.126, Keeper/Aether/Specter reference)
+- Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
 - Round 3: #20/#21 Sentinel · then #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Waiting: devneet-id/rune-dev#6 merge; a Windows run; decisions devneet-id/rune#29, #30
@@ -8,6 +9,15 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 14:53 - Round 2 landed: devneet-id/rune#40
+Trials first (devneet-id/rune-dev#6): `survive-glitches-and-exit` (probe runites cast in their own process, exit codes read) failed 3/6 on 1.x; `cast-beyond-the-process` (Specter's first scenario) failed 3/4 — the caller waited the full 2 s of a "non-blocking" job.
+Fixes in devneet-id/rune#40 (draft):
+- #16 Keeper: the glitch handler returns `false` when `!(error_reporting() & $errno)` — `@` is not a glitch.
+- #19 Aether: `aether_exit($force, $code = 0)` → `exit($code)`; Keeper's glitch exits 1.
+- #18 Specter: hidden non-blocking on Unix → `nohup sh -c '<cmd>' > /dev/null 2>&1 &`.
+Phantasm: Aether 1.21, Keeper 1.16, Specter 1.10 → **1.21.126**. All scenarios **185/185** (Linux). Not tested: Windows, macOS.
+Note: repairing only the changed runes leaves the links of the runes that lean on them (e.g. Whisper → Weaver, every rune → Aether) one step behind; a repair pass over all runes would raise every version — to discuss before a release.
 
 #### 14:51 - Release v1.21.123: no — release once the issues are clean; round 2 planned
 **anwarachilles (release owner): no release now** — "release after we clean the issues". The 17 open issues come first; the next report gathers every round since 1.21.117. (Round 1 stays merged and untagged.)
