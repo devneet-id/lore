@@ -1,7 +1,7 @@
 (upcoming)
 - Waiting: devneet-id/rune-dev#7 (setup: dump-autoload) to merge
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Round 3 in progress: #21, #28, #41 (rune side) · then #20 Sentinel · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
+- Round 3: devneet-id/rune#42 waiting; then lore (Versioning 1.21.133, Liberation words, Known Issues) · next #20 Sentinel · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Waiting: a Windows run; decisions devneet-id/rune#29, #30
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -11,6 +11,12 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 21:07 - Round 3 landed: devneet-id/rune#42
+Trials first (on devneet-id/rune-dev#7): `engrave-with-sentinel` (probe runite, insert/remove) 6/8 on 1.x; `keep-the-contract` (marks, legacy hooks, Grimoire header, composer links, Liberation words) 0/6 on 1.x.
+Fixes in devneet-id/rune#42 (draft): #21 Sentinel remove refuses an unknown rune or one not in the runite · #28 legacy `_arise()`/`_aether_end()` out of 5 Manifests, true #NOTEs (Keeper begin/end, empty `end()`), Minister `DEVELOPMENT` → `VOID`, Grimoire header, composer links → devneet-id · #41 rune side: the `@liberation` greeting and `Ethereal::liberation()` say "portable runtimes".
+Phantasm: Cipher 1.7, Forger 1.17, Keeper 1.17, Minister 0.4, Specter 1.11, Weaver 1.10, Whisper 1.14 → **1.21.133**. All scenarios **199/199** (Linux).
+A mistake of mine corrected: #41 claimed a misplaced #NOTE in `runtime.php`; there is none (a `sed` slice skipped lines). Issue body updated with a correction line, and the Minister / launcher piece added to it.
 
 #### 21:04 - Round 3 planned: the light ones
 anwarachilles: list what is left and take the light ones first.
