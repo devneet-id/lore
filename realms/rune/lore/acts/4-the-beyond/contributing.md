@@ -23,7 +23,7 @@ Write the check before the fix: a `trial(...)` in an existing scenario, or a new
 - A `#NOTE` above every new node.
 - New constants, globals, functions use the rune prefix.
 - Do not stretch a rune into another rune's purpose.
-- Keep CRLF; `php -l`.
+- Keep LF (never commit CRLF); `php -l`.
 
 The upstream `CONTRIBUTING.md` shows a handy way to build a new node: write its Ether, Essence, Entity and a small Manifest inside a test cast first, run it, then move each part into the right file of the rune.
 

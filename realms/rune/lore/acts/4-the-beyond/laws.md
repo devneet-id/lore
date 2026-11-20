@@ -36,6 +36,6 @@ These are not style tips. Every tool in Rune — Sentinel, Grimoire, the footer,
 17. **Echoes live in `.echoes/<runite>/`** — one folder per runite. Do not name your own items like the system files (`rune.json`, `soul.json`, `cast.json`, `shard.json`, `grimoire.json`).
 
 ## Working on Rune
-18. **Files in `rune` are CRLF.** Keep them CRLF; `php -l` every changed PHP file.
+18. **Files in `rune` are LF.** The repo stores LF (`.gitattributes`); on Windows git may show CRLF in your working copy and still commits LF — never commit CRLF, a CRLF shebang breaks a runite on Linux and macOS. `php -l` every changed PHP file.
 19. **The `rune` repo holds only what ships.** Notes, drafts and trials stay in your own workshop.
 20. **Prove before you change.** A trial in your workshop first, then the fix. See [The Workshop](the-workshop.md).

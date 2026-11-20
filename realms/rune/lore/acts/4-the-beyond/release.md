@@ -41,8 +41,8 @@ Repo `devneet-id/rune`, branch `1.x`.
 `devneet/rune` updates from new GitHub tags on its own. If the new version does not show, press **Update** on the package page. Users get it with `composer update devneet/rune`.
 
 ## Checklist
-- [ ] every trial still passes (`php cast trials`)
-- [ ] every changed rune has a higher Phantasm version, no `x.9 → x.10`
-- [ ] `php -l` on changed PHP files; CRLF kept
+- [ ] every trial still passes (`php cast scenario` in rune-dev — on Linux and on Windows)
+- [ ] every changed rune has a higher Phantasm version (whole numbers: `1.9 → 1.10`, see [Versioning](versioning.md))
+- [ ] `php -l` on changed PHP files; LF kept
 - [ ] `lore` updated ([Keeping the Lore](keeping-the-lore.md))
 - [ ] tag = footer `Version=`

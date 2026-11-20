@@ -61,7 +61,7 @@ php evolve sentinel --phantasm-upgrade=Weaver   # only raise the version
 To check what users get, make another folder with its own `composer.json` and `composer require devneet/rune`. The same runite runs unchanged — only the autoload source differs.
 
 ## Rules of the bench
-- Files in `rune` are **CRLF**: keep the line endings, and `php -l` every PHP file you touch.
+- Files in `rune` are **LF** (`.gitattributes` keeps them so): never commit CRLF, and `php -l` every PHP file you touch.
 - A new scenario: a folder named after what it does (`track-todos-with-report` — the name is the key, no number), a `cast` with the shebang, the workshop autoload, a `test` cast.
 - A fix without a trial is a guess. Add the check first, watch it fail, then fix.
 - Notes, drafts and trials stay in the workshop — never in `rune`.

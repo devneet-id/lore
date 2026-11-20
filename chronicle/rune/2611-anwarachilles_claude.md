@@ -9,6 +9,11 @@ _Times are UTC._
 ---
 ## 20
 
+#### 14:36 - LF landed; covenant release read
+- devneet-id/rune#39 (draft): `.gitattributes` `* text=auto eol=lf` (+ binaries); renormalise changes nothing (104 files already LF).
+- Lore on `main`: Law 18 now says LF (and why); The Workshop, Contributing and the Release checklist follow. The checklist also had two other holes, fixed: `php cast trials` (gone → `php cast scenario`, Linux and Windows) and "no `x.9 → x.10`" (against Decisions: whole numbers, 1.10 after 1.9).
+- Read the new `covenant/release.md`: at the end of every round the agent brings a release report; the administrator answers yes/no; an agent never releases on its own. The round-1 report goes to anwarachilles now (rune#38 merged; rune-dev#6 and rune#39 still open).
+
 #### 14:35 - Line endings: the repo stores LF (Law 18 was a hole)
 anwarachilles: a Law that says CRLF while the code is LF is a hole in the project; "do what you think is best".
 Decision: the rune repo **stores LF** — a `#!/usr/bin/env php` line ending in CRLF breaks every runite on Linux/macOS (`env: 'php\r'`), and CRLF in the repo makes every line a diff. On Windows git may show CRLF in the working copy (`core.autocrlf`) — that is likely where "CRLF" came from. About to: add `.gitattributes` (`* text=auto eol=lf`) to devneet-id/rune by PR, and fix Law 18 and the pages that repeat it (The Workshop, Contributing, Release) — realm docs, so straight to `main` (covenant/changing-lore.md).
