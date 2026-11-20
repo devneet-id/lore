@@ -1,12 +1,26 @@
 (upcoming)
-- Ask anwarachilles: keep chronicle times in UTC, or WIB?
-- Start with devneet-id/rune#31 (baseline trials), then the bugs #16–#19, then #28
-- Waiting on decisions: devneet-id/rune#29 (Whisper without Weaver), devneet-id/rune#30 (Awakening and .gitignore)
+- Waiting: anwarachilles runs `php cast scenario` on Windows with devneet-id/rune#38 + devneet-id/rune-dev#6, then merges
+- After the merge: lore — Known Issues (Exura relics, the 3 Crafter/Weaver bugs), Versioning 1.21.123, Crafter/Keeper/Weaver reference; Law 18 (files are LF, not CRLF) with anwarachilles
+- Round 2 (proposal): #16 Keeper `@` · #19 exit code · #18 Specter Linux · #20/#21 Sentinel — each with its failing trial first
+- Waiting on decisions: devneet-id/rune#29, devneet-id/rune#30
 
 _Times are UTC._
 
 ---
 ## 20
+
+#### 08:25 - Round 1 landed: devneet-id/rune#38
+PR devneet-id/rune#38 (draft) fixes the five bugs of round 1:
+- #37 Keeper: shard targets stored with `/` on every OS; the reliquary reads an old relic's `\` as `/` (the "Exura relics on Linux" root).
+- #33 Weaver: `weaver_min_php()` rewritten on `token_get_all` — strings/heredoc kept; the old regex also let a `#` comment swallow the rest of the line.
+- #34 Crafter: `plain--html.txt` registered, LANGUAGE matched in any order, a seed without template throws before writing.
+- #35 Crafter: new entity `crafter_spark_encoding()` — gzip is `base64(gzencode())`, templates decode it back; unknown ENCRYPTION throws.
+- #36 Crafter: `crafter_spark()` resets in `finally`.
+Phantasm via `sentinel --phantasm-repair`: Keeper 1.15, Weaver 1.9, Crafter 1.16 → **1.21.123**.
+
+Proof, measured in rune-dev: rune 1.x **170/175** → with #38 **175/175** (Linux). New check *a spark that fails* added to devneet-id/rune-dev#6 (it fails on 1.x, passes with #38) — a check I first wrote wrong (`trial_safe` around `trial_capture` never sees the throw), caught by watching it fail.
+
+Blocked on anwarachilles: #37 can only be proved on Windows — run `php cast scenario` there with both branches before merging. Lore (Known Issues, Versioning, references) waits for the merge.
 
 #### 08:20 - Round 1 planned: the bugs the trials already prove
 anwarachilles: work the issues in rounds — pick what fits one round, push the rest to the next — and send the PR.
