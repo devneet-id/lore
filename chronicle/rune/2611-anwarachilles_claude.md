@@ -4,11 +4,19 @@
 - Round 3: #20/#21 Sentinel · #41 Liberation words (docs) · then #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Waiting: a Windows run; decisions devneet-id/rune#29, #30
+- Waiting on anwarachilles: the design of Minister (it will carry Liberation's runtimes; `@liberation/cast.bat` / `cast.sh` anchored to the root `.echoes/`) — still being studied
 
 _Times are UTC._
 
 ---
 ## 20
+
+#### 20:49 - Liberation's pending piece: cast.bat / cast.sh, and Minister
+anwarachilles explained what Liberation still lacks:
+- **`cast.bat` and `cast.sh` inside `@liberation/`** — launchers that serve as an **anchor to the root `.echoes/`**, so a runite run through a runtime kept in `@liberation/` still keeps its memory in the runite's own `.echoes/`. This is the pending task.
+- **The goal:** Rune able to run **several runtimes**.
+- **Who carries it: Minister** — the rune he has not finished building. He will explain its details later; Minister's own task is still being studied by him.
+So: no work on the launchers or on Minister until anwarachilles brings the design. devneet-id/rune#41 (Liberation = portable runtimes) stays docs-first.
 
 #### 20:39 - Liberation is portable runtimes, not only PHP
 anwarachilles: *The Liberation of Forte* manages **portable runtimes** of any kind (anything that runs like PHP from a binary kept next to the runite), not one PHP runtime; the mode README still says PHP. Checked: `runtime.php` is already generic (`<runtime>@<version>/`, one `liberation.json` entry per runtime, `--runtime-url` for any runtime); only `runtime_catalog()` (php only) and the words are PHP-bound — greeting `liberation.md`, `Ethereal::liberation()` #NOTE, and ~10 lore pages. A misplaced #NOTE in `runtime.php` too. Filed devneet-id/rune#41 (docs first; catalog and running a cast with another runtime to shape later).
