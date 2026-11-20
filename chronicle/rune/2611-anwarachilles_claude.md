@@ -10,6 +10,10 @@ _Times are UTC._
 ---
 ## 20
 
+#### 18:18 - rune-dev setup: dump-autoload, Rune from ../rune only
+anwarachilles found that rune-dev took Rune from Composer: `composer.json` had `psr-4 Rune\ → ../rune/` **and** `require devneet/rune ^1.21`, so `composer install` put Packagist 1.21.117 into `vendor/` as a second source behind `../rune` (checked: `autoload_psr4` listed both; `Rune\Ethereal` loaded from `../rune`, so past trials did test local code — but a class missing locally would have loaded silently from 1.21.117). He tested: without `vendor/` and the lock, `composer dump-autoload` works. He had already removed `composer.lock`.
+devneet-id/rune-dev#7: `require` removed; README › Setup says `composer dump-autoload`, never install/update, and why. From a clean `vendor/`: only `../rune`; **185/185**.
+
 #### 18:08 - Correction: measured 181/185, not 179
 The 18:07 entry guessed the number before measuring. Measured now — rune-dev `main` against rune `1.x`: **181/185**; the 4 failures are exactly the round-2 checks (`survive-glitches-and-exit` 3/6: #16 ×2, #19; `cast-beyond-the-process` 3/4: #18). Lesson kept: no number goes into the chronicle before it is measured.
 
