@@ -2,6 +2,8 @@
 
 > From a change to Packagist.
 
+**Release owner: anwarachilles.** Whether to release is the owner's decision, asked by the agent at the end of every round — see the [release covenant](../../../../../covenant/release.md). This page is *how* a release is cut, once the answer is yes.
+
 A release is the footer made public. Commit the changes, tag the version the footer shows, publish it on GitHub — Packagist does the rest.
 
 ## 1. Commit

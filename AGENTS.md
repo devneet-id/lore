@@ -15,14 +15,15 @@ Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at e
    - write an entry **before starting**, when **a human decides**, when **work lands**, on **a finding or a block**, and **before stopping**;
    - never more than **1 hour** of active work without an entry;
    - times in **UTC** from the clock; commit the entry with the work.
-4. **Change lore** the way [covenant/changing-lore.md](covenant/changing-lore.md) says: the laws division by pull request, every other division straight to `main`.
+4. **Release only on a human's yes.** At the end of every round the agent brings a release report; the release owner answers yes or no. An agent never publishes a release on its own — see [covenant/release.md](covenant/release.md).
+5. **Change lore** the way [covenant/changing-lore.md](covenant/changing-lore.md) says: the laws division by pull request, every other division straight to `main`.
 
 ## The reading path
 
 Follow it in order; every file ends with a link to the next one.
 
 1. **This file** — how we work.
-2. **[covenant/](covenant/README.md)** — the laws: how to chronicle, how lore changes.
+2. **[covenant/](covenant/README.md)** — the laws: how to chronicle, how to release, how lore changes.
 3. **[glossary.md](glossary.md)** — the vocabulary. The names are load-bearing; read it before any code.
 4. **[atlas/](atlas/README.md)** — *space*: the maps of the realms.
 5. **[realms/](realms/README.md)** — *depth*: one folder per project. Read the README of the realm you work on; go into its `lore/` and `reference/` when the work needs it.

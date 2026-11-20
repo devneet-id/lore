@@ -75,4 +75,4 @@ Write an entry on each of these events — don't save them up:
 
 ---
 
-**Next →** [changing-lore.md](changing-lore.md) — who changes lore, and how.
+**Next →** [release.md](release.md) — who decides a release, and when.
