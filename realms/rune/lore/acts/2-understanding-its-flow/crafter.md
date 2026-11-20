@@ -53,13 +53,13 @@ The item's callable runs only when it is sparked.
 | `TYPE` | `class` | `plain`, `function` or `class` |
 | `LANGUAGE` | `['html', 'css', 'js', 'php']` | the languages of the shards — must match a template (below) |
 | `MINIFIED` | `[]` | languages to minify with Weaver, e.g. `['css', 'js']` |
-| `ENCRYPTION` | `base64` | how `function` and `class` hide their source |
+| `ENCRYPTION` | `base64` | how `function` and `class` hide their source: `base64`, or `gzip` (compressed, kept as base64 text) |
 
 `CHARSET`, `LINT` and `REPO` also exist in the seed but are not used yet.
 
 ## Templates — which `TYPE` + `LANGUAGE`
 
-The template is chosen by **exact** match, order included:
+The template is chosen by the same languages (in any order) and the same `TYPE`:
 
 | `TYPE` | `LANGUAGE` | Result |
 |---|---|---|
@@ -68,10 +68,11 @@ The template is chosen by **exact** match, order included:
 | `plain` | `['css']` | one CSS file |
 | `plain` | `['js']` | one JS file |
 | `plain` | `['php']` | one PHP file |
+| `plain` | `['html']` | one HTML file |
 | `function` | `['html', 'css', 'js', 'php']` | a PHP file that rebuilds and runs the page from base64 inside functions |
 | `class` | `['html', 'css', 'js', 'php']` | the same, inside a class |
 
-Anything else has no template and glitches: `Undefined variable $templates`. The templates live in `Crafter/weaver/`.
+Anything else has no template: the spark stops with *Crafter has no template for TYPE=…, LANGUAGE=…* before anything is written. The templates live in `Crafter/weaver/`.
 
 ## Shards
 
@@ -102,7 +103,9 @@ Crafter::shard('src/index.html', function($source) {
 2. **cleaning** — strip wrappers, minify what `MINIFIED` asks.
 3. **bundling** — pick the template, bind the clusters with Weaver, add a hash from `cipher_id()` and the copyright line.
 4. **distributing** — write `DIST` with Forger.
-5. **message** — the `[√] Crafting … has been Sparked!!` lines, then Crafter resets to its default seed.
+5. **message** — the `[√] Crafting … has been Sparked!!` lines.
+
+Crafter then resets to its default seed — **also when a step fails**, so a failed build never leaks into the next one.
 
 `Crafter::spark('page', fn)` runs `fn` between bundling and distributing.
 

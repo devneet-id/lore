@@ -6,7 +6,7 @@ Weaver turns raw data into text. It binds values into `{{tokens}}`, remembers th
 
 | | |
 |---|---|
-| **Version** | `1.8` |
+| **Version** | `1.9` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 0 · The Void |
@@ -70,7 +70,7 @@ The logic. Other runes call these functions too.
 | `weaver_min_css( $input )` | Minify CSS content by removing whitespace, comments, and unnecessary characters |
 | `weaver_min_js( $input )` | Minify JavaScript content by stripping out whitespace and simplifying expressions |
 | `weaver_min_html($input)` | Minify HTML content by collapsing spaces and removing unnecessary tags or breaks |
-| `weaver_min_php($input)` | Minify PHP code by trimming extra whitespace and cleaning up the syntax |
+| `weaver_min_php( $input )` | Minify PHP code with the PHP tokenizer: comments and extra whitespace go, strings (also heredoc/nowdoc) stay byte for byte |
 
 ## Ether
 Constants — truth that never changes.
@@ -93,4 +93,4 @@ Globals — state that changes as the flow goes on.
 - `Weaver::bond()` needs its second argument: pass `null` to read.
 
 ---
-*Generated from `Weaver/Phantasm.php` (version 1.8). Read it live with `php cast grimoire --runic=Weaver`.*
+*Generated from `Weaver/Phantasm.php` (version 1.9). Read it live with `php cast grimoire --runic=Weaver`.*

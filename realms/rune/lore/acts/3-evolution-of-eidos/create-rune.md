@@ -28,7 +28,7 @@ Without a name (`--runic-create`), Sentinel asks: *Give us the rune name:*
 ```
 A new rune is marked **BETA**, at version **0.1**. Its Phantasm joins the footer at once:
 ```
-◇Version=1.21.120   before
+◇Version=1.21.123   before
 ◇Version=1.21.121   after --runic-create (major 0 → middle +0, minor 1 → last +1)
 ```
 

@@ -2,20 +2,20 @@
 
 > What is still open — and where to start.
 
-Rune is not finished. These are the issues found by the trials and by reading the code. Each one names the file, so you can start right away. Pick one, write its trial, fix it — see [Contributing](contributing.md).
+Rune is not finished. The work itself lives in the **[issues of devneet-id/rune](https://github.com/devneet-id/rune/issues)** — each bug there names its file and the rune-dev trial that proves it. This page keeps the short list. Pick one, write its trial, fix it — see [Contributing](contributing.md).
 
 ## Bugs
-| Issue | Where | What happens |
-|---|---|---|
-| Exura relics on Linux | the Exura relics (made on Windows) | Shards are stored with Windows paths (`src/exura/\exura.*`); opening them on Linux writes odd file names. Re-seal them on any OS with forward slashes. |
+Tracked as issues, e.g. Keeper and `@` (devneet-id/rune#16), Chanter flags (devneet-id/rune#17, #22), Specter on Linux (devneet-id/rune#18), the exit code (devneet-id/rune#19).
+
+Fixed in 1.21.123 (devneet-id/rune#38): shard paths with `\` on Windows — the cause of the Exura relics that opened oddly on Linux; an older relic's `\` is now read as `/` (#37) · `weaver_min_php()` changing strings (#33) · Crafter writing an empty file when no template fits (#34) · `ENCRYPTION gzip` (#35) · a failed spark leaking into the next build (#36).
 
 ## Sentinel
 | Issue | What happens |
 |---|---|
-| `--runite-insert=Keeper` adds no `begin()`/`end()` | Without `Keeper::begin()` nothing is saved, yet `Keeper::item()` returns `true`. Add them by hand. |
-| `--runite-remove` does not validate the rune name | Unknown names say *Removed* though nothing changed, unlike `--runite-insert`. |
+| `--runite-insert=Keeper` adds no `begin()`/`end()` (devneet-id/rune#20) | Without `Keeper::begin()` nothing is saved, yet `Keeper::item()` returns `true`. Add them by hand. |
+| `--runite-remove` does not validate the rune name (devneet-id/rune#21) | Unknown names say *Removed* though nothing changed, unlike `--runite-insert`. |
 
-## Contract and text
+## Contract and text — devneet-id/rune#28
 - Some `#NOTE`s are inaccurate: Keeper `begin`/`end`, generic `end()`, "placeholder" for `cipher()` / `forger()`. Fix the `#NOTE`, then `--phantasm-repair --mode=note`.
 - `_arise()` hooks remain in the Manifests of Cipher, Forger, Specter, Weaver and Whisper — never called (legacy).
 - Minister still has the mark `DEVELOPMENT`, which is not a mark (should be VOID, BETA or EXIST).

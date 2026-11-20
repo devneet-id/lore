@@ -6,7 +6,7 @@ Crafter is the builder. An **item** is what you craft, its **seed** is the recip
 
 | | |
 |---|---|
-| **Version** | `1.15` |
+| **Version** | `1.16` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 2 · Understanding Its Flow |
@@ -61,6 +61,7 @@ The logic. Other runes call these functions too.
 | `crafter_spark_message()` | Display crafting summary with item name, output path, file size, and total shards used. |
 | `crafter_spark_clustering()` | Inject and group each shard’s content into the appropriate cluster based on name or file type; only the languages of the seed are read, other shards are skipped. |
 | `crafter_spark_cleaning()` | Clean each cluster by removing unwanted patterns using language-specific cleaning rules. |
+| `crafter_spark_encoding( String $encryption )` | The encoder of a sealed bundle (TYPE function/class): base64, or gzip kept as base64 text so it fits a quoted PHP string. |
 | `crafter_spark_bundling()` | Bundle cleaned shard clusters and metadata into a final distributable template. |
 | `crafter_spark_distributing()` | Write the bundled template to the distribution path defined in crafter seed. |
 
@@ -95,7 +96,7 @@ Globals — state that changes as the flow goes on.
 | `$CRAFTER_SPARK_DISTRIBUTE` | Final crafted content ready to be written to output. |
 
 ## Notes
-- Seeds: `DIST` (output file), `TYPE` (`plain`, `class`, `function`), `LANGUAGE` (`html`, `css`, `js`, `php`), `MINIFIED`, `ENCRYPTION` (`base64`).
+- Seeds: `DIST` (output file), `TYPE` (`plain`, `class`, `function`), `LANGUAGE` (`html`, `css`, `js`, `php`), `MINIFIED`, `ENCRYPTION` (`base64`, `gzip`). A seed with no template, or an unknown `ENCRYPTION`, stops the spark before anything is written.
 - A shard named `*.head.html` goes into `<head>`.
 - Only files whose language is in the seed's `LANGUAGE` are read (`*.head.html` counts as html); images, other extensions and folders are skipped, and the spark says `Skipped=<n>`.
 - Crafter shards are its source files, not relic shards: after `spark()` call your own `store` cast to choose what travels with the relic (`Keeper::shard`).
@@ -103,4 +104,4 @@ Globals — state that changes as the flow goes on.
 - Crafter is the door to **Exura**, the simple toolkit for websites.
 
 ---
-*Generated from `Crafter/Phantasm.php` (version 1.15). Read it live with `php cast grimoire --runic=Crafter`.*
+*Generated from `Crafter/Phantasm.php` (version 1.16). Read it live with `php cast grimoire --runic=Crafter`.*

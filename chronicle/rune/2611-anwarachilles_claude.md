@@ -1,6 +1,6 @@
 (upcoming)
-- Waiting: anwarachilles runs `php cast scenario` on Windows with devneet-id/rune#38 + devneet-id/rune-dev#6, then merges
-- After the merge: lore — Known Issues (Exura relics, the 3 Crafter/Weaver bugs), Versioning 1.21.123, Crafter/Keeper/Weaver reference; Law 18 (files are LF, not CRLF) with anwarachilles
+- Waiting: devneet-id/rune-dev#6 to merge (the trials of round 1); a Windows run of `php cast scenario` to confirm #37
+- Ask anwarachilles: Law 18 (rune files are LF, not CRLF); a release tag for 1.21.123?
 - Round 2 (proposal): #16 Keeper `@` · #19 exit code · #18 Specter Linux · #20/#21 Sentinel — each with its failing trial first
 - Waiting on decisions: devneet-id/rune#29, devneet-id/rune#30
 
@@ -8,6 +8,17 @@ _Times are UTC._
 
 ---
 ## 20
+
+#### 11:05 - Round 1 merged; lore follows 1.21.123
+anwarachilles merged devneet-id/rune#38 (11:03) — #33–#37 closed by it. devneet-id/rune-dev#6 (the trials that prove them) is still open.
+
+Lore updated on `main` to the merged code:
+- Versioning: Crafter 1.16, Keeper 1.15, Weaver 1.9 → `1 . (12 + 9) . 123` = **1.21.123**; every example footer/copyright in realms moved 1.21.120 → 1.21.123 (as done for 1.21.120 before).
+- Crafter (act + reference): `['html']` template, languages matched in any order, no template / unknown ENCRYPTION stops before writing, `gzip`, reset also on failure, node `crafter_spark_encoding()`.
+- Weaver reference: `weaver_min_php()` on the tokenizer. Keeper reference: shards stored with `/` on every OS.
+- Known Issues: bugs now point to the issues of devneet-id/rune; the Exura-relics row is gone (fixed by #37); Sentinel rows → #20/#21, contract → #28. Road Ahead › Near no longer lists fixed bugs.
+
+Note: the latest release tag is `1.21.117`; 1.21.120 and 1.21.123 are not tagged — releasing is anwarachilles' call.
 
 #### 08:25 - Round 1 landed: devneet-id/rune#38
 PR devneet-id/rune#38 (draft) fixes the five bugs of round 1:
