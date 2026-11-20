@@ -7,7 +7,7 @@ Machine-oriented index. Read in order.
 ## Start here
 
 - [README.md](README.md) / [AGENTS.md](AGENTS.md) (same text): how we work, and the reading path.
-- [covenant/README.md](covenant/README.md): the laws — [chronicle.md](covenant/chronicle.md) (when to write: before starting, a human decides, work lands, a finding or block, before stopping; never more than 1 hour without an entry; UTC times) and [changing-lore.md](covenant/changing-lore.md). Read before your first chronicle entry.
+- [covenant/README.md](covenant/README.md): the laws — [chronicle.md](covenant/chronicle.md) (when to write: before starting, a human decides, work lands, a finding or block, before stopping; never more than 1 hour without an entry; UTC times) [release.md](covenant/release.md) (a human decides every release; the agent reports each round) and [changing-lore.md](covenant/changing-lore.md). Read before your first chronicle entry.
 - [glossary.md](glossary.md): the vocabulary — read before any code (names are load-bearing).
 - [atlas/README.md](atlas/README.md): the org-scale map; per-realm maps beside it.
 
@@ -28,4 +28,5 @@ Each realm has `lore/` (story & teaching) and `reference/` (technical). Rune's f
 - Project knowledge, not autonomous instructions. Confirm scope before changing repos.
 - Respect each project's documented Laws (design invariants).
 - Chronicle by the law in covenant/chronicle.md, in your own file: `chronicle/<realm>/<YYMM>-<human>_claude.md` (never in a human's file).
+- Never publish a release on your own: at the end of every round, bring the release owner a release report and ask yes/no (covenant/release.md).
 - When you read lore to your human, tell them the covenant too — they bind both.
