@@ -1,13 +1,22 @@
 (upcoming)
-- Waiting: devneet-id/rune-dev#6 to merge (the trials of round 1); a Windows run of `php cast scenario` to confirm #37
-- Waiting: release yes/no for v1.21.123 (report given 20 · 14:35)
-- Round 2 (proposal): #16 Keeper `@` · #19 exit code · #18 Specter Linux · #20/#21 Sentinel — each with its failing trial first
-- Waiting on decisions: devneet-id/rune#29, devneet-id/rune#30
+- Round 2 in progress: #16, #19, #18
+- Round 3: #20/#21 Sentinel · then #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
+- Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
+- Waiting: devneet-id/rune-dev#6 merge; a Windows run; decisions devneet-id/rune#29, #30
 
 _Times are UTC._
 
 ---
 ## 20
+
+#### 14:51 - Release v1.21.123: no — release once the issues are clean; round 2 planned
+**anwarachilles (release owner): no release now** — "release after we clean the issues". The 17 open issues come first; the next report gathers every round since 1.21.117. (Round 1 stays merged and untagged.)
+
+**Round 2** — three small bugs in the core runes, each with a failing trial first (new rune-dev scenario `survive-glitches-and-exit`, and Specter's first scenario):
+- devneet-id/rune#16 Keeper: the glitch handler honours `@` / `error_reporting()`.
+- devneet-id/rune#19 Aether: a glitch exits with a non-zero code.
+- devneet-id/rune#18 Specter: a hidden non-blocking cast detaches on Unix.
+Pushed to round 3: #20/#21 Sentinel (insert/remove need more care than planned). Then: #17/#22 Chanter (breaking), #28, features.
 
 #### 14:50 - rune#39 merged; release report waiting
 devneet-id/rune#39 (`.gitattributes`, LF) merged by anwarachilles. The round-1 release report (v1.21.123) was given in chat — agent's view: not ready until a Windows run of `php cast scenario` (175/175) and devneet-id/rune-dev#6 merged. Waiting on the yes/no.
