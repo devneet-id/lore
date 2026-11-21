@@ -11,6 +11,9 @@ _Times are UTC._
 ---
 ## 21
 
+#### 01:22 - Covenant note goes to the lore team by voice, not by issue
+anwarachilles: no issue in devneet-id/lore — the lore team sits next to him; the note on `covenant/release.md` ("round" = a set of issues, report every round) is given in chat for him to pass on.
+
 #### 01:20 - Rounds: no counting; only to split one problem
 anwarachilles: no need to number rounds. A **round** is used only when **one problem** must be split into several passes. Otherwise the work is simply issues and PRs, named by what they fix. From now on: no "round N" in PR titles or chronicle entries; a split problem says "part 1/2" of its issue.
 Note: `covenant/release.md` defines a round as "a set of issues picked for one round" and asks for a release report at the end of every round — the laws division's text; to raise with anwarachilles whether it should follow (an issue in devneet-id/lore, by covenant/changing-lore.md). Meanwhile the release stays: after the issues are clean.
