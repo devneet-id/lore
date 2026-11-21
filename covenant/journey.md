@@ -57,7 +57,7 @@ Rules:
 
 **You:** open an issue in the repo of the project you built with (e.g. [devneet-id/rune](https://github.com/devneet-id/rune/issues)), titled `journey: <your project>`, linking your `JOURNEY.md`. Is your repo private? Paste the entries that matter into the issue instead. Share at any point — you do not have to wait for the end.
 
-**DEVNEET:** the project's administrator reads the journey and turns each difficulty into an issue — a bug, a documentation gap, an enhancement — that links back to the journey entry. Those issues are picked into rounds like any other work, and the author hears back when their difficulty is fixed.
+**DEVNEET:** the project's administrator reads the journey and turns each difficulty into an issue — a bug, a documentation gap, an enhancement — that links back to the journey entry. Those issues are worked like any other issue ([workflow.md](workflow.md)), and the author hears back when their difficulty is fixed.
 
 ---
 

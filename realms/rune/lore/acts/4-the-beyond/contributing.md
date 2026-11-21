@@ -66,4 +66,4 @@ What changes, in two sentences.
 New runes start as **evolution runes** in `@evolution/` ([Create a Rune](../3-evolution-of-eidos/create-rune.md)). An origin rune is added only when an evolution rune has proved a purpose no origin rune has. Propose it in an issue first, with its Phantasm and its runites.
 
 ## Contributing to the lore
-Changed behaviour → change the lore in the same round. See [Keeping the Lore](keeping-the-lore.md).
+Changed behaviour → change the lore in the same pull request. See [Keeping the Lore](keeping-the-lore.md).

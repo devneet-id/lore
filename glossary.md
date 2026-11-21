@@ -9,6 +9,7 @@ The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — 
 - **lore** — the body of knowledge/story of a thing (also the name of this repo, and of each realm's narrative folder).
 - **journey** — `JOURNEY.md`: the road of someone building *with* a DEVNEET project, start to end, kept in their own repo and shared so DEVNEET can fix what was hard ([covenant/journey.md](covenant/journey.md)). The chronicle's other side.
 - **codex** — _(coming soon)_ a separate store of small reusable code (e.g. cast-build snippets).
+- **round** — one part of a single problem that a human split into several passes, named `part 1/3 of #12`. Never a set of issues, never numbered across the project, never a release trigger. See [covenant/workflow.md](covenant/workflow.md).
 ## Rune
  
 - **Rune** — a modular unit of the framework; "something not yet known" until invoked.
