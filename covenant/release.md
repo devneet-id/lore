@@ -21,15 +21,16 @@ A human may let an agent publish releases. The permission:
 
 Even with permission, the agent publishes only after the human's **yes** on that release, unless the permission says otherwise.
 
-## When: every round
+## When: at the release point
 
-Work is done in **rounds**: a set of issues picked for one round, the rest pushed to the next.
+A release does not follow the pace of the work. Rounds only split one problem into parts ([workflow.md](workflow.md)); they never call for a release. The agent brings the human a release report and asks *release, or not?* when one of these happens:
 
-1. **At the end of every round** — all its PRs merged — the agent brings the human a release report and asks: *release, or not?*
-2. **Hotfix** — a critical bug or a security hole fixed: the agent asks at once, without waiting for the round to end.
-3. **Reminder** — merged changes waiting more than **4 weeks** without a release: the agent reminds the human. A reminder, never a trigger.
+1. **The release point is reached** — the point the release owner set for the project. By default: **the issues are clean** — every issue the release owner wants in this release is closed, its PRs merged. The release owner may set another point (a chosen set of issues, a milestone); the agent records it in the chronicle. Example: Rune's release owner decided *"release after the issues are clean"*.
+2. **The release owner asks** for a report — at any time.
+3. **Hotfix** — a critical bug or a security hole fixed: the agent asks at once, without waiting for the release point.
+4. **Reminder** — merged changes waiting more than **4 weeks** without a release: the agent reminds the human. A reminder, never a trigger.
 
-The human may also gather several rounds into one release: a round's **no** is just as valid as a **yes**.
+The human may answer **no** and gather more work into the next release: a **no** is just as valid as a **yes**.
 
 ## The release report
 
@@ -41,7 +42,7 @@ The agent writes it; the human reads it and answers. Same shape every time, so i
 **Tested** — trials, stress tests: what ran, where, and the numbers (e.g. 175/175 on Linux).
 **Not tested** — what could not be run, and why (e.g. Windows not run here).
 **Compared to the last release** — no fewer passing trials? any regression?
-**Changes** — the round's issues and PRs.
+**Changes** — the issues and PRs merged since the last release.
 **Runes affected** — the runes changed, and the runes that lean on them (links).
 **Breaking changes** — each one with how to migrate, or "none".
 **Known issues** — what still fails, and its effect on users.
@@ -62,7 +63,7 @@ Rules for the agent writing it:
 ## The answer is recorded
 
 - **Yes** → a chronicle entry: the version, and the reason when something failed (e.g. *released with trial X failing: a known linking error, no effect on users*). Whatever failed goes into the release notes as **Known issues**.
-- **No** → a chronicle entry: the reason, and what the next round needs.
+- **No** → a chronicle entry: the reason, and what is needed before the next report.
 
 ## Release notes
 
