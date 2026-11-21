@@ -1,19 +1,19 @@
 # Covenant · Chronicle
 
-How every human and agent keeps the [chronicle](../chronicle/README.md) — the track record of the work. The chronicle belongs to the project (realm) divisions. The laws division keeps none: its tasks and drafts are issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues) ([changing-lore.md](changing-lore.md)).
+How every operator and agent keeps the [chronicle](../chronicle/README.md) — the track record of the work. The chronicle belongs to the project (realm) divisions. The laws division keeps none: its tasks and drafts are issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues) ([changing-lore.md](changing-lore.md)).
 
 ## File convention
 
 One log file per realm, **per month**, per author:
 
 ```
-chronicle/<realm>/<YYMM>-<author>.md          a human
-chronicle/<realm>/<YYMM>-<author>_claude.md   the AI working with that human
+chronicle/<realm>/<YYMM>-<author>.md          an operator
+chronicle/<realm>/<YYMM>-<author>_claude.md   the agent working with that operator
 ```
 
 e.g. `chronicle/rune/2611-anwarachilles.md` and `chronicle/rune/2611-anwarachilles_claude.md` (26 = 2026, 11 = November)
 
-- **`<author>`** is the human's handle. An AI never logs in a human's file: it writes its own file named after the human it works with, plus `_<ai>` (`_claude`). Human and AI work stay apart yet side by side.
+- **`<author>`** is the operator's handle. An agent never logs in an operator's file: it writes its own file named after the operator it works with, plus `_<ai>` (`_claude`). Operator and agent work stay apart yet side by side.
 - **`YYMM`** (year first) so files sort chronologically. Never `MMYY` — months from different years interleave.
 - **One file per month** keeps the count balanced even across multi-day work.
 - The **month/year is in the filename**; the **day and time** go inside each entry.
@@ -55,10 +55,10 @@ Rules:
 Write an entry on each of these events — don't save them up:
 
 1. **Before starting** — before the first change: what you are about to do, and the issue it serves.
-2. **A human decides** — an instruction, approval, refusal or explanation. Write it right away; it is the *why* that is easiest to lose.
+2. **An operator decides** — an instruction, approval, refusal or explanation. Write it right away; it is the *why* that is easiest to lose.
 3. **A piece of work lands** — a commit, a PR opened or merged, an issue filed or closed, a test run finished (with its numbers).
-4. **A finding or a block** — a bug, a failing test, or stopping to wait for a human.
-5. **Before stopping** — end of session, a hand-off, or (for an AI) before its context is compacted. Update `(upcoming)` in the same entry.
+4. **A finding or a block** — a bug, a failing test, or stopping to wait for an operator.
+5. **Before stopping** — end of session, a hand-off, or (for an agent) before its context is compacted. Update `(upcoming)` in the same entry.
 
 **The 1-hour limit:** never go more than **1 hour of active work** without an entry. If none of the events above has happened, write a short progress entry.
 
@@ -69,8 +69,8 @@ Write an entry on each of these events — don't save them up:
 
 ## How it's used
 
-1. Pick a realm; open your current month file (`<YYMM>-<you>.md`, or `<YYMM>-<human>_claude.md` for an AI; create it if new month).
-2. Read the realm's files top-down — the humans' and the AI's — to load the current thinking.
+1. Pick a realm; open your current month file (`<YYMM>-<you>.md`, or `<YYMM>-<operator>_claude.md` for an agent; create it if new month).
+2. Read the realm's files top-down — the operators' and the agents' — to load the current thinking.
 3. Before doing something, write it; then log on every event in [When to write](#when-to-write) — newest on top.
 
 ---

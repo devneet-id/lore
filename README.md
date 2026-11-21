@@ -1,6 +1,6 @@
 # DEVNEET · lore
 
-**The central knowledge home of DEVNEET — the first place every human and every agent steps into.**
+**The central knowledge home of DEVNEET — the first place every operator and every agent steps into.**
 
 > **✦ Covenant.**
 >
@@ -12,7 +12,7 @@
 
 DEVNEET and every project under it are built on this covenant. The laws in [covenant/](covenant/README.md) are how we keep it, day by day.
 
-`README.md` and `AGENTS.md` hold the same text: humans and agents learn the same workflow, from the same words. Change one, change both.
+`README.md` and `AGENTS.md` hold the same text: operators and agents learn the same workflow, from the same words. Change one, change both.
 
 Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at every scale (fractal): one hub, its branches.
 
@@ -20,12 +20,12 @@ Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at e
 
 1. **Read lore** along [the reading path](#the-reading-path) below, to load the team's current position.
 2. **Take your work** from the issues of the project's repo (e.g. [devneet-id/rune](https://github.com/devneet-id/rune/issues)). Tasks live there, not here. One issue, one problem, landed by pull requests that link it; when your operator splits one big problem into **rounds**, each round is a part of its issue (`part 1/3 of #12`) — see [covenant/workflow.md](covenant/workflow.md).
-3. **Chronicle as you go.** Every human and every agent of a project division keeps a track record in [chronicle/](chronicle/), by the law in [covenant/chronicle.md](covenant/chronicle.md) — read it before your first entry (the laws division keeps its record as issues in lore instead). In short:
-   - your own file, one per realm per month: `chronicle/<realm>/<YYMM>-<you>.md`; an AI writes `<YYMM>-<human>_claude.md`, never in a human's file;
-   - write an entry **before starting**, when **a human decides**, when **work lands**, on **a finding or a block**, and **before stopping**;
+3. **Chronicle as you go.** Every operator and every agent of a project division keeps a track record in [chronicle/](chronicle/), by the law in [covenant/chronicle.md](covenant/chronicle.md) — read it before your first entry (the laws division keeps its record as issues in lore instead). In short:
+   - your own file, one per realm per month: `chronicle/<realm>/<YYMM>-<you>.md`; an agent writes `<YYMM>-<operator>_claude.md`, never in an operator's file;
+   - write an entry **before starting**, when **an operator decides**, when **work lands**, on **a finding or a block**, and **before stopping**;
    - never more than **1 hour** of active work without an entry;
    - times in **UTC** from the clock; commit the entry with the work.
-4. **Release only on a human's yes.** At the release point (by default, when the issues are clean) or when the release owner asks, the agent brings a release report; the release owner answers yes or no. An agent never publishes a release on its own — see [covenant/release.md](covenant/release.md).
+4. **Release only on an operator's yes.** At the release point (by default, when the issues are clean) or when the release owner asks, the agent brings a release report; the release owner answers yes or no. An agent never publishes a release on its own — see [covenant/release.md](covenant/release.md).
 5. **Stay in your division.** An agent never merges without its operator's permission, and never takes over another division — its work, its repo, its laws — without its operator's permission; it never decides that on its own. See [covenant/workflow.md](covenant/workflow.md).
 6. **Change lore** the way [covenant/changing-lore.md](covenant/changing-lore.md) says: the laws division by pull request, every other division straight to `main`.
 
@@ -43,9 +43,9 @@ Follow it in order; every file ends with a link to the next one.
 4. **[atlas/](atlas/README.md)** — *space*: the maps of the realms.
 5. **[realms/](realms/README.md)** — *depth*: one folder per project. Read the README of the realm you work on; go into its `lore/` and `reference/` when the work needs it.
 6. **[chronicle/](chronicle/README.md)** — *time*: the track record.
-7. **The realm's latest chronicle entries**, human and AI — the current position. Read them last.
+7. **The realm's latest chronicle entries**, operator and agent — the current position. Read them last.
 
-> An agent that reads lore to its human tells the human the covenant too — they bind both.
+> An agent that reads lore to its operator tells the operator the covenant too — they bind both.
 
 ## Realms
 
