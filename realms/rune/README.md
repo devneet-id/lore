@@ -20,6 +20,32 @@ Rune is the foundation of the DEVNEET ecosystem — lightweight, lazy-loaded, pr
 - **Distribution:** seal a runite into a `.rune` **relic** and share it through a reliquary (see [reliquary](../reliquary/README.md)).
 - **Version:** the footer `Version=` is counted from every rune's Phantasm version — it is the release tag.
 
+## Working on this realm
+
+| Repo | What it is |
+|---|---|
+| [`devneet-id/rune`](https://github.com/devneet-id/rune) | the product — default branch `1.x`; issues live here |
+| [`devneet-id/rune-dev`](https://github.com/devneet-id/rune-dev) | the workshop — `scenario/` (one runite per scenario, with its trial) and `exploration/` (the modes) |
+| [`devneet-id/rune-skill`](https://github.com/devneet-id/rune-skill) | what an agent needs to *use* Rune — not written yet |
+
+**Clone and initialise** — side by side, rune-dev takes Rune from `../rune`:
+```bash
+git clone https://github.com/devneet-id/rune.git
+git clone https://github.com/devneet-id/rune-dev.git
+cd rune-dev
+composer dump-autoload
+php cast scenario --here
+```
+No `composer require`, no lock file: `dump-autoload` only writes the autoloader. Every scenario must pass.
+
+**Test an agent's branch** — the agent names it in its pull requests (one in `rune`, its scenario in `rune-dev`):
+```bash
+cd rune && git fetch origin && git checkout <branch> && git pull
+cd ../rune-dev && git fetch origin && git checkout <branch> && git pull
+php cast scenario --here
+```
+A new scenario must fail on `1.x` and pass on the branch; the agent's pull request says the counts. Then merge or send it back, go back to `1.x` / `main`, `git pull`, `git branch -d <branch>`.
+
 Building something with Rune? Keep a `JOURNEY.md` and share it — see [covenant/journey.md](../../covenant/journey.md).
 
 New here? Start with [lore/](lore/README.md). Looking something up? Go to [reference/](reference/README.md).

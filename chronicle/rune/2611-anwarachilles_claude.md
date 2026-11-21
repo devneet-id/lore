@@ -11,6 +11,9 @@ _Times are UTC._
 ---
 ## 21
 
+#### 23:07 - Read the new laws; rune's part done
+anwarachilles asked to check the changed lore (laws PRs devneet-id/lore#18–#25). Read: "operator and agent", never "human"; `laws-update` issues (none open now); choose the realm; guide the operator first; merged branches are deleted; the two-sided flow. Rune's part: added **"Working on this realm"** to `realms/rune/README.md` (rune, rune-dev, rune-skill; clone, `composer dump-autoload`, test an agent's branch, clean up). Guiding: anwarachilles already tests branches locally on Windows (199/199 on 1.21.133) — to confirm with him that this counts as guided. Entries from here say operator, not human.
+
 #### 11:42 - Merged; lore follows 1.21.137
 anwarachilles merged devneet-id/rune#44 and devneet-id/rune-dev#8. Lore (`main`): Version 1.21.137 and the versioning table; a flag is `true` in every example and in Chanter, the glossary, Act 0/1 and Traps (`is_string()` where a value is needed); Phantasm `flow` (paradigm, Act 3, glossary); Sentinel writes `begin()`/`end()` at `#sentinel-flow-*` (Act 1, reference); `Keeper::tolerate()`; `$AETHER_FOOTER`, `$WHISPER_COLOR`, `whisper_color()`; Awakening writes the `.gitignore` (Act 0, reference); Known Issues (fixed in 1.21.137; #43 open). The Chanter reference example was run against the merged Rune.
 
