@@ -6,7 +6,7 @@ How work moves from an issue to merged code in a project's repo. Workflow is **h
 
 ## Divisions and operators
 
-- **Every agent works for one division**, under its **operator** — the human it works for, who gives it its tasks and its permissions.
+- **Every agent works for one division**, under its **operator** — the person it works for (every human member of DEVNEET is an operator), who gives it its tasks and its permissions.
 - **An agent never takes over another division** — its work, its repo, its laws — without its operator's permission. It never decides to take one over on its own, even when it has the access and the change looks small: it raises the matter with its operator, or opens an issue for the division that owns it.
 
 ## Issues are the unit of work

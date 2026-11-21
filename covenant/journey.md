@@ -51,7 +51,7 @@ Rules:
 - **Honest over polished.** A difficulty is the most useful thing you can write; never leave one out because it felt like your own mistake.
 - **Exact.** Versions, commands, error text, the lore page you read. "It didn't work" cannot be fixed.
 - **No secrets.** No keys, passwords or private data — a journey is meant to be read.
-- **Agents mark their entries.** An agent writing for its human says so in the entry (*written by Claude, with …*), and records what its human decided.
+- **Agents mark their entries.** An agent writing for its operator says so in the entry (*written by Claude, with …*), and records what its operator decided.
 
 ## How DEVNEET hears it
 
