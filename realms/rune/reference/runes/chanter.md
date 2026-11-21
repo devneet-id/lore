@@ -6,7 +6,7 @@ Chanter is the gate of the command line. A **cast** is a command, a **spell** is
 
 | | |
 |---|---|
-| **Version** | `1.16` |
+| **Version** | `1.17` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 0 · The Void |
@@ -15,7 +15,7 @@ Chanter is the gate of the command line. A **cast** is a command, a **spell** is
 
 ## When to use
 - Register: `Chanter::cast('greet --name', fn, 'Greet someone.')`.
-- Read a spell: `Chanter::spell('name')` — `false` when missing, `'1'` when given without a value.
+- Read a spell: `Chanter::spell('name')` — `false` when missing, `true` when given without a value (a flag), the value as a string otherwise (`--x=1` is `'1'`).
 - Cast from code: `Chanter::cast('greet --name=Rune')()` returns the cast's return value.
 
 ## In code
@@ -23,8 +23,8 @@ Chanter is the gate of the command line. A **cast** is a command, a **spell** is
 // php cast greet --name=Anwar --loud
 Chanter::cast('greet --name --loud', function() {
   $name = Chanter::spell('name');
-  if (!$name || $name === '1') {
-    $name = 'traveler';        // a spell without a value is '1'
+  if (!is_string($name)) {
+    $name = 'traveler';        // missing (false) or a bare flag (true)
   }
   $text = "Hello, $name!";
   Whisper::echo((Chanter::spell('loud') ? strtoupper($text) : $text) . '{{nl}}');
@@ -65,7 +65,7 @@ The logic. Other runes call these functions too.
 | `chanter_cast_has( String $arg )` | Checks if a cast function exists for the given arguments |
 | `chanter_spell( String $name, $values = NULL )` | Gets or sets a spell by name depending on whether values are provided |
 | `chanter_spell_set( String $name, String $value )` | Registers or updates a spell with the given name and value |
-| `chanter_spell_get( String $name )` | Retrieves the value of a spell argument if it exists |
+| `chanter_spell_get( String $name )` | Retrieves a spell: true for a bare flag (--x), the value as a string (--x=1 gives "1"), false when not given |
 | `chanter_spell_chain()` | Builds a full CLI-style spell string from all current spell arguments |
 | `chanter_spell_has( String $name )` | Checks whether a spell is given with a value (not only as a flag) |
 | `chanter_echo_name( String $arg )` | Takes the cast name from a cast signature (`quest --add --rank` -&gt; `quest`) |
@@ -97,10 +97,11 @@ Globals — state that changes as the flow goes on.
 | `$CHANTER_ECHO` | Holds text or data to be echoed after cast execution |
 
 ## Notes
+- A flag is `true` (bool), a value is a string: test a flag with `=== true` (or truthiness), never with `'1'` — before 1.21.137 a bare flag was `'1'` (devneet-id/rune#17). `chanter_spell_chain()` hands a flag on as a bare `--x`.
 - `Chanter::begin()` loads the built-in runites (rune, grimoire, sentinel, reliquary); `Chanter::end()` runs the cast asked on the command line.
 - Spell values keep `0` and `+`; use quotes or `%20` for spaces.
 - A spell set from code (`Chanter::spell('x', 'v')`) is read on the next cast — by design.
 - `--zero-trust` runs the cast with the arcane off and the output drained.
 
 ---
-*Generated from `Chanter/Phantasm.php` (version 1.16). Read it live with `php cast grimoire --runic=Chanter`.*
+*Generated from `Chanter/Phantasm.php` (version 1.17). Read it live with `php cast grimoire --runic=Chanter`.*

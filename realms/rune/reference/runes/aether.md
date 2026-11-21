@@ -6,7 +6,7 @@ Aether is the flow that runs beneath everything. It is the first rune to awaken 
 
 | | |
 |---|---|
-| **Version** | `1.21` |
+| **Version** | `1.22` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 0 · The Void |
@@ -106,11 +106,13 @@ Globals — state that changes as the flow goes on.
 | `$AETHER_ZERO_TRUST` | Zero-trust state (output drained, arcane disabled). |
 | `$AETHER_ARCANE` | Arcane records of this flow. |
 | `$AETHER_ARCANE_STATE` | Whether arcane is recorded (enable/disable). |
+| `$AETHER_FOOTER` | Whether the flow ends with the footer (Version, Execute, Memory); a runite sets `$AETHER_FOOTER = false;` for output read by a machine. |
 
 ## Notes
+- Output for a machine (JSON, an MCP stdio server): set `$AETHER_FOOTER = false;` and `$WHISPER_COLOR = false;` in the runite, after the awaken lines — stdout is then only what the casts print. A feature is switched off by an essence in the runite.
 - `aether_list_runes()` lists the ten origin runes, plus the runes in `@evolution/` (PascalCase folders) when the runite is in evolution mode. `aether_version()` adds their Phantasm versions as whole numbers: `<major AETHER_VERSION>.<minor AETHER_VERSION + rune majors>.<rune minors>`. The footer `Version=` counts evolution runes too; the release counts origin runes only.
 - `AETHER_REPO` is the runite's own folder, wherever it is cast from, and `AETHER_FILE` the runite as typed (`cast`, `realm/cast`).
 - Constants `AETHER_LOGS`, `AETHER_ECHOES_RUNE`, `AETHER_ECHOES_INFORMATION`, `AETHER_ECHOES_ARCANE(S)` are legacy (`AETHER_ECHOES_ARTEFACT` is gone) — Keeper owns the echoes now.
 
 ---
-*Generated from `Aether/Phantasm.php` (version 1.21). Read it live with `php cast grimoire --runic=Aether`.*
+*Generated from `Aether/Phantasm.php` (version 1.22). Read it live with `php cast grimoire --runic=Aether`.*

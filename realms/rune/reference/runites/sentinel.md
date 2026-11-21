@@ -11,7 +11,7 @@ Sentinel guards your runite. It unlocks the modes, writes runes into the runite 
 | UNLOCK | `sentinel --evolution` | writes `Rune\Ethereal::evolution();` under the `require` line, opens `@evolution/` |
 | UNLOCK | `sentinel --federation` | writes `Rune\Ethereal::federation();` under the `require` line, opens `@federation/` |
 | UNLOCK | `sentinel --liberation` | writes `Rune\Ethereal::liberation();` under the `require` line, opens `@liberation/` |
-| RUNITE | `sentinel --runite-insert=Keeper` | adds `use Rune\Keeper\Manifest as Keeper;` and `Keeper::ether()::essence()::entity();` at the markers |
+| RUNITE | `sentinel --runite-insert=Keeper` | adds `use Rune\Keeper\Manifest as Keeper;` and `Keeper::ether()::essence()::entity();` at the markers — and, for a rune with a flow, `Keeper::begin();` / `Keeper::end();` at `#sentinel-flow-begin` / `#sentinel-flow-end` |
 | RUNITE | `sentinel --runite-insert=Keeper.entity` | awakens only some parts (`ether`, `essence`, `entity`) |
 | RUNITE | `sentinel --runite-remove=Keeper` | removes them again (`Keeper.essence` removes one part); an unknown rune, or one not in the runite, is refused |
 
@@ -55,8 +55,8 @@ vendor/
 
 ## Notes
 - An unlocked mode is not unlocked twice: Sentinel only tells you. To close a mode, delete its line by hand.
-- Sentinel writes at `#sentinel-manifest` and `#sentinel-awaken`. Keep the markers.
-- `--runite-insert=Keeper` does not add `Keeper::begin()` / `Keeper::end()` — write them yourself.
+- Sentinel writes at `#sentinel-manifest`, `#sentinel-awaken`, `#sentinel-flow-begin` and `#sentinel-flow-end`. Keep the markers.
+- A rune whose Phantasm has `$flow = true` (Aether, Chanter, Keeper) needs `X::begin()` / `X::end()`: insert writes them above the flow markers (once), remove takes them out. A runite without the flow markers (made before 1.21.137) gets a warning and nothing is guessed — add the markers, or the two lines, by hand.
 - Sentinel keeps the runite's own line ending (CRLF or LF).
 - Rune names are matched whatever their case (`ledger` → `Ledger`).
 - `--altar` (the GUI) and `--inspect` are still there, hidden while in development.

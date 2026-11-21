@@ -62,9 +62,9 @@ The first line is the shebang `#!/usr/bin/env php`, so your editor reads `cast` 
 Its comment header says *"Act. 1 - Understanding Its Flow"*. That label is older than this lore; here, it is your Act 0.
 
 ## Nothing is remembered yet
-After Awakening your folder holds `cast`, `vendor/` and the Composer files — nothing else. The four runes of this Act keep nothing between runs. Memory arrives in [Act 1 · First Resonance](../1-first-resonance/README.md).
+After Awakening your folder holds `cast`, `.gitignore`, `vendor/` and the Composer files — nothing else. The four runes of this Act keep nothing between runs. Memory arrives in [Act 1 · First Resonance](../1-first-resonance/README.md).
 
-When it does, it lives in `.echoes/` next to the runite — memory and settings of this machine only. Keep it, and `vendor/`, out of git from the first commit:
+When it does, it lives in `.echoes/` next to the runite — memory and settings of this machine only. Awakening already wrote a `.gitignore` that keeps it, and `vendor/`, out of git (it cast `sentinel --gitignore` for you). Run that again any time:
 
 ```bash
 php cast sentinel --gitignore

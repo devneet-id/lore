@@ -48,7 +48,7 @@ So a cast is only a promise until `Chanter::end()`. And `Aether::end()` is truly
 ## The footer
 Every run ends with one line:
 ```
-◇Version=1.21.133: ϟExecute=0.0040s, ΞMemory=926.73KB - ^1.10MB
+◇Version=1.21.137: ϟExecute=0.0040s, ΞMemory=926.73KB - ^1.10MB
 ```
 | Sign | Meaning |
 |---|---|

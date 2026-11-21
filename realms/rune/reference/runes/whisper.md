@@ -6,7 +6,7 @@ Whisper is the voice of the runite. Everything the user reads passes through it:
 
 | | |
 |---|---|
-| **Version** | `1.14` |
+| **Version** | `1.15` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles, Kuro Kid |
 | **Introduced in** | Act 0 · The Void |
@@ -61,7 +61,8 @@ The logic. Other runes call these functions too.
 | `whisper_echo( String $message, Bool $asString = false )` | Display or retrieve a formatted message with color/icon support |
 | `whisper_echo_get( String $message )` | Return a string with applied whisper styles (colors, icons, labels) |
 | `whisper_echo_set( String $message )` | Print the formatted message or route to drain if enabled |
-| `whisper_echo_imbue( String $text )` | Apply all whisper formatting to the text (colors, icons, labels) |
+| `whisper_echo_imbue( String $text )` | Apply all whisper formatting to the text (colors, icons, labels); without colour the ANSI codes are left out |
+| `whisper_color()` | Whether Whisper speaks in colour: `$WHISPER_COLOR` is not false and `NO_COLOR` is not set in the environment. |
 | `whisper_call( String $prompt )` | Prompt user for input via terminal with styled message |
 | `whisper_drain_start()` | Start buffering whisper output instead of printing directly |
 | `whisper_drain_set( String $message )` | Store a line of whisper output into the drain buffer |
@@ -92,11 +93,13 @@ Globals — state that changes as the flow goes on.
 | `$WHISPER_LABELS` | Default label prefixes for whisper messages |
 | `$WHISPER_DRAIN` | Buffer to store whisper output when in drain mode |
 | `$WHISPER_DRAIN_STATE` | State toggle to determine whether whisper is in drain mode |
+| `$WHISPER_COLOR` | Whether Whisper speaks in colour; a runite sets `$WHISPER_COLOR = false;` for plain text (`NO_COLOR` in the environment does the same). |
 
 ## Notes
+- Plain text: `$WHISPER_COLOR = false;` in the runite, or `NO_COLOR` set in the environment. The style tokens still work; they write no ANSI codes, and `Whisper::clear()` does nothing.
 - Style tokens: `{{nl}}` `{{tab}}` `{{bold}}` `{{end}}` `{{php}}`, and `{{color-X}}` `{{text-X}}` `{{bg-X}}` `{{icon-X}}` `{{label-X}}` where X is primary, secondary, success, warning, info, danger, error, failed, debug, default, end.
 - Icons: `[√]` success · `[!]` warning · `[x]` danger/error/failed · `[i]` info · `[~]` primary · `[#]` secondary · `[^]` debug.
 - Whisper's style values are not kept in the Weaver bond.
 
 ---
-*Generated from `Whisper/Phantasm.php` (version 1.14). Read it live with `php cast grimoire --runic=Whisper`.*
+*Generated from `Whisper/Phantasm.php` (version 1.15). Read it live with `php cast grimoire --runic=Whisper`.*

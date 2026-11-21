@@ -37,7 +37,7 @@ Chanter::cast('build', function() {
 ```html
 <!DOCTYPE html>
 <html>
-<!-- RUNE 1.21.133 | Created By @anwarachilles -->
+<!-- RUNE 1.21.137 | Created By @anwarachilles -->
 <head>
 <title>Ember</title>
   <style>
@@ -98,7 +98,7 @@ function hello( $name ) {
 ```php
 Chanter::cast('build-app --type', function() {
   $type = Chanter::spell('type');
-  $type = ($type && $type !== '1') ? $type : 'plain';
+  $type = is_string($type) ? $type : 'plain';
   Crafter::item('app', function() use ($type) {
     Crafter::seed('DIST', AETHER_REPO . "/dist/app.$type.php");
     Crafter::seed('TYPE', $type);
@@ -152,7 +152,7 @@ Crafter::shard('src/hello.php');
 
 ```php
 <?php
-/* RUNE 1.21.133 | Created By @anwarachilles */
+/* RUNE 1.21.137 | Created By @anwarachilles */
 function hello( $name ) {
   return "Hello, $name.";
 }

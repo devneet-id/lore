@@ -35,7 +35,7 @@ Every part of the system is named for its **role in the world**, not with a gene
 - **Entity moves between runes.** It may call the entities of other runes (`keeper_item_get`, `cipher_hash`, `aether_arcane`). This is how runes work together.
 - **Manifest moves between engravings.** It only shows the entities to your runite and holds no logic of its own. Every method: call the entity → `aether_arcane('X.manifest.name')` → return.
 - **Phantasm is the contract** between the maker of a rune and the Grimoire, and Rune's replacement for heavy Reflection. *A rune without a Phantasm is a rune nobody knows — and likely of no use.*
-  - `version`, `main` (name), `user` (who keeps it), `note` (purpose), `mark` (how safe it is: VOID → BETA → EXIST), `link` (the runes it needs), `node` (every ether, essence, entity and manifest with its `#NOTE`), `origin` (its folder).
+  - `version`, `main` (name), `user` (who keeps it), `note` (purpose), `mark` (how safe it is: VOID → BETA → EXIST), `link` (the runes it needs), `node` (every ether, essence, entity and manifest with its `#NOTE`), `flow` (whether the runite must call its `begin()` / `end()`), `origin` (its folder).
 
 **Who may use whom**
 

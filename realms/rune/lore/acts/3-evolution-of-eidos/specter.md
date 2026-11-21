@@ -16,7 +16,7 @@ Then check that `Keeper::begin()` / `Keeper::end()` are in your runite ([Sentine
 ```php
 Chanter::cast('mood --set', function() {
   $set = Chanter::spell('set');
-  if ($set && $set !== '1') Specter::soul('mood', $set);
+  if (is_string($set)) Specter::soul('mood', $set);
   Whisper::echo('mood = ' . (Specter::soul('mood') ?: '(empty)') . '{{nl}}');
 }, 'A soul outlives the run. --set=calm');
 ```

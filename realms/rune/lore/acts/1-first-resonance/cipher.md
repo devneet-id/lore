@@ -99,7 +99,7 @@ Chanter::cast('note --add --edit --remove --text', function() {
 
   // create
   if ($text = Chanter::spell('add')) {
-    if ($text === '1') $text = Whisper::call('Note: ');
+    if ($text === true) $text = Whisper::call('Note: ');
     $id = Cipher::id('n');
     $NOTES[$id] = $text;
     notes_keep();
@@ -111,7 +111,7 @@ Chanter::cast('note --add --edit --remove --text', function() {
   if ($id = Chanter::spell('edit')) {
     if (!isset($NOTES[$id])) return Whisper::echo("{{color-danger}}{{icon-danger}} No note $id{{nl}}");
     $text = Chanter::spell('text');
-    if (!$text || $text === '1') $text = Whisper::call('New text: ');
+    if (!is_string($text)) $text = Whisper::call('New text: ');
     $NOTES[$id] = $text;
     notes_keep();
     return Whisper::echo("{{color-success}}{{icon-success}} Edited $id{{nl}}");
@@ -151,7 +151,7 @@ Chanter::cast('export', function() {
 // import: every line of a text file becomes a note
 Chanter::cast('import --file', function() {
   $file = Chanter::spell('file');
-  if (!$file || $file === '1') $file = __DIR__ . '/export/notes.txt';
+  if (!is_string($file)) $file = __DIR__ . '/export/notes.txt';
   if (!file_exists($file)) return Whisper::echo("{{color-danger}}{{icon-danger}} No file $file{{nl}}");
   $lines = array_filter(array_map('trim', explode("\n", Forger::item($file))));
   foreach ($lines as $line) {

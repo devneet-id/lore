@@ -1,6 +1,5 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- In review: devneet-id/rune#44 (#17, #20, #24, #25, #30) + devneet-id/rune-dev#8 → after merge: lore (1.21.137, flags `true`, flow markers, `Keeper::tolerate`, `$AETHER_FOOTER`/`$WHISPER_COLOR`, Awakening `.gitignore`)
 - Next: discuss #29; #41 later · #43 `--runic-create` `_arise()` · #22 · #26 · #27 · #31
 - Waiting on anwarachilles: close #23 (`Keeper::env`) as not planned? · #32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
@@ -11,6 +10,9 @@ _Times are UTC._
 
 ---
 ## 21
+
+#### 11:42 - Merged; lore follows 1.21.137
+anwarachilles merged devneet-id/rune#44 and devneet-id/rune-dev#8. Lore (`main`): Version 1.21.137 and the versioning table; a flag is `true` in every example and in Chanter, the glossary, Act 0/1 and Traps (`is_string()` where a value is needed); Phantasm `flow` (paradigm, Act 3, glossary); Sentinel writes `begin()`/`end()` at `#sentinel-flow-*` (Act 1, reference); `Keeper::tolerate()`; `$AETHER_FOOTER`, `$WHISPER_COLOR`, `whisper_color()`; Awakening writes the `.gitignore` (Act 0, reference); Known Issues (fixed in 1.21.137; #43 open). The Chanter reference example was run against the merged Rune.
 
 #### 11:33 - Landed for review: #17, #20, #24, #25, #30; #32 in lore
 - devneet-id/rune#44 (draft): one commit per issue — flag `true` (breaking), Phantasm `$flow` + `#sentinel-flow-*`, `Keeper::tolerate()` / `'throw'`, `$AETHER_FOOTER` / `$WHISPER_COLOR` (+ `NO_COLOR`), Awakening runs `sentinel --gitignore` through Specter. Phantasm raised → **1.21.137**.

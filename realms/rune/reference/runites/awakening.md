@@ -25,7 +25,8 @@ php cast
       :: Learn how to cast: casts, spells, and cast in cast.
      ```
 2. The chosen relic is downloaded, checked against its sha256 and opened: its **runite** replaces your file (starting with `#!/usr/bin/env php` when your file has no `.php`), its **shards** are written next to it.
-3. *Awakening successfully. Checkout your runite with `php cast`.*
+3. Awakening casts `sentinel --gitignore` on the new runite (through Specter), so `.echoes/` and `vendor/` are out of git from the start.
+4. *Awakening successfully. Checkout your runite with `php cast`.*
 
 ## Notes
 - When the reliquary can not be reached (offline, no openssl), Awakening says so and offers the blank template.

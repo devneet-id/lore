@@ -35,10 +35,8 @@ Sentinel writes at the two markers:
 
 That is all: the [Manifest](../0-the-void/manifest.md) line and the [awaken](../0-the-void/awaken.md) line. Keep both markers, or Sentinel has nowhere to write.
 
-## The trap: Keeper needs begin and end
-Sentinel does **not** add `Keeper::begin()` and `Keeper::end()`. Without them, Keeper looks like it works — `Keeper::item()` returns `true` — but nothing is saved and no `.echoes` folder appears.
-
-Add them by hand, inside the flow:
+## Keeper needs begin and end
+Keeper has a **flow**: without `Keeper::begin()` and `Keeper::end()` it looks like it works — `Keeper::item()` returns `true` — but nothing is saved and no `.echoes` folder appears. Sentinel knows it (Keeper's Phantasm says `$flow = true`) and writes both at the flow markers of the blank runite, `#sentinel-flow-begin` and `#sentinel-flow-end`:
 
 ```php
 Aether::begin();
@@ -53,7 +51,7 @@ Keeper::end();        // before Aether::end()
 Aether::end();
 ```
 
-What opens later closes earlier.
+What opens later closes earlier. A runite made before 1.21.137 has no flow markers: Sentinel warns and writes nothing — add the two lines by hand, as above.
 
 ## Take a rune out
 ```bash

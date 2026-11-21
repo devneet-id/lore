@@ -38,7 +38,7 @@ Every rune is made of these five files. → [Runes](runes/README.md)
 | **Essence** | State that changes as the flow goes on. | `Essence.php` — globals, e.g. `$CHANTER_CAST`. |
 | **Entity** | The logic. | `Entity.php` — functions, e.g. `forger_fix()`. Other runes call them too. |
 | **Manifest** | The face a rune shows. | `Manifest.php` — the static class your runite calls: `Forger::fix(...)`. |
-| **Phantasm** | The contract of a rune. | `Phantasm.php` — `version`, `main`, `user`, `note`, `mark`, `link`, `node`, `origin`. Read it with `grimoire --runic=X`. |
+| **Phantasm** | The contract of a rune. | `Phantasm.php` — `version`, `main`, `user`, `note`, `mark`, `link`, `node`, `flow`, `origin`. Read it with `grimoire --runic=X`. |
 
 ## Works and things
 
@@ -48,7 +48,7 @@ Every rune is made of these five files. → [Runes](runes/README.md)
 | **Runite** | What an engraving makes — your app. | A file engraved with runes. Any name; the default is `cast`. Without `.php` it must start with `#!/usr/bin/env php`. `AETHER_FILE` is its name. → [Runites](runites/README.md) |
 | **Arise / awaken** | To wake a rune. | `X::ether()::essence()::entity();` — under the `#sentinel-awaken` marker. |
 | **Cast** | A command spoken to the runite. | A CLI command: `Chanter::cast('name --spell', fn, 'echo')`. Also a common name for the runite file. |
-| **Spell** | A word that shapes a cast. | A CLI option `--x` or `--x=value`, read with `Chanter::spell('x')`: `false` when missing, `'1'` when given without a value. |
+| **Spell** | A word that shapes a cast. | A CLI option `--x` or `--x=value`, read with `Chanter::spell('x')`: `false` when missing, `true` when given without a value (a flag), the value as a string otherwise. |
 | **Echo** (of a cast) | What a cast says of itself. | The third argument of `Chanter::cast()` — the `≈` line on the main hall. |
 | **Relic** | A runite preserved to travel. | A `.rune` file: runite (+ echoes + shards) in base64, then sealed with the runic cipher. Blocks start with `[ᚱᚾ]`. Once called *artefact*. → [reliquary](runites/reliquary.md) |
 | **Reliquary** | A place where relics are kept. | The built-in runite `reliquary`, and a GitHub repo listing relics (`relic.json`, `nexus.json`) — first of all `devneet-id/reliquary`. → [The Reliquary](../lore/acts/4-the-beyond/reliquary.md) |

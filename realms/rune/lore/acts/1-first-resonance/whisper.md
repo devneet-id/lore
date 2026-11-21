@@ -28,7 +28,7 @@ The app uses one color per meaning: success for done, warning for removed, dange
 `Whisper::call()` asks and waits for one line:
 
 ```php
-if ($text === '1') $text = Whisper::call('Note: ');
+if ($text === true) $text = Whisper::call('Note: ');
 ```
 ```
 $ php cast note --add

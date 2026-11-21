@@ -28,7 +28,7 @@ php cast
 
  #  R E G I S T E R E D.
 
-◇Version=1.21.133: ϟExecute=0.0039s, ΞMemory=923.52KB - ^1.10MB
+◇Version=1.21.137: ϟExecute=0.0039s, ΞMemory=923.52KB - ^1.10MB
 ```
 *(The banner above STATS is left out here.)*
 
@@ -44,7 +44,7 @@ Replace `// ✦ Main logic lives here` with:
 ```php
 Chanter::cast('greet --name', function() {
   $name = Chanter::spell('name');
-  if (!$name || $name === '1') {
+  if (!is_string($name)) {
     $name = 'traveller';
   }
   $line = Weaver::bind('Welcome, {{who}}. The void is quiet.', ['who' => $name]);
@@ -57,7 +57,7 @@ Every rune of this Act is here:
 | Line | Rune | What it does |
 |---|---|---|
 | `Chanter::cast('greet --name', fn, 'Greet …')` | Chanter | registers the cast `greet`, its spell `--name`, and its echo (the note) |
-| `Chanter::spell('name')` | Chanter | reads `--name`: `false` when missing, `'1'` when given without a value |
+| `Chanter::spell('name')` | Chanter | reads `--name`: `false` when missing, `true` when given without a value |
 | `Weaver::bind($text, [...])` | Weaver | fills `{{who}}` with the name |
 | `Whisper::echo(...)` | Whisper | prints, with a color and an icon |
 | begin, end, footer | Aether | carries the whole flow |
@@ -83,7 +83,7 @@ Each run ends with the footer. Run `php cast` again: your cast now stands under 
 
 ## Read the footer
 ```
-◇Version=1.21.133: ϟExecute=0.0051s, ΞMemory=921.83KB - ^1.10MB
+◇Version=1.21.137: ϟExecute=0.0051s, ΞMemory=921.83KB - ^1.10MB
 ```
 The Rune version, how long it took, and how much memory it used. See [Begin and End](begin-and-end.md#the-footer).
 

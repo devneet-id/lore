@@ -17,4 +17,4 @@ Every rune is a folder of five files: **Ether** (constants), **Essence** (global
 | [Specter](specter.md) | Enables out-of-process operations through soul-like abstractions | Act 3 · Evolution of Eidos | `1.9` | `VOID` | 30 |
 | [Minister](minister.md) | Speaks with a familiar (an AI spirit) on behalf of the runite | Act 3 · Evolution of Eidos | `0.3` | `DEVELOPMENT` | 9 |
 
-**Version=** in the footer of every cast: the major of `AETHER_VERSION`, then its minor plus the sum of the rune majors, then the sum of the rune minors — all whole numbers (`1.21.133` today). See [Versioning](../../lore/acts/4-the-beyond/versioning.md).
+**Version=** in the footer of every cast: the major of `AETHER_VERSION`, then its minor plus the sum of the rune majors, then the sum of the rune minors — all whole numbers (`1.21.137` today). See [Versioning](../../lore/acts/4-the-beyond/versioning.md).

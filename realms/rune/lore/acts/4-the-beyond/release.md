@@ -27,13 +27,13 @@ git commit -m "fix(chanter): keep notes on casts with spells" -m "Notes are stor
 Do not forget the Phantasm bump of every rune you changed ([Versioning](versioning.md)).
 
 ## 2. Read the version
-Run any runite on the clean branch and read `Version=`. That is the tag: `Version=1.21.133` → `v1.21.133`. Read it from a runite without evolution mode — evolution runes count in the footer, not in the release.
+Run any runite on the clean branch and read `Version=`. That is the tag: `Version=1.21.137` → `v1.21.137`. Read it from a runite without evolution mode — evolution runes count in the footer, not in the release.
 
 ## 3. Publish on GitHub
 Repo `devneet-id/rune`, branch `1.x`.
 1. **Releases → Draft a new release**.
-2. Tag `v1.21.133` (create on publish) · target `1.x` · previous tag (e.g. `v1.21.117`).
-3. Title: `v1.21.133 — <a name>` (e.g. *Cleansing of the Runes*).
+2. Tag `v1.21.137` (create on publish) · target `1.x` · previous tag (e.g. `v1.21.117`).
+3. Title: `v1.21.137 — <a name>` (e.g. *Cleansing of the Runes*).
 4. Description: short, in English — summary, highlights, rune versions, breaking changes, full changelog link.
 5. **Publish release**. GitHub adds the source `zip` and `tar.gz` itself.
 

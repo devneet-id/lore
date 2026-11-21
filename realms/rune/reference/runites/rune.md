@@ -18,6 +18,6 @@
 
 ## The footer
 ```
-◇Version=1.21.133: ϟExecute=0.0042s, ΞMemory=960.41KB - ^1.13MB
+◇Version=1.21.137: ϟExecute=0.0042s, ΞMemory=960.41KB - ^1.13MB
 ```
 `Version=` is the version of Rune, counted from every rune's Phantasm version ([Versioning](../../lore/acts/4-the-beyond/versioning.md)) · `Execute` the time · `Memory` usage and peak.

@@ -6,7 +6,7 @@ Keeper is the memory of a runite. It keeps **echoes** in `.echoes/<runite>/`: it
 
 | | |
 |---|---|
-| **Version** | `1.17` |
+| **Version** | `1.18` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 1 · First Resonance |
@@ -23,7 +23,7 @@ Keeper is the memory of a runite. It keeps **echoes** in `.echoes/<runite>/`: it
 // Keeper needs Keeper::begin() after Chanter::begin() and Keeper::end() before Aether::end()
 Chanter::cast('remember --text', function() {
   $text = Chanter::spell('text');
-  if ($text && $text !== '1') {
+  if (is_string($text)) {
     Keeper::item('memory', ['text' => $text]);          // .echoes/<runite>/memory.json
   }
   $memory = Keeper::item('memory');                       // an object, or null
@@ -42,6 +42,7 @@ Call from your runite: `Keeper::name(...)`.
 | `echo( String $repo, String $name, $value = "" )` | Reads or writes a raw file inside the given repo depending on value. |
 | `item( String $name, $value = false )` | Gets or sets a structured keeper item in JSON format. |
 | `shard(Array\|String $source)` | Saves rune shard(s) from string or array source. |
+| `tolerate( Array\|String $levels )` | Tolerates warnings in this flow: levels kept in the arcane and passed (`['warning', 'notice', 'deprecated']`), or `'throw'` to make them an `ErrorException`. |
 
 ## Entity
 The logic. Other runes call these functions too.
@@ -63,6 +64,8 @@ The logic. Other runes call these functions too.
 | `keeper_shard_clean()` | Cleans all stored shards and resets the shard repository. |
 | `keeper_glitch_boot()` | Initializes custom error, exception, and shutdown handlers to capture and log all glitches into a file. |
 | `keeper_glitch_message( $glitch )` | Shows the glitch screen (severity, line, file, message). |
+| `keeper_tolerate( Array\|String $levels )` | Sets the warnings this flow tolerates — a list of levels or `'throw'` — and returns what is tolerated. |
+| `keeper_glitch_level( Int $errno )` | The level of a PHP error number: warning, notice, deprecated, or error. |
 | `keeper_glitch_detect()` | Dumps the current glitch state for inspection. |
 | `keeper_is_glitch()` | Checks if the glitch log file has content, indicating an error has occurred. |
 
@@ -91,15 +94,17 @@ Globals — state that changes as the flow goes on.
 | `$KEEPER` | main essence |
 | `$KEEPER_ARCANE` | Defines stepwatch thresholds for classifying performance stages in arcane processing (e.g., BURST to OVERCLOCK). |
 | `$KEEPER_SAVING_ACTIVE` | Whether Keeper is saving echoes in this flow. |
+| `$KEEPER_TOLERATE` | The warnings tolerated in this flow (levels: warning, notice, deprecated), or `"throw"` to turn them into an `ErrorException`. |
 
 ## Notes
-- Without `Keeper::begin()` the `.echoes` folder does not exist and `Keeper::item()` saves nothing (it still returns `true`). `sentinel --runite-insert=Keeper` does not add `begin`/`end` for you.
+- Without `Keeper::begin()` the `.echoes` folder does not exist and `Keeper::item()` saves nothing (it still returns `true`). `sentinel --runite-insert=Keeper` writes `Keeper::begin()` / `Keeper::end()` at the `#sentinel-flow-*` markers (Keeper's Phantasm has `$flow = true`); a runite without the markers gets a warning — add them by hand.
 - Every runite has its own folder next to itself: `.echoes/cast/`, `.echoes/ember/`… — the same folder whether it is cast from inside or from a parent folder.
 - Shards are paths relative to the runite's folder (`Keeper::shard(['weaver'])`), stored with `/` on every OS so a relic sealed on Windows opens on Linux; only files inside that folder are carried.
 - `Keeper::shard()` is the only way in: Forger and Crafter never add shards on their own.
 - A warning silenced with `@` (or left out of `error_reporting()`) is not a glitch; any other warning is, and the runite exits with code **1**.
+- `Keeper::tolerate(['warning'])` lets a level pass in this flow — it is written to the arcane as `Keeper.glitch.tolerated`, not to `glitch.txt`. `Keeper::tolerate('throw')` turns a warning into an `ErrorException` the cast can catch; uncaught, it is a glitch. An error is never tolerated.
 - `.echoes/` is where a runite keeps its own settings and data — `Keeper::item()` is a JSON store (`.echoes/<runite>/<name>.json`). Rune does not read `.env`; `.echoes/` takes its place, and `sentinel --gitignore` keeps it out of git. Items never travel in a relic. → [Keep Settings in `.echoes`](../../lore/engravings/settings.md)
 - Arcane states by step time: BURST, FLASH, FLOW, FALL, BREAK, COLLAPSE, OVERCLOCK.
 
 ---
-*Generated from `Keeper/Phantasm.php` (version 1.17). Read it live with `php cast grimoire --runic=Keeper`.*
+*Generated from `Keeper/Phantasm.php` (version 1.18). Read it live with `php cast grimoire --runic=Keeper`.*

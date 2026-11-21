@@ -5,7 +5,9 @@
 Rune is not finished. The work itself lives in the **[issues of devneet-id/rune](https://github.com/devneet-id/rune/issues)** — each bug there names its file and the rune-dev trial that proves it. This page keeps the short list. Pick one, write its trial, fix it — see [Contributing](contributing.md).
 
 ## Bugs
-Tracked as issues, e.g. Chanter flags (devneet-id/rune#17, #22) and Sentinel and Keeper (devneet-id/rune#20).
+Tracked as issues, e.g. Chanter (devneet-id/rune#22) and Sentinel's `--runic-create` templates (devneet-id/rune#43).
+
+Fixed in 1.21.137 (devneet-id/rune#44): a bare flag is `true` — **breaking**, compare with `true`, not `'1'` (#17) · Sentinel writes `begin()` / `end()` for a rune with a flow at the `#sentinel-flow-*` markers (#20) · `Keeper::tolerate()` (#24) · `$AETHER_FOOTER` / `$WHISPER_COLOR` for output read by a machine (#25) · Awakening writes the `.gitignore` (#30).
 
 Fixed in 1.21.133 (devneet-id/rune#42): `--runite-remove` refuses an unknown rune or one not in the runite (#21) · legacy `_arise()` hooks gone, true `#NOTE`s, Minister marked `VOID`, the Grimoire header and composer links (#28).
 
@@ -16,7 +18,7 @@ Fixed in 1.21.123 (devneet-id/rune#38): shard paths with `\` on Windows — the 
 ## Sentinel
 | Issue | What happens |
 |---|---|
-| `--runite-insert=Keeper` adds no `begin()`/`end()` (devneet-id/rune#20) | Without `Keeper::begin()` nothing is saved, yet `Keeper::item()` returns `true`. Add them by hand. |
+| `--runic-create` writes the legacy `_arise()` (devneet-id/rune#43) | A new rune starts with an empty `_arise()` in its Manifest and Phantasm. Delete it by hand. |
 
 ## Planned work
 | Task | State | Plan |
@@ -26,4 +28,4 @@ Fixed in 1.21.123 (devneet-id/rune#38): shard paths with `\` on Windows — the 
 ## Not tested yet
 - Specter on macOS (Terminal via `osascript`) — written, never run on a Mac.
 - Minister against a real familiar (URL + token).
-- The rune-dev trials run on Linux (the agent's bench) and on Windows (the administrator's, 199/199 on 1.21.133); macOS not yet.
+- The rune-dev trials run on Linux (the agent's bench) and on Windows (the administrator's, 199/199 on 1.21.133); on 1.21.137 the 236 trials pass on Linux; macOS not yet.

@@ -33,7 +33,7 @@ php cast
  ♦ php8 cast greet --name --loud
     ≈ Greet someone. --name=Anwar --loud
 
-◇Version=1.21.133: ϟExecute=0.0038s, ΞMemory=926.56KB - ^1.10MB
+◇Version=1.21.137: ϟExecute=0.0038s, ΞMemory=926.56KB - ^1.10MB
 ```
 
 - **DEFAULT** — the built-in runites every runite has: [grimoire](../../../reference/runites/grimoire.md), [reliquary](../../../reference/runites/reliquary.md), [sentinel](../../../reference/runites/sentinel.md). The main hall itself is the hidden cast [rune](../../../reference/runites/rune.md).
@@ -63,9 +63,10 @@ Inside the cast, `Chanter::spell('name')` reads it:
 | You type | `Chanter::spell('name')` |
 |---|---|
 | `--name=Anwar` | `'Anwar'` |
-| `--name` | `'1'` (given, no value) |
+| `--name` | `true` (a flag: given, no value) |
 | *(nothing)* | `false` |
 | `--name=0` | `'0'` |
+| `--name=1` | `'1'` (a value, not a flag) |
 
 ## Spaces
 On the command line, use quotes: `--name="Rune Lore"`. When you cast from code (you will in [Chanter](chanter.md)), write the space as `%20`: `'greet --name=Rune%20Lore'`.
@@ -83,7 +84,7 @@ This is the cast above. It is the first thing you will engrave in [Chanter](chan
 ```php
 Chanter::cast('greet --name --loud', function() {
   $name = Chanter::spell('name');
-  if (!$name || $name === '1') $name = 'traveller';
+  if (!is_string($name)) $name = 'traveller';
   $text = "Hello, $name";
   if (Chanter::spell('loud')) $text = strtoupper($text);
   Whisper::echo("{{color-success}}{{icon-success}} $text{{nl}}");

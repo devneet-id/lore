@@ -39,7 +39,7 @@ Call mom
 ```php
 Chanter::cast('import --file', function() {
   $file = Chanter::spell('file');
-  if (!$file || $file === '1') $file = __DIR__ . '/export/notes.txt';
+  if (!is_string($file)) $file = __DIR__ . '/export/notes.txt';
   if (!file_exists($file)) return Whisper::echo("{{color-danger}}{{icon-danger}} No file $file{{nl}}");
   $lines = array_filter(array_map('trim', explode("\n", Forger::item($file))));
   foreach ($lines as $line) {

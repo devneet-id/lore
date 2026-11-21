@@ -23,7 +23,7 @@ Specter works beyond the main flow. It keeps a **soul** that outlives a run, cas
 Chanter::cast('soul --name --value', function() {
   $name = Chanter::spell('name') ?: 'mood';
   $value = Chanter::spell('value');
-  if ($value && $value !== '1') {
+  if (is_string($value)) {
     Specter::soul($name, $value);                         // .echoes/<runite>/soul.json
   }
   Whisper::echo("$name = " . (Specter::soul($name) ?? '(empty)') . '{{nl}}');

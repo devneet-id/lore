@@ -14,6 +14,7 @@ The Phantasm is how a rune speaks of itself without being run. The Grimoire read
 | `mark` | `VOID`, `BETA`, `EXIST` ([marks](../../../reference/glossary.md#marks-and-signs)) | `--runic-create` (BETA), then you |
 | `link` | the runes it leans on: `[rune, parts, version]` | `--phantasm-repair --mode=link` |
 | `node` | every constant, global, function and method, with its `#NOTE` | `--phantasm-repair --mode=node` + `--mode=note` |
+| `flow` | `true` when the rune has a flow: the runite must call `X::begin()` / `X::end()` (Aether, Chanter, Keeper); default `false` | `--runic-create` (`false`), then you — `--phantasm-repair` keeps it |
 | `origin` | the rune's folder (`__DIR__`) | `--runic-create` — keep it |
 
 `user` and `note` are not in the generated file. Add them by hand:
@@ -67,7 +68,7 @@ php cast sentinel --phantasm-upgrade=Ledger
 `0.2` → `0.3`. The minor number grows by one, and the last number of the footer grows with it — versions are counted as whole numbers ([Versioning](../4-the-beyond/versioning.md)):
 ```
 ◇Version=1.21.119   Ledger 0.2
-◇Version=1.21.133   Ledger 0.3
+◇Version=1.21.137   Ledger 0.3
 ```
 After `.9` comes `.10` (`0.9` → `0.10`), and the footer still moves up by one. A version must be `<major>.<minor>`; anything else (`1.2.3`) is refused and must be fixed by hand. A rune that does not exist answers *Rune not found*.
 

@@ -68,7 +68,7 @@ Chanter::cast('note --add --edit --remove --text', function() {
 
   // create
   if ($text = Chanter::spell('add')) {
-    if ($text === '1') $text = Whisper::call('Note: ');
+    if ($text === true) $text = Whisper::call('Note: ');
     $NOTES[] = $text;
     Whisper::echo('{{color-success}}{{icon-success}} Added #' . count($NOTES) . '{{nl}}');
     return count($NOTES);
@@ -78,7 +78,7 @@ Chanter::cast('note --add --edit --remove --text', function() {
   if ($id = Chanter::spell('edit')) {
     if (!isset($NOTES[$id - 1])) return Whisper::echo("{{color-danger}}{{icon-danger}} No note #$id{{nl}}");
     $text = Chanter::spell('text');
-    if (!$text || $text === '1') $text = Whisper::call('New text: ');
+    if (!is_string($text)) $text = Whisper::call('New text: ');
     $NOTES[$id - 1] = $text;
     return Whisper::echo("{{color-success}}{{icon-success}} Edited #$id{{nl}}");
   }
