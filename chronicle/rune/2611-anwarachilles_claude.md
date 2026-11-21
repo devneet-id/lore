@@ -1,12 +1,22 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Next round: #20 Sentinel (Keeper begin/end) · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
+- Next round (4): #20 — Phantasm `$flow` + `#sentinel-flow-begin/-end` (decided) · #32 lore holes · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Waiting: decisions devneet-id/rune#29, #30
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
 - Waiting on anwarachilles: the design of Minister (it will carry Liberation's runtimes; `@liberation/cast.bat` / `cast.sh` anchored to the root `.echoes/`) — still being studied
 
 _Times are UTC._
+
+---
+## 21
+
+#### 01:19 - #20 decided: Phantasm `$flow` + `#sentinel-flow-*` markers; ai.txt is residue
+Discussed with anwarachilles why Sentinel misses Keeper's `begin`/`end`: the Phantasm cannot tell which runes have a flow (node shows empty `end()` in Forger, Specter, Weaver, Whisper; only Aether, Chanter, Keeper need theirs). My first idea (order numbers) was simplified by him:
+- **Phantasm `$flow = true|false`** — default `false`; `true` for Aether, Chanter, Keeper; evolution runes may set it.
+- **Runite markers `#sentinel-flow-begin` / `#sentinel-flow-end`** — their place gives the order: insert writes `X::begin();` above the first, `X::end();` above the second; remove takes both out; no duplicates; no markers → warning, nothing guessed.
+- `@runite/grimoire/ai.txt` is **residue** (old structure, `rune.php`): marked, not touched, to retire separately.
+Checked: `--phantasm-repair` rewrites only `$node`, so `$flow` survives. Written into devneet-id/rune#20; enough for #20 — to be round 4 with its trial first.
 
 ---
 ## 20
