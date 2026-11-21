@@ -1,6 +1,6 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Next: #20 — Phantasm `$flow` + `#sentinel-flow-begin/-end` (decided) · #32 lore holes · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
+- In progress: #17, #20, #30, #24, #25, #32 · then discuss #29; #41 later · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Waiting: decisions devneet-id/rune#29, #30
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -10,6 +10,17 @@ _Times are UTC._
 
 ---
 ## 21
+
+#### 11:22 - Decided and about to start: #17, #20, #30, #24, #25, #32
+anwarachilles, on the open issues:
+- **#17** Chanter: a bare flag becomes **`true` (bool)** — breaking, accepted: "true / false / a value", anything else is hard to read.
+- **#20** as decided (Phantasm `$flow`, `#sentinel-flow-begin/-end`).
+- **#30** Awakening **runs `sentinel --gitignore`** on the new runite, **through Specter**.
+- **#24** do it (Keeper `tolerate()` / throw mode; the `@` part itself was #16, already merged).
+- **#25** output for machines: plain text without colour tokens; a feature is switched off by a constant/essence set in the runite — **`AETHER_FOOTER` true/false** for the footer.
+- **#32** fix the lore: **Rune does not handle env**; `.echoes/` already behaves like it — add information about `.echoes/` only. (This goes against #23 `Keeper::env()`; proposed to close #23 as not planned — waiting for his word.)
+- To discuss later: **#29** — `aether_has_entity()` as the key, where to place it (e.g. in a rune's root entity `keeper()`, then `trigger_error` or an exception). **#41** next time.
+Order: trials first in rune-dev for each, then rune, Phantasm, lore; one PR in rune, one in rune-dev.
 
 #### 01:22 - Covenant note goes to the lore team by voice, not by issue
 anwarachilles: no issue in devneet-id/lore — the lore team sits next to him; the note on `covenant/release.md` ("round" = a set of issues, report every round) is given in chat for him to pass on.
