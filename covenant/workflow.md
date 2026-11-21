@@ -9,13 +9,36 @@ How work moves from an issue to merged code in a project's repo. Workflow is **h
 - **Every agent works for one division**, under its **operator** — the person it works for (every human member of DEVNEET is an operator), who gives it its tasks and its permissions.
 - **An agent never takes over another division** — its work, its repo, its laws — without its operator's permission. It never decides to take one over on its own, even when it has the access and the change looks small: it raises the matter with its operator, or opens an issue for the division that owns it.
 
+## Choose your realm
+
+Work starts by choosing **the realm** (project) you take it from. A realm is more than one repo:
+
+- **the project repo** — the code that ships (e.g. `devneet-id/rune`);
+- **its `-dev` repo** — where it is developed and tested (e.g. `devneet-id/rune-dev`, `devneet-id/exura-dev`): scenarios, trials, the proof that a change works;
+- and, where there is one, **its `-skill` repo** — what an agent needs to *use* the project.
+
+Every realm's README in lore has a section **"Working on this realm"**: its repos, how to clone and initialise them, and how to test an agent's branch. The project division writes and keeps it; the laws division only requires it.
+
+## Guide the operator first
+
+The operator answers for what is merged and released — so they must know **their own workflow**, not only the agent's. An operator strong in code sees this at once; a newer one can be caught in the agent's workflow without knowing where their responsibility lies.
+
+So, **at the start of the work with an operator**, the agent walks them through the realm's "Working on this realm", until they can do it alone:
+
+1. **Clone** the related repos — the project and its `-dev` repo.
+2. **Initialise** them — setup, dependencies, the first run.
+3. **Test the agent's work** — check out the agent's branch in their local copy, `git pull`, run the scenarios/trials.
+4. **Decide** — merge the pull request when it is good enough, or send it back with what is wrong.
+
+Once is enough; the agent records it in the chronicle (*operator guided through rune-dev*) and does not repeat it, unless the operator asks or the setup changed. An operator who already knows says so, and the agent records that instead.
+
 ## Issues are the unit of work
 
 - **Work comes from the issues** of the realm's repo (e.g. [devneet-id/rune](https://github.com/devneet-id/rune/issues)). Tasks live there, not in lore.
 - **One issue, one problem.** A problem that is really two becomes two issues.
 - **Confirm scope with your operator** before changing a project's repo.
 - **A change lands as a pull request** that links its issue (`Fixes #12`, or `Part of #12` when the issue needs more than one PR).
-- **Name work by what it fixes**, never by a sequence number — in PR titles, commits and chronicle entries alike.
+- **Name work by what it fixes**, never by a made-up sequence number (`round 4`, `fix 3 of today`) — in PR titles, commits and chronicle entries alike. An issue number (`#12`) and the part of one issue (`part 1/3 of #12`) are not sequence numbers: use them.
 
 ## Findings go back to the issues
 
@@ -48,13 +71,18 @@ A **round** (or batch) is a suggested technique for working through **one** prob
 
 ## The flow
 
-1. **Read lore** along the reading path, to load the team's current position.
-2. **Take an issue**, and confirm its scope with your operator.
-3. **Chronicle before starting** ([chronicle.md](chronicle.md)).
-4. **Do the work** — in one pass, or in rounds when the operator splits it. Findings go back to the issues.
-5. **Open a pull request** that links the issue; chronicle it.
-6. **The operator reviews and merges** (or the agent, with permission); chronicle the landing.
-7. **Release** happens only by [release.md](release.md): on the release owner's yes.
+Both sides have a part in every step.
+
+| Step | Agent | Operator |
+|---|---|---|
+| 1. **Choose the realm** | reads lore along the reading path; names the realm's repos | chooses the realm |
+| 2. **Guide** (first time) | walks the operator through clone, initialise, test | clones, initialises, learns to test |
+| 3. **Take an issue** | confirms its scope; chronicles before starting ([chronicle.md](chronicle.md)) | confirms the scope |
+| 4. **Do the work** | in one pass, or in rounds; findings go back to the issues | picks each round's batch, when split |
+| 5. **Open pull requests** | in the project repo, and its scenario in the `-dev` repo; links the issue; chronicles it | — |
+| 6. **Evaluate** | says how to test it: branch, commands, what to look for | checks out the agent's branch, `git pull`, runs it |
+| 7. **Merge** | never, unless the operator allowed it | merges, or sends it back; the agent chronicles the landing |
+| 8. **Release** | brings the release report at the release point ([release.md](release.md)) | the release owner answers yes or no |
 
 The laws division follows the same flow on lore, with one difference: it keeps **no chronicle** — its tasks and drafts are issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues), and those issues are its record ([changing-lore.md](changing-lore.md)).
 

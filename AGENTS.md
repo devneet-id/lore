@@ -19,7 +19,7 @@ Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at e
 ## How we work
 
 1. **Read lore** along [the reading path](#the-reading-path) below, to load the team's current position.
-2. **Take your work** from the issues of the project's repo (e.g. [devneet-id/rune](https://github.com/devneet-id/rune/issues)). Tasks live there, not here. One issue, one problem, landed by pull requests that link it; when your operator splits one big problem into **rounds**, each round is a part of its issue (`part 1/3 of #12`) — see [covenant/workflow.md](covenant/workflow.md).
+2. **Choose your realm, then take your work** from the issues of the project's repo (e.g. [devneet-id/rune](https://github.com/devneet-id/rune/issues)). Tasks live there, not here. One issue, one problem, landed by pull requests that link it; when your operator splits one big problem into **rounds**, each round is a part of its issue (`part 1/3 of #12`) — see [covenant/workflow.md](covenant/workflow.md). An agent first guides its operator through the realm's repos — clone, initialise, test the agent's branch — so the operator knows their own part.
 3. **Chronicle as you go.** Every operator and every agent of a project division keeps a track record in [chronicle/](chronicle/), by the law in [covenant/chronicle.md](covenant/chronicle.md) — read it before your first entry (the laws division keeps its record as issues in lore instead). In short:
    - your own file, one per realm per month: `chronicle/<realm>/<YYMM>-<you>.md`; an agent writes `<YYMM>-<operator>_claude.md`, never in an operator's file;
    - write an entry **before starting**, when **an operator decides**, when **work lands**, on **a finding or a block**, and **before stopping**;
@@ -40,7 +40,7 @@ Follow it in order; every file ends with a link to the next one.
 1. **This file** — how we work.
 2. **[covenant/](covenant/README.md)** — the laws: how work flows, how to chronicle, how to release, how to write a journey, how lore changes.
 3. **[glossary.md](glossary.md)** — the vocabulary. The names are load-bearing; read it before any code.
-4. **[atlas/](atlas/README.md)** — *space*: the maps of the realms.
+4. **[atlas/](atlas/README.md)** — *space*: the maps — lore at a glance, who works where, the repos of a realm, the flow, the realms.
 5. **[realms/](realms/README.md)** — *depth*: one folder per project. Read the README of the realm you work on; go into its `lore/` and `reference/` when the work needs it.
 6. **[chronicle/](chronicle/README.md)** — *time*: the track record.
 7. **The realm's latest chronicle entries**, operator and agent — the current position. Read them last.
