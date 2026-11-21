@@ -7,6 +7,7 @@ The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — 
 - **DEVNEET** — the open developer community (Indonesia) behind these projects.
 - **realm** — one project in the ecosystem (rune, reliquary, exura). Nodes on the atlas.
 - **lore** — the body of knowledge/story of a thing (also the name of this repo, and of each realm's narrative folder).
+- **journey** — `JOURNEY.md`: the road of someone building *with* a DEVNEET project, start to end, kept in their own repo and shared so DEVNEET can fix what was hard ([covenant/journey.md](covenant/journey.md)). The chronicle's other side.
 - **codex** — _(coming soon)_ a separate store of small reusable code (e.g. cast-build snippets).
 ## Rune
  
