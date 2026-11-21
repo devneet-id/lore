@@ -20,6 +20,8 @@ Rune is the foundation of the DEVNEET ecosystem — lightweight, lazy-loaded, pr
 - **Distribution:** seal a runite into a `.rune` **relic** and share it through a reliquary (see [reliquary](../reliquary/README.md)).
 - **Version:** the footer `Version=` is counted from every rune's Phantasm version — it is the release tag.
 
+Building something with Rune? Keep a `JOURNEY.md` and share it — see [covenant/journey.md](../../covenant/journey.md).
+
 New here? Start with [lore/](lore/README.md). Looking something up? Go to [reference/](reference/README.md).
 
 ---
