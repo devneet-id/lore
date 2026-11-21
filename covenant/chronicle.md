@@ -1,6 +1,6 @@
 # Covenant · Chronicle
 
-How every human and agent keeps the [chronicle](../chronicle/README.md) — the track record of the work. Every division follows this, except the laws division, whose record is its pull requests ([changing-lore.md](changing-lore.md)).
+How every human and agent keeps the [chronicle](../chronicle/README.md) — the track record of the work. The chronicle belongs to the project (realm) divisions. The laws division keeps none: its tasks and drafts are issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues) ([changing-lore.md](changing-lore.md)).
 
 ## File convention
 
