@@ -15,7 +15,7 @@ How work moves from an issue to merged code in a project's repo. Workflow is **h
 - **One issue, one problem.** A problem that is really two becomes two issues.
 - **Confirm scope with your operator** before changing a project's repo.
 - **A change lands as a pull request** that links its issue (`Fixes #12`, or `Part of #12` when the issue needs more than one PR).
-- **Name work by what it fixes**, never by a sequence number — in PR titles, commits and chronicle entries alike.
+- **Name work by what it fixes**, never by a made-up sequence number (`round 4`, `fix 3 of today`) — in PR titles, commits and chronicle entries alike. An issue number (`#12`) and the part of one issue (`part 1/3 of #12`) are not sequence numbers: use them.
 
 ## Findings go back to the issues
 
