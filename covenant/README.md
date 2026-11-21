@@ -8,7 +8,7 @@ Written and changed only by the laws division, through pull requests ([changing-
 - **[chronicle.md](chronicle.md)** — how to keep the chronicle: your own file, when to write (the 1-hour limit), the entry format.
 - **[release.md](release.md)** — a release is an operator's decision: at the release point (by default, when the issues are clean) the agent reports, the operator answers yes or no.
 - **[journey.md](journey.md)** — everyone who builds with a DEVNEET project keeps a `JOURNEY.md`, start to end, and shares it; their difficulties become DEVNEET's fixes.
-- **[changing-lore.md](changing-lore.md)** — who changes lore, and how.
+- **[changing-lore.md](changing-lore.md)** — who changes lore, and how; how a changed law reaches the divisions (`laws-update` issues, answered `<division>: done`).
 
 ---
 

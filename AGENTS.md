@@ -18,7 +18,7 @@ Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at e
 
 ## How we work
 
-1. **Read lore** along [the reading path](#the-reading-path) below, to load the team's current position.
+1. **Read lore** along [the reading path](#the-reading-path) below, to load the team's current position, and check the open [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update) issues: one that names your division is a task, answered with a comment `<division>: done` once done — see [covenant/changing-lore.md](covenant/changing-lore.md#when-a-law-changes).
 2. **Choose your realm, then take your work** from the issues of the project's repo (e.g. [devneet-id/rune](https://github.com/devneet-id/rune/issues)). Tasks live there, not here. One issue, one problem, landed by pull requests that link it; when your operator splits one big problem into **rounds**, each round is a part of its issue (`part 1/3 of #12`) — see [covenant/workflow.md](covenant/workflow.md). An agent first guides its operator through the realm's repos — clone, initialise, test the agent's branch — so the operator knows their own part.
 3. **Chronicle as you go.** Every operator and every agent of a project division keeps a track record in [chronicle/](chronicle/), by the law in [covenant/chronicle.md](covenant/chronicle.md) — read it before your first entry (the laws division keeps its record as issues in lore instead). In short:
    - your own file, one per realm per month: `chronicle/<realm>/<YYMM>-<you>.md`; an agent writes `<YYMM>-<operator>_claude.md`, never in an operator's file;

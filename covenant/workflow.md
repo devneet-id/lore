@@ -86,7 +86,7 @@ Both sides have a part in every step.
 
 | Step | Agent | Operator |
 |---|---|---|
-| 1. **Choose the realm** | reads lore along the reading path; names the realm's repos | chooses the realm |
+| 1. **Choose the realm** | reads lore along the reading path; checks the open `laws-update` issues ([changing-lore.md](changing-lore.md#when-a-law-changes)); names the realm's repos | chooses the realm |
 | 2. **Guide** (first time) | walks the operator through clone, initialise, test | clones, initialises, learns to test |
 | 3. **Take an issue** | confirms its scope; chronicles before starting ([chronicle.md](chronicle.md)) | confirms the scope |
 | 4. **Do the work** | in one pass, or in rounds; findings go back to the issues | picks each round's batch, when split |

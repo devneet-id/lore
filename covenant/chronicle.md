@@ -69,6 +69,7 @@ Write an entry on each of these events — don't save them up:
 
 ## How it's used
 
+0. Check the open [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update) issues: one that names your division is a task, answered with `<division>: done` once done ([changing-lore.md](changing-lore.md#when-a-law-changes)).
 1. Pick a realm; open your current month file (`<YYMM>-<you>.md`, or `<YYMM>-<operator>_claude.md` for an agent; create it if new month).
 2. Read the realm's files top-down — the operators' and the agents' — to load the current thinking.
 3. Before doing something, write it; then log on every event in [When to write](#when-to-write) — newest on top.
