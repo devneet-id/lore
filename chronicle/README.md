@@ -2,7 +2,7 @@
 
 The chronicle is the *time* axis: the **track record of humans and AI developing DEVNEET together**. Anyone who is about to do something — a human or an AI — writes it here first and logs what happened as they work.
 
-**How to write it is a law: [covenant/chronicle.md](../covenant/chronicle.md)** — read it before your first entry. Every division writes here except the laws division, whose record is its pull requests.
+**How to write it is a law: [covenant/chronicle.md](../covenant/chronicle.md)** — read it before your first entry. The project (realm) divisions write here; the laws division keeps its record as issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues).
 
 It exists so that anyone joining later — a new member of the IT division, or a new AI agent — can read who did what, when, and why, and continue from there.
 
