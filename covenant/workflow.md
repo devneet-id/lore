@@ -29,6 +29,7 @@ So, **at the start of the work with an operator**, the agent walks them through 
 2. **Initialise** them — setup, dependencies, the first run.
 3. **Test the agent's work** — check out the agent's branch in their local copy, `git pull`, run the scenarios/trials.
 4. **Decide** — merge the pull request when it is good enough, or send it back with what is wrong.
+5. **Clean up** — after the merge, go back to `main`, `git pull`, and delete the agent's branch from the local copy (`git branch -d <branch>`).
 
 Once is enough; the agent records it in the chronicle (*operator guided through rune-dev*) and does not repeat it, unless the operator asks or the setup changed. An operator who already knows says so, and the agent records that instead.
 
@@ -49,6 +50,16 @@ Something new found in the middle of the work — another bug, a gap, an idea �
 - **By default an agent never merges** a pull request — not its own, not anyone's. The operator reviews and merges.
 - **An operator may let an agent merge.** The permission is **explicit** (said by the operator, never inferred), **recorded** (in the operator's chronicle — for the laws division, in its issue), names its **scope** (one pull request, or standing permission for one repo), and can be **revoked** at any time, recorded the same way.
 - Merging is not releasing: even an agent allowed to merge publishes nothing without [release.md](release.md).
+
+## Merged branches are deleted
+
+A branch has done its work once its pull request is merged. It is deleted, so branches never pile up:
+
+- **On GitHub**, every DEVNEET repo turns on **Settings → General → Pull Requests → "Automatically delete head branches"**: a merged pull request deletes its branch by itself. A repo's administrator sets it once.
+- **In the operator's local copy**, the operator deletes the merged branch after testing and merging (step 8 of the flow).
+- **The agent** starts its next work on a fresh branch from the latest `main` — a branch with the same name is simply made again.
+
+A pull request that is closed without a merge has its branch deleted by hand, once nobody needs it.
 
 ## Rounds: a technique for big problems
 
@@ -82,7 +93,8 @@ Both sides have a part in every step.
 | 5. **Open pull requests** | in the project repo, and its scenario in the `-dev` repo; links the issue; chronicles it | — |
 | 6. **Evaluate** | says how to test it: branch, commands, what to look for | checks out the agent's branch, `git pull`, runs it |
 | 7. **Merge** | never, unless the operator allowed it | merges, or sends it back; the agent chronicles the landing |
-| 8. **Release** | brings the release report at the release point ([release.md](release.md)) | the release owner answers yes or no |
+| 8. **Clean up** | starts its next work on a fresh branch from the latest `main` | back to `main`, `git pull`, deletes the merged branch locally |
+| 9. **Release** | brings the release report at the release point ([release.md](release.md)) | the release owner answers yes or no |
 
 The laws division follows the same flow on lore, with one difference: it keeps **no chronicle** — its tasks and drafts are issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues), and those issues are its record ([changing-lore.md](changing-lore.md)).
 
