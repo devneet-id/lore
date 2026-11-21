@@ -9,6 +9,7 @@ Every recipe is taken from runites that were run against Rune.
 | [Keep Data (CRUD)](crud.md) | Act 1 |
 | [Manage Files](files.md) | Act 1 |
 | [Seal a Secret](secrets.md) | Act 1 |
+| [Keep Settings in `.echoes`](settings.md) | Act 1 |
 | [HTML Report from Templates](report.md) | Act 1 |
 | [Share a Project as a Relic](relic.md) | Act 1 |
 | [Test Your Runite](testing.md) | Act 0 |

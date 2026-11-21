@@ -1,8 +1,9 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- In progress: #17, #20, #30, #24, #25, #32 · then discuss #29; #41 later · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
+- In review: devneet-id/rune#44 (#17, #20, #24, #25, #30) + devneet-id/rune-dev#8 → after merge: lore (1.21.137, flags `true`, flow markers, `Keeper::tolerate`, `$AETHER_FOOTER`/`$WHISPER_COLOR`, Awakening `.gitignore`)
+- Next: discuss #29; #41 later · #43 `--runic-create` `_arise()` · #22 · #26 · #27 · #31
+- Waiting on anwarachilles: close #23 (`Keeper::env`) as not planned? · #32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
-- Waiting: decisions devneet-id/rune#29, #30
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
 - Waiting on anwarachilles: the design of Minister (it will carry Liberation's runtimes; `@liberation/cast.bat` / `cast.sh` anchored to the root `.echoes/`) — still being studied
 
@@ -10,6 +11,12 @@ _Times are UTC._
 
 ---
 ## 21
+
+#### 11:33 - Landed for review: #17, #20, #24, #25, #30; #32 in lore
+- devneet-id/rune#44 (draft): one commit per issue — flag `true` (breaking), Phantasm `$flow` + `#sentinel-flow-*`, `Keeper::tolerate()` / `'throw'`, `$AETHER_FOOTER` / `$WHISPER_COLOR` (+ `NO_COLOR`), Awakening runs `sentinel --gitignore` through Specter. Phantasm raised → **1.21.137**.
+- devneet-id/rune-dev#8 (draft): `read-spells-and-flags`, `speak-to-machines`, `awaken-a-runite` new; `engrave-with-sentinel`, `survive-glitches-and-exit` extended. On 1.x: 7/10, 12/17, 8/12, 2/6, 4/6; with #44: **236/236** (`php cast scenario --here`). The rune-dev commit message says 3/10 for the first — a slip; the PRs carry the measured 7/10.
+- Finding, filed apart: devneet-id/rune#43 — the `--runic-create` templates still write `_arise()`.
+- #32 (lore, `main`): new engraving *Keep Settings in `.echoes`* (run against Rune before writing it down), a note in the Keeper reference and Act 1 Keeper, `sentinel --gitignore` in Act 0. Rune does not handle env: `.echoes/` takes the place of `.env`. The Road Ahead item was already clean. Left: the server-service engraving — asked.
 
 #### 11:22 - Decided and about to start: #17, #20, #30, #24, #25, #32
 anwarachilles, on the open issues:

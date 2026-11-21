@@ -64,6 +64,12 @@ Its comment header says *"Act. 1 - Understanding Its Flow"*. That label is older
 ## Nothing is remembered yet
 After Awakening your folder holds `cast`, `vendor/` and the Composer files — nothing else. The four runes of this Act keep nothing between runs. Memory arrives in [Act 1 · First Resonance](../1-first-resonance/README.md).
 
+When it does, it lives in `.echoes/` next to the runite — memory and settings of this machine only. Keep it, and `vendor/`, out of git from the first commit:
+
+```bash
+php cast sentinel --gitignore
+```
+
 Reference: [Awakening](../../../reference/runites/awakening.md)
 
 Next: [Your First Runite](first-runite.md)

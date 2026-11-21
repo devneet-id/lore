@@ -84,6 +84,9 @@ php notes/cast notes
 
 …reads the same `notes/.echoes/cast/` — the same memory, no second `.echoes` in the parent.
 
+## Its own settings
+`.echoes` is also where the runite keeps what belongs to this machine only — an API URL, a token, a choice. Rune has no `.env`: `Keeper::item('config', …)` is the place, and `.echoes/` stays out of git (`php cast sentinel --gitignore`). Recipe: [Keep Settings in `.echoes`](../../engravings/settings.md).
+
 ## Trap
 `Keeper::echo('note.txt', 'text')` writes a plain file in the echoes; `Keeper::echo('note.txt')` reads it back. Use `Keeper::item()` for data.
 

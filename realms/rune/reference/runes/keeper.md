@@ -98,6 +98,7 @@ Globals — state that changes as the flow goes on.
 - Shards are paths relative to the runite's folder (`Keeper::shard(['weaver'])`), stored with `/` on every OS so a relic sealed on Windows opens on Linux; only files inside that folder are carried.
 - `Keeper::shard()` is the only way in: Forger and Crafter never add shards on their own.
 - A warning silenced with `@` (or left out of `error_reporting()`) is not a glitch; any other warning is, and the runite exits with code **1**.
+- `.echoes/` is where a runite keeps its own settings and data — `Keeper::item()` is a JSON store (`.echoes/<runite>/<name>.json`). Rune does not read `.env`; `.echoes/` takes its place, and `sentinel --gitignore` keeps it out of git. Items never travel in a relic. → [Keep Settings in `.echoes`](../../lore/engravings/settings.md)
 - Arcane states by step time: BURST, FLASH, FLOW, FALL, BREAK, COLLAPSE, OVERCLOCK.
 
 ---
