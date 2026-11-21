@@ -71,4 +71,4 @@ The agent drafts and recaps the release notes; the human does not have to write 
 
 ---
 
-**Next →** [changing-lore.md](changing-lore.md) — who changes lore, and how.
+**Next →** [journey.md](journey.md) — the road of everyone who builds with DEVNEET.
