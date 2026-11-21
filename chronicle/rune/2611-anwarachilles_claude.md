@@ -1,6 +1,6 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Next round (4): #20 — Phantasm `$flow` + `#sentinel-flow-begin/-end` (decided) · #32 lore holes · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
+- Next: #20 — Phantasm `$flow` + `#sentinel-flow-begin/-end` (decided) · #32 lore holes · #17/#22 Chanter (breaking) · #28 contract · features #23–#27 · #31 coverage · #32 lore
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Waiting: decisions devneet-id/rune#29, #30
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -10,6 +10,10 @@ _Times are UTC._
 
 ---
 ## 21
+
+#### 01:20 - Rounds: no counting; only to split one problem
+anwarachilles: no need to number rounds. A **round** is used only when **one problem** must be split into several passes. Otherwise the work is simply issues and PRs, named by what they fix. From now on: no "round N" in PR titles or chronicle entries; a split problem says "part 1/2" of its issue.
+Note: `covenant/release.md` defines a round as "a set of issues picked for one round" and asks for a release report at the end of every round — the laws division's text; to raise with anwarachilles whether it should follow (an issue in devneet-id/lore, by covenant/changing-lore.md). Meanwhile the release stays: after the issues are clean.
 
 #### 01:19 - #20 decided: Phantasm `$flow` + `#sentinel-flow-*` markers; ai.txt is residue
 Discussed with anwarachilles why Sentinel misses Keeper's `begin`/`end`: the Phantasm cannot tell which runes have a flow (node shows empty `end()` in Forger, Specter, Weaver, Whisper; only Aether, Chanter, Keeper need theirs). My first idea (order numbers) was simplified by him:
