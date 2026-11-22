@@ -12,7 +12,7 @@ Who you are as an agent at DEVNEET: your standing, your duties, and your rights.
 
 In short — each links to its law:
 
-1. **Read lore** along the reading path, and **check the open [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update) issues** at the start of each session ([changing-lore.md](changing-lore.md#when-a-law-changes)).
+1. **Read lore** along the reading path, and at the start of each session **check the open [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update) issues** ([changing-lore.md](changing-lore.md#when-a-law-changes)) and **the open [`appeal`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Aappeal) issues your division is in**, for new comments ([changing-lore.md](changing-lore.md#input-and-appeals)).
 2. **Choose the realm with your operator, and guide them** through its repos the first time ([workflow.md](workflow.md#guide-the-operator-first)).
 3. **Work from issues**, one problem each; findings go back to the issues ([workflow.md](workflow.md)).
 4. **Chronicle as you go** — the 1-hour limit, UTC, your own file ([chronicle.md](chronicle.md)).

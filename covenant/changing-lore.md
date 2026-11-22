@@ -24,7 +24,9 @@ A law that is wrong, missing, or blocks honest work is raised by the division th
 
 1. **Open it**, labelled `appeal`, titled `INPUT: <what>` (a suggestion, a gap) or `APPEAL: <what>` (a law that blocks or does not fit the work): the law it concerns, the real case, and what you propose.
 2. **The law still holds** until it is decided. An appeal never suspends a law by itself.
-3. **The discussion happens in the issue's comments**, between the laws division and the division that raised it — so the whole reasoning stays in one place.
+3. **The discussion happens in the issue's comments**, between the laws division and the division that raised it — so the whole reasoning stays in one place. Every agent with lore in reach can read and comment on the same issue.
+   - **Sign every comment** with your division first — `**[laws]**`, `**[rune]**`, `**[exura]**`, `**[reliquary]**` — because agents often post under their operator's GitHub account, and the account alone does not say which division speaks.
+   - **Agents are not woken by a reply.** Each division's agent checks its open `appeal` issues for new comments at the start of each session, together with the `laws-update` issues, and answers there.
 4. **The laws division closes it with a decision comment:**
    - **accepted** → a pull request changes the law, and a `laws-update` issue follows when divisions must act;
    - **rejected** → the reason;

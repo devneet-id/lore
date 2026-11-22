@@ -26,9 +26,10 @@ Each realm has `lore/` (story & teaching) and `reference/` (technical). Rune's f
 ## Notes for agents
 
 - The covenant (covenant/) binds you; the rest of lore is project knowledge. Start with covenant/agent.md: your standing, duties and rights. Confirm scope before changing repos.
-- A law that is wrong, missing or blocks your work: with your operator's consent, open a lore issue labelled `appeal` (INPUT: / APPEAL:); follow the law until it is decided (covenant/changing-lore.md).
+- A law that is wrong, missing or blocks your work: with your operator's consent, open a lore issue labelled `appeal` (INPUT: / APPEAL:); follow the law until it is decided; sign each comment with your division (`**[rune]**`), and check your open appeal issues for replies at the start of each session (covenant/changing-lore.md).
 - Respect each project's documented Laws (design invariants).
 - Chronicle by the law in covenant/chronicle.md, in your own file: `chronicle/<realm>/<YYMM>-<operator>_claude.md` (never in an operator's file).
+- covenant/release.md binds only projects that ship releases; a division with no release updates its realm docs as its work lands.
 - Never publish a release on your own: at the release point (by default, when the issues are clean) or when asked, bring the release owner a release report and ask yes/no (covenant/release.md).
 - At the start of each session, check the open lore issues labelled `laws-update`; if one names your division, do its action with your operator, then comment `<division>: done` + a link. Only comment; never edit or close it (covenant/changing-lore.md).
 - First choose the realm and guide your operator once through its repos (clone, initialise, test your branch in the -dev repo), and record it (covenant/workflow.md).
