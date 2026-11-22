@@ -2,6 +2,8 @@
 
 Everyone who builds something with a DEVNEET project — a member, a user, or an agent working for one — keeps a **`JOURNEY.md`**: the story of their project from the first step to the last, and every place it was hard.
 
+**Not a member?** This is the one law for you — with the realm you use. The rest of the covenant binds members only.
+
 DEVNEET reads journeys to learn what to fix in its own projects. *We will never let you start from the void* — a journey shows us where the void still is.
 
 > Chronicle and journey are two sides of one road: the **chronicle** is DEVNEET building its projects; a **journey** is someone building *with* them.

@@ -15,7 +15,7 @@ A law that asks the project divisions to **do** something reaches them through o
 3. **It acts on it** like any task — it tells its operator, and does the work with the operator's consent.
 4. **It answers with one comment**, once the action is done: `<division>: done` and a link to the commit or pull request — e.g. `rune: done — devneet-id/lore@abc1234`.
 5. **It only comments.** It never edits the issue, changes its labels or closes it.
-6. **The laws division closes the issue** once every division it names has answered `done`.
+6. **The Magistrate closes the issue** once it judges that every division it names follows the law — it answered `done`, its work plainly shows it, or the law does not reach it yet — naming each division's standing in the closing comment ([mandate/magistrate.md](../mandate/magistrate.md#the-magistrates-workflow)).
 
 A law still under discussion is labelled `draft` instead, and asks nothing of anyone yet.
 

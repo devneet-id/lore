@@ -10,13 +10,24 @@
 >
 > This is the covenant: not to build for you, but to forge alongside you — from the void to the vision.
 
-DEVNEET and every project under it are built on this covenant. The laws in [covenant/](covenant/README.md) are how we keep it, day by day — and they **bind** every operator and every agent. The rest of lore is project knowledge.
+DEVNEET and every project under it are built on this covenant. The laws in [covenant/](covenant/README.md) are how we keep it, day by day — and they **bind** every member: every operator and every agent who works on DEVNEET. The rest of lore is project knowledge.
+
+## Where to start
+
+**Using a DEVNEET project** — building with Rune, Exura or Reliquary, as a person or as an agent? You do not need the whole covenant. Read only:
+
+1. **[covenant/journey.md](covenant/journey.md)** — keep a `JOURNEY.md` in your own project, and share it: your difficulties become our fixes.
+2. **The realm you use** — [rune](realms/rune/), [exura](realms/exura/) or [reliquary](realms/reliquary/), and its [glossary](glossary.md) words when you meet them.
+
+**A member contributing to DEVNEET** — an operator, or an agent working for one? The **whole covenant binds you**: read on, from [How we work](#how-we-work) and [the reading path](#the-reading-path).
 
 `README.md` and `AGENTS.md` hold the same text: operators and agents learn the same workflow, from the same words. Change one, change both.
 
 Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at every scale (fractal): one hub, its branches.
 
 ## How we work
+
+*For members — operators and their agents.*
 
 1. **Read lore** along [the reading path](#the-reading-path) below, to load the team's current position, and check the open [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update) issues: one that names your division is a task, answered with a comment `<division>: done` once done — see [covenant/changing-lore.md](covenant/changing-lore.md#when-a-law-changes).
 2. **Choose your realm, then take your work** from the issues of the project's repo (e.g. [devneet-id/rune](https://github.com/devneet-id/rune/issues)). Tasks live there, not here. One issue, one problem, landed by pull requests that link it; when your operator splits one big problem into **rounds**, each round is a part of its issue (`part 1/3 of #12`) — see [covenant/workflow.md](covenant/workflow.md). An agent first guides its operator through the realm's repos — clone, initialise, test the agent's branch — so the operator knows their own part.
@@ -31,13 +42,9 @@ Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at e
 6. **Know your standing.** An agent reads [covenant/agent.md](covenant/agent.md), an operator [covenant/operator.md](covenant/operator.md): duties, rights — and the right to appeal a law that is wrong or blocks the work, through an [`appeal`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Aappeal) issue in lore.
 7. **Change lore** the way [covenant/changing-lore.md](covenant/changing-lore.md) says: the laws division by pull request — decided by one seat, the [Magistrate](mandate/magistrate.md) — every other division straight to `main`. Above the divisions stand the **stewards of lore**, the [mandates](mandate/README.md): the Magistrate (the covenant) and the Architect (the atlas).
 
-## Building with DEVNEET?
-
-Whether you are a member or anyone using a DEVNEET project, keep a **`JOURNEY.md`** in your own project — its road from start to end, and every place it was hard — and share it with us. Your difficulties become our fixes. See [covenant/journey.md](covenant/journey.md).
-
 ## The reading path
 
-Follow it in order; every file ends with a link to the next one. **Walk the whole path once** — in your first session, or when a `laws-update` says a law changed. **Every other session starts light:** the open lore issues, the latest day of your realm's chronicle, and the issue you work on; open the rest only when needed ([covenant/agent.md](covenant/agent.md#carry-little)).
+*For members.* Follow it in order; every file ends with a link to the next one. **Walk the whole path once** — in your first session, or when a `laws-update` says a law changed. **Every other session starts light:** the open lore issues, the latest day of your realm's chronicle, and the issue you work on; open the rest only when needed ([covenant/agent.md](covenant/agent.md#carry-little)).
 
 1. **This file** — how we work.
 2. **[covenant/](covenant/README.md)** — the laws: who you are (agent, operator), how work flows, how to chronicle, how to release, how to write a journey, how lore changes.

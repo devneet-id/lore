@@ -2,7 +2,11 @@
 
 > The central knowledge home of DEVNEET. Rune is the foundation (a lore-driven, modular system beneath PHP); Reliquary distributes Rune apps as relics; Exura is an independent minimalist framework series. Everything centers on Rune. Principle: openness compounds.
 
-Machine-oriented index. Read in order.
+Machine-oriented index.
+
+**Using a DEVNEET project** (not a member): read only covenant/journey.md (keep and share a JOURNEY.md) and the realm you use (realms/<realm>/README.md). The rest of the covenant binds members only.
+
+**A member** (an operator, or an agent working for one): the whole covenant binds you. Read in order.
 
 ## Start here
 
