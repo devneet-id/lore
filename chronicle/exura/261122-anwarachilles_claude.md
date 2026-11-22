@@ -4,13 +4,16 @@
 - Worked only when asked: devneet-id/exurajs#3, devneet-id/exuraphp#9 (mode); devneet-id/exuracss#4–#6, devneet-id/exurajs#2, devneet-id/exuraphp#3–#8 (findings)
 - Tint fix: move AnwarAchilles/exuracss#1 to a branch of devneet-id/exuracss for devneet-id/exuracss#4, then close the fork PR
 - To do with anwarachilles: guide him once through *Working on this realm* (clone, `php exura`, test a branch) and record it
-- Waiting on anwarachilles: review/merge the PR in devneet-id/exura that removes the docs moved to lore
+- Waiting on anwarachilles: review/merge devneet-id/exura#1 (removes the docs moved to lore)
 - Realm docs follow the release (lore#27): each exura PR carries a *Lore* line; `realms/exura/` is updated after a release
 - Rune: `aether_exit()` exits with a bare `exit` — a runite always returns 0; for the rune division (devneet-id/rune is outside this session)
 
 _Times are UTC._
 
 ---
+
+#### 18:48 - devneet-id/exura#1 opened
+Removes `exuracss/`, `exurajs/`, `exuraphp/` from the umbrella repo (no page of the website reads them) and points its README to `realms/exura/`. Draft, waiting on anwarachilles.
 
 #### 18:47 - Exura docs moved into the realm; Working on this realm
 **anwarachilles decided:** the docs of the umbrella repo devneet-id/exura move to `realms/exura/` — the docs only, not the website.
