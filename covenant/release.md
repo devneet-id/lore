@@ -46,7 +46,7 @@ The agent writes it; the operator reads it and answers. Same shape every time, s
 **Runes affected** — the runes changed, and the runes that lean on them (links).
 **Breaking changes** — each one with how to migrate, or "none".
 **Known issues** — what still fails, and its effect on users.
-**Lore** — updated to follow the code, or what is still missing.
+**Lore** — the realm pages to update after this release (from the PRs' *Lore* notes); docs follow the release ([workflow.md](workflow.md#docs-follow-the-release)).
 
 **Draft release notes** — ready to publish.
 

@@ -51,6 +51,14 @@ Something new found in the middle of the work — another bug, a gap, an idea �
 - **An operator may let an agent merge.** The permission is **explicit** (said by the operator, never inferred), **recorded** (in the operator's chronicle — for the laws division, in its issue), names its **scope** (one pull request, or standing permission for one repo), and can be **revoked** at any time, recorded the same way.
 - Merging is not releasing: even an agent allowed to merge publishes nothing without [release.md](release.md).
 
+## Docs follow the release
+
+A realm's docs in lore (`realms/<project>/`, and the realm's pages in the atlas) describe **the released version** of the project — what a user actually gets. So they are updated **after a release**, not with every pull request:
+
+- **While the work goes on**, the code changes; the realm's docs do not. What the docs will need is noted in the pull request (a short *Lore* line: the pages that change), so nothing is forgotten.
+- **After the release owner's yes and the release**, the agent updates the realm's docs in one pass, from those notes, so they match the release — and chronicles it.
+- **The chronicle is not docs:** it is written as the work happens ([chronicle.md](chronicle.md)), release or not.
+
 ## Merged branches are deleted
 
 A branch has done its work once its pull request is merged. It is deleted, so branches never pile up:
@@ -95,6 +103,7 @@ Both sides have a part in every step.
 | 7. **Merge** | never, unless the operator allowed it | merges, or sends it back; the agent chronicles the landing |
 | 8. **Clean up** | starts its next work on a fresh branch from the latest `main` | back to `main`, `git pull`, deletes the merged branch locally |
 | 9. **Release** | brings the release report at the release point ([release.md](release.md)) | the release owner answers yes or no |
+| 10. **Update the realm** | after the release, updates the realm's docs in lore to match it, from the PRs' *Lore* notes; chronicles it | — |
 
 The laws division follows the same flow on lore, with one difference: it keeps **no chronicle** — its tasks and drafts are issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues), and those issues are its record ([changing-lore.md](changing-lore.md)).
 
