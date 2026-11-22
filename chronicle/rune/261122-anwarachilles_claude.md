@@ -1,6 +1,6 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- In review: devneet-id/rune#50 (#26) + devneet-id/rune-dev#12 · Lore lines waiting for the release: rune#49 (Keeper lock), rune#50 (Specter + the server-service engraving of rune#32) · Next: #41 Liberation (without waiting for Minister; test with **php**, and **python** at most — anwarachilles) · #31 rest (Minister, Federation, Liberation)
+- Lore lines waiting for the release: rune#49 (Keeper lock), rune#50 (Specter + the server-service engraving of rune#32) · Next: #41 Liberation (without waiting for Minister; test with **php**, and **python** at most — anwarachilles) · #31 rest (Minister, Federation, Liberation)
 - Waiting on anwarachilles: rune#32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -10,6 +10,9 @@
 _Times are UTC._
 
 ---
+
+#### 12:32 - Merged: #26
+anwarachilles merged devneet-id/rune#50 (Specter long-running, with the Windows fix 6e0fbc8) and devneet-id/rune-dev#12. Version 1.21.142. Windows re-run of `serve-beyond-the-runite` not reported to me yet. Realm docs wait for the release; #50's *Lore* line (incl. the server-service engraving) stays in `(upcoming)`. Next: #41 — dissecting step 3 (running a cast with a kept runtime) with him first, since Minister was to carry it.
 
 #### 12:25 - Finding on Windows: #26 detach and run
 anwarachilles ran `serve-beyond-the-runite` on Windows: **11/18** (the worker never ran; alive/kill/title/cast.json follow from it; the run log missed lines). Causes found by reading, fixed in devneet-id/rune#50 (6e0fbc8): `cmd /C` took off the first and last quote of a quoted program with quoted arguments → now `/S /C "…"`; stdout and stderr had a handle each on the log, overwriting each other on Windows → one handle for both. Linux still 18/18, all 320/320. Windows to be run again by him — not confirmed yet. Also decided for #41: no need to try every runtime — **php** (and python at most) is enough for the trial.
