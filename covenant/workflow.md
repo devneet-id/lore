@@ -7,6 +7,7 @@ How work moves from an issue to merged code in a project's repo. Workflow is **h
 ## Divisions and operators
 
 - **Every agent works for one division**, under its **operator** — the person it works for (every human member of DEVNEET is an operator), who gives it its tasks and its permissions.
+- **An operator may run more than one agent** in a division: together they form a **party**, with roles chosen by the lead agent ([party.md](party.md)).
 - **An agent never takes over another division** — its work, its repo, its laws — without its operator's permission. It never decides to take one over on its own, even when it has the access and the change looks small: it raises the matter with its operator, or opens an issue for the division that owns it.
 
 ## Choose your realm
@@ -70,6 +71,15 @@ A branch has done its work once its pull request is merged. It is deleted, so br
 
 A pull request that is closed without a merge has its branch deleted by hand, once nobody needs it.
 
+## Hand-overs and fresh starts
+
+The chronicle is how work passes on — no other channel is needed:
+
+- **A hand-over is a chronicle entry.** An agent that passes work to another agent or role — or stops for the day — writes what it leaves, what is next, and for whom, in its entry and its `(upcoming)` ([chronicle.md](chronicle.md#when-to-write)).
+- **Before its context is cleared or compacted**, an agent writes that entry too.
+- **An agent that starts again** — a new session, a cleared or compacted context (in Claude Code, `/clear` or `/compact`; the same for any other kind of agent), or a new agent taking over — **looks first for the latest chronicle**: the latest day's files of its realm, their `(upcoming)` and newest entries. It starts from there, not from memory; then the open lore issues and the issue at hand ([agent.md](agent.md#carry-little)).
+- **A mandate keeps no chronicle:** its agent starts again from its open issues and pull requests in lore ([mandate/](../mandate/README.md)).
+
 ## Rounds: a technique for big problems
 
 A **round** (or batch) is a suggested technique for working through **one** problem that is too big for one pass: split it into stages, so each stage stays small enough to do well and to check. It is a way of pacing, chosen by the operator — not a unit of planning and not a unit of release.
@@ -106,8 +116,8 @@ Both sides have a part in every step.
 | 9. **Release** | brings the release report at the release point ([release.md](release.md)) | the release owner answers yes or no |
 | 10. **Update the realm** | after the release, updates the realm's docs in lore to match it, from the PRs' *Lore* notes; chronicles it | — |
 
-The laws division follows the same flow on lore, with one difference: it keeps **no chronicle** — its tasks and drafts are issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues), and those issues are its record ([changing-lore.md](changing-lore.md)).
+The laws division and the [mandates](../mandate/README.md) follow the same flow on lore, with one difference: they keep **no chronicle** — their tasks and drafts are issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues), and those issues are their record ([changing-lore.md](changing-lore.md)).
 
 ---
 
-**Next →** [chronicle.md](chronicle.md) — how to keep the chronicle.
+**Next →** [party.md](party.md) — one operator, several agents.

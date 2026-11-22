@@ -11,6 +11,7 @@ What this repo holds, and the axis each part answers.
 ```mermaid
 graph TD
     LORE([lore])
+    LORE --> MAN["mandate/ · stewards"]
     LORE --> COV["covenant/ · laws"]
     LORE --> GLO["glossary.md · words"]
     LORE --> ATL["atlas/ · space"]
@@ -19,35 +20,44 @@ graph TD
     JOU["JOURNEY.md · from outside"] -.->|difficulties become issues| REA
 ```
 
+- **[mandate/](../mandate/README.md)** — the stewards of lore, above the divisions: the Magistrate (the covenant) and the Architect (the atlas).
 - **[covenant/](../covenant/README.md)** — the laws: how work flows, how to chronicle, how to release, how to write a journey, how lore changes.
 - **[glossary.md](../glossary.md)** — the vocabulary; the names are load-bearing.
 - **atlas/** — these maps.
 - **[realms/](../realms/README.md)** — one folder per project: its story and its reference.
-- **[chronicle/](../chronicle/README.md)** — the track record of the project divisions, month by month.
+- **[chronicle/](../chronicle/README.md)** — the track record of the project divisions, day by day.
 - **[journey](../covenant/journey.md)** — `JOURNEY.md`, kept by anyone building *with* a DEVNEET project, in their own repo.
 
 ## Who works where
 
-Every agent works for an **operator**, in one **division**.
+Every agent works for an **operator**, in one **division** — alone, or in a **party** with a role. Above the divisions stand the **mandates**.
 
 ```mermaid
 graph LR
     OP([operator]) -->|tasks, permissions| AG([agent])
     AG -->|reports, asks| OP
+    subgraph MAN["mandates · stewards of lore"]
+        MOP([operator]) --- MAG([Magistrate agent])
+        MOP --- MAR([Architect agent])
+    end
+    MAG -->|pull requests + lore issues| COV2
+    MAR -->|pull requests + lore issues| ATL2["atlas/"]
     subgraph LAWS["laws division"]
         LOP([operator]) --- LAG([agent])
     end
     subgraph PROJ["project divisions · rune, exura, reliquary"]
-        POP([operator]) --- PAG([agent])
+        POP([operator]) --- PAG([lead agent])
+        PAG -.->|forms the party| PRO(["roles · rune:coder, rune:documenter…"])
     end
     LAWS -->|pull requests + lore issues| COV2["covenant/"]
     PROJ -->|straight to main| REA2["realms/ + chronicle/"]
     PROJ -->|pull requests| REPO2["project repos"]
 ```
 
+- The **mandates** keep lore itself: the Magistrate decides the covenant, the Architect keeps the atlas ([mandate/](../mandate/README.md)).
 - The **operator** gives the agent its tasks and permissions, and decides: merging, releasing, crossing into another division ([workflow](../covenant/workflow.md)).
 - The **laws division** changes the covenant only by pull request; its record is issues in lore ([changing-lore](../covenant/changing-lore.md)).
-- The **project divisions** commit realm docs and chronicle straight to `main`, and change their projects by pull request.
+- The **project divisions** commit realm docs and chronicle straight to `main`, and change their projects by pull request. An operator with several agents works as a party: the lead agent chooses the roles ([party](../covenant/party.md)).
 
 ## Repos of a realm
 

@@ -9,12 +9,14 @@ One log file per realm, **per day**, per author — **daily files from 2026-11-2
 ```
 chronicle/<realm>/<YYMMDD>-<operator>.md           an operator
 chronicle/<realm>/<YYMMDD>-<operator>_<agent>.md   the agent working for that operator
+chronicle/<realm>/<YYMMDD>-<operator>_<agent>_<role>.md   a role of a party, only when roles could clash
 ```
 
 e.g. `chronicle/rune/261122-anwarachilles.md` and `chronicle/rune/261122-anwarachilles_claude.md` (26 = 2026, 11 = November, 22 = the day)
 
 - **`<operator>`** is the operator's **GitHub login, in lowercase** (`AnwarAchilles` → `anwarachilles`). An agent works under its operator's GitHub account, so it takes the login from **that account's identity** (e.g. the GitHub tools' "who am I", or `gh api user`) — **never from `git config` or a commit's author**, which may name the agent itself. If it cannot be sure, it asks its operator; it never guesses.
 - **`<agent>`** is the agent's own name, in lowercase: `claude`, `chatgpt`, …
+- **A party keeps one chronicle:** every role writes in the lead agent's file, marking each entry with its role (`#### 14:02 - [rune:coder] …`). Only when the roles could clash — several agents writing the same day at the same time — does each role write its own `<operator>_<agent>_<role>` file; the lead decides ([party.md](party.md#one-chronicle)).
 - **An agent never logs in an operator's file:** it writes its own `<operator>_<agent>` file. Operator and agent work stay apart yet side by side.
 - **`YYMMDD`** (year first) so files sort chronologically. The day is the **UTC** day.
 - **One file per day** keeps each file small: a session reads one day, not a month.
@@ -56,7 +58,7 @@ Write an entry on each of these events — don't save them up:
 2. **An operator decides** — an instruction, approval, refusal or explanation. Write it right away; it is the *why* that is easiest to lose.
 3. **A piece of work lands** — a commit, a PR opened or merged, an issue filed or closed, a test run finished (with its numbers).
 4. **A finding or a block** — a bug, a failing test, or stopping to wait for an operator.
-5. **Before stopping** — end of session, a hand-off, or (for an agent) before its context is compacted. Update `(upcoming)` in the same entry.
+5. **Before stopping** — end of session, a hand-over to another agent or role, or (for an agent) before its context is cleared or compacted. Update `(upcoming)` in the same entry: it is what the next one reads first ([workflow.md](workflow.md#hand-overs-and-fresh-starts)).
 
 **The 1-hour limit:** never go more than **1 hour of active work** without an entry. If none of the events above has happened, write a short progress entry.
 
@@ -71,7 +73,7 @@ Write an entry on each of these events — don't save them up:
    - [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update): one that names your division is a task, answered with `<division>: done` once done ([changing-lore.md](changing-lore.md#when-a-law-changes));
    - [`appeal`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Aappeal) issues your division is in: new comments to answer ([changing-lore.md](changing-lore.md#input-and-appeals)).
 1. Pick a realm; open today's file (`<YYMMDD>-<you>.md`, or `<YYMMDD>-<operator>_<agent>.md` for an agent); create it if it is a new day, carrying over the last `(upcoming)`.
-2. **Read only the latest day** of the realm's files — the operators' and the agents': their `(upcoming)` and entries are the current position. Older days are opened only to cross-check, searched by issue number ([agent.md](agent.md#carry-little)).
+2. **Read only the latest day** of the realm's files — the operators', the agents' and the roles': their `(upcoming)` and entries are the current position. Older days are opened only to cross-check, searched by issue number ([agent.md](agent.md#carry-little)).
 3. Before doing something, write it; then log on every event in [When to write](#when-to-write) — newest on top.
 
 ---

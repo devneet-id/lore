@@ -16,6 +16,7 @@ Who you are as an operator at DEVNEET: your standing, your duties, and your righ
 4. **Give permissions explicitly**, and have them recorded: to merge, to release, to cross into another division. Never by assumption ([workflow.md](workflow.md#merging-is-the-operators), [release.md](release.md)).
 5. **Answer the release report** yes or no, when you are the release owner ([release.md](release.md)).
 6. **Keep your agent in its division**, and do not ask it to take over another's.
+7. **With more than one agent, let the lead agent form the party** — or form it yourself, as its head, when you work without an agent ([party.md](party.md)).
 
 ## Your rights
 
@@ -25,4 +26,4 @@ Who you are as an operator at DEVNEET: your standing, your duties, and your righ
 
 ---
 
-**Next →** [magistrate.md](magistrate.md) — the one seat that decides the covenant.
+**Next →** [magistrate.md](magistrate.md) — the authority above the divisions.
