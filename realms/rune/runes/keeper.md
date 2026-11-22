@@ -1,0 +1,110 @@
+# Keeper
+
+> Handles persistent message tracking, data logging, and structured memory management—acts as a system-level manager for recording, retrieving, and organizing information across operations.
+
+Keeper is the memory of a runite. It keeps **echoes** in `.echoes/<runite>/`: items, shards, the arcane of every run, and the **glitch** when something breaks.
+
+| | |
+|---|---|
+| **Version** | `1.18` |
+| **Mark** | `VOID` |
+| **By** | Anwar Achilles |
+| **Introduced in** | Act 1 · First Resonance |
+| **Uses** | [Aether](aether.md) (ether), [Chanter](chanter.md) (entity), [Cipher](cipher.md) (entity), [Forger](forger.md) (entity), [Specter](specter.md) (entity), [Whisper](whisper.md) (entity) |
+| **Awaken** | `use Rune\Keeper\Manifest as Keeper;` · `Keeper::ether()::essence()::entity();` |
+
+## When to use
+- Engrave it: `Keeper::begin()` after `Chanter::begin()`, and `Keeper::end()` before `Aether::end()`.
+- Remember: `Keeper::item('name', $data)` / `Keeper::item('name')` (an object).
+- Carry files into a relic: `Keeper::shard(['folder', 'file.txt'])`.
+
+## In code
+```php
+// Keeper needs Keeper::begin() after Chanter::begin() and Keeper::end() before Aether::end()
+Chanter::cast('remember --text', function() {
+  $text = Chanter::spell('text');
+  if (is_string($text)) {
+    Keeper::item('memory', ['text' => $text]);          // .echoes/<runite>/memory.json
+  }
+  $memory = Keeper::item('memory');                       // an object, or null
+  Whisper::echo('memory: ' . ($memory->text ?? '(empty)') . '{{nl}}');
+  Whisper::echo('kept in ' . KEEPER_ECHOES . '{{nl}}');
+}, 'Remember a text in .echoes. --text="..."');
+```
+
+## Manifest
+Call from your runite: `Keeper::name(...)`.
+
+| Method | Note |
+|---|---|
+| `begin( $flags = 0 )` | Special hook for aether-based awakening phase, executed at the start of the crafter process. |
+| `end()` | Final phase of the class lifecycle, called after all manifest components are registered and ready. |
+| `echo( String $repo, String $name, $value = "" )` | Reads or writes a raw file inside the given repo depending on value. |
+| `item( String $name, $value = false )` | Gets or sets a structured keeper item in JSON format. |
+| `shard(Array\|String $source)` | Saves rune shard(s) from string or array source. |
+| `tolerate( Array\|String $levels )` | Tolerates warnings in this flow: levels kept in the arcane and passed (`['warning', 'notice', 'deprecated']`), or `'throw'` to make them an `ErrorException`. |
+
+## Entity
+The logic. Other runes call these functions too.
+
+| Function | Note |
+|---|---|
+| `keeper()` | Main entity |
+| `keeper_arcane_process()` | Converts arcane log entries into a readable format with timing and state evaluation, then stores the result. |
+| `keeper_arcane_process_store( $datas )` | Saves processed arcane log data into a timestamped file. |
+| `keeper_item( String $name, $value = "" )` | Gets or sets a keeper item based on whether a value is provided. |
+| `keeper_item_set( String $name, $value )` | Saves a value as a formatted JSON file under the given name. |
+| `keeper_item_get( String $name )` | Retrieves and decodes a JSON file by name into a usable value. |
+| `keeper_echo( String $repo, String $name, $value = "" )` | Reads or writes a raw file inside a given repository, depending on whether a value is provided. |
+| `keeper_echo_set( String $repo, String $name, $value )` | Ensures the target repository exists, then saves the given value as a plain file. |
+| `keeper_echo_get( String $repo, String $name )` | Reads and returns the contents of a plain file from the given repository. |
+| `keeper_shard_place( String $path )` | Places a shard path in the runite folder: a relative path is read from AETHER_REPO, an absolute one is kept. |
+| `keeper_shard_set( String $source_path )` | Adds one file to the shard list (only files inside the runite folder, stored relative to it). |
+| `keeper_shard_set_all( Array $file_maps )` | Adds many files and folders to the shard list at once (paths relative to the runite folder). |
+| `keeper_shard_clean()` | Cleans all stored shards and resets the shard repository. |
+| `keeper_glitch_boot()` | Initializes custom error, exception, and shutdown handlers to capture and log all glitches into a file. |
+| `keeper_glitch_message( $glitch )` | Shows the glitch screen (severity, line, file, message). |
+| `keeper_tolerate( Array\|String $levels )` | Sets the warnings this flow tolerates — a list of levels or `'throw'` — and returns what is tolerated. |
+| `keeper_glitch_level( Int $errno )` | The level of a PHP error number: warning, notice, deprecated, or error. |
+| `keeper_glitch_detect()` | Dumps the current glitch state for inspection. |
+| `keeper_is_glitch()` | Checks if the glitch log file has content, indicating an error has occurred. |
+
+## Ether
+Constants — truth that never changes.
+
+| Constant | Note |
+|---|---|
+| `KEEPER` | main ether |
+| `KEEPER_ECHOES` | Base directory for all Keeper-related output files and logs (next to the runite). |
+| `KEEPER_ECHOES_KEEPER` | Path to the main keeper state file. |
+| `KEEPER_ECHOES_STATS` | Path to the statistics log file for tracking system data. |
+| `KEEPER_ECHOES_ARCANE` | Path to the active arcane log file containing process entries. |
+| `KEEPER_ECHOES_GLITCH` | Path to the glitch log file for captured errors and exceptions. |
+| `KEEPER_ECHOES_ARCANES` | Directory for archived arcane logs. |
+| `KEEPER_ECHOES_SHARDS` | Directory for encoded shard backups. |
+| `KEEPER_ECHOES_SHARD` | Shard list of the runite (files carried into the relic). |
+| `KEEPER_SAVING_ECHOES` | Flag bit for Keeper::begin(): save echoes. |
+| `KEEPER_SHOW_GLITCH` | Flag bit for Keeper::begin(): show glitch screen. |
+
+## Essence
+Globals — state that changes as the flow goes on.
+
+| Global | Note |
+|---|---|
+| `$KEEPER` | main essence |
+| `$KEEPER_ARCANE` | Defines stepwatch thresholds for classifying performance stages in arcane processing (e.g., BURST to OVERCLOCK). |
+| `$KEEPER_SAVING_ACTIVE` | Whether Keeper is saving echoes in this flow. |
+| `$KEEPER_TOLERATE` | The warnings tolerated in this flow (levels: warning, notice, deprecated), or `"throw"` to turn them into an `ErrorException`. |
+
+## Notes
+- Without `Keeper::begin()` the `.echoes` folder does not exist and `Keeper::item()` saves nothing (it still returns `true`). `sentinel --runite-insert=Keeper` writes `Keeper::begin()` / `Keeper::end()` at the `#sentinel-flow-*` markers (Keeper's Phantasm has `$flow = true`); a runite without the markers gets a warning — add them by hand.
+- Every runite has its own folder next to itself: `.echoes/cast/`, `.echoes/ember/`… — the same folder whether it is cast from inside or from a parent folder.
+- Shards are paths relative to the runite's folder (`Keeper::shard(['weaver'])`), stored with `/` on every OS so a relic sealed on Windows opens on Linux; only files inside that folder are carried.
+- `Keeper::shard()` is the only way in: Forger and Crafter never add shards on their own.
+- A warning silenced with `@` (or left out of `error_reporting()`) is not a glitch; any other warning is, and the runite exits with code **1**.
+- `Keeper::tolerate(['warning'])` lets a level pass in this flow — it is written to the arcane as `Keeper.glitch.tolerated`, not to `glitch.txt`. `Keeper::tolerate('throw')` turns a warning into an `ErrorException` the cast can catch; uncaught, it is a glitch. An error is never tolerated.
+- `.echoes/` is where a runite keeps its own settings and data — `Keeper::item()` is a JSON store (`.echoes/<runite>/<name>.json`). Rune does not read `.env`; `.echoes/` takes its place, and `sentinel --gitignore` keeps it out of git. Items never travel in a relic. → [Keep Settings in `.echoes`](../engravings/settings.md)
+- Arcane states by step time: BURST, FLASH, FLOW, FALL, BREAK, COLLAPSE, OVERCLOCK.
+
+---
+*Generated from `Keeper/Phantasm.php` (version 1.18). Read it live with `php cast grimoire --runic=Keeper`.*

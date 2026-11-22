@@ -1,6 +1,6 @@
 # Glossary
  
-The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — they map to real constructs across the realms. Read this before any code. Grouped by realm; everything ultimately centers on Rune. Rune's complete glossary lives in [realms/rune/reference/glossary.md](realms/rune/reference/glossary.md).
+The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — they map to real constructs across the realms. Read this before any code. Grouped by realm; everything ultimately centers on Rune. Rune's complete glossary lives in [realms/rune/glossary.md](realms/rune/glossary.md).
  
 ## Shared
  

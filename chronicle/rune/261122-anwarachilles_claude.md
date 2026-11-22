@@ -1,5 +1,5 @@
 (upcoming)
-- Release 1.21.142: **yes** — tag `1.21.142`, title `v1.21.142 — Beyond the Flow`, description given in chat; anwarachilles publishes on GitHub. After it: realm docs in one pass (lore#27) from the *Lore* lines — `versioning.md` (1.21.142: Aether 1.22, Chanter 1.18, Cipher 1.7, Crafter 1.16, Forger 1.17, Keeper 1.19, Minister 0.4, Specter 1.13, Weaver 1.10, Whisper 1.16), `reference/runes/keeper.md` (#49 lock), `reference/runes/specter.md` + Act 3 `specter.md` (#50), new engraving "a runite as a server service" (rune#32 last item → then close rune#32), `known-issues.md`, realm README "Current".
+- Release 1.21.142: **yes** — tag `1.21.142`, title `v1.21.142 — Beyond the Flow`, description given in chat; anwarachilles publishes on GitHub. After it: realm docs in one pass (lore#27) from the *Lore* lines — `versioning.md` (1.21.142: Aether 1.22, Chanter 1.18, Cipher 1.7, Crafter 1.16, Forger 1.17, Keeper 1.19, Minister 0.4, Specter 1.13, Weaver 1.10, Whisper 1.16), `runes/keeper.md` (#49 lock), `runes/specter.md` + Act 3 `specter.md` (#50), new engraving "a runite as a server service" (rune#32 last item → then close rune#32), `known-issues.md`, realm README "Current".
 - Open in rune: #41 Liberation (catalog: python; running: `@liberation/cast.sh|bat` + a runtime-path function with `Specter::run()` — two questions asked, not answered; test with php, python at most) · #31 rest (Minister, Federation, Liberation need the network) · #32 (closes with the engraving).
 - Windows: `serve-beyond-the-runite` after fix 6e0fbc8 — re-run not reported.
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
@@ -9,6 +9,9 @@
 _Times are UTC._
 
 ---
+
+#### 18:29 - Landed: realm rune flattened
+anwarachilles: take the contents of `realms/rune/lore/` and `realms/rune/reference/` out, level with the realm. Now `realms/rune/` holds `acts/`, `engravings/`, `paradigm.md`, `runes/`, `runites/`, `modes.md`, `glossary.md`; the two folder READMEs merged into the realm README (Acts, Look it up, Runes and Runites, Laws). Every relative link rewritten and checked — none broken inside the realm; root `glossary.md` and `llms.txt` pointed to the new glossary. Structure only, no content change (realm docs still wait for 1.21.142). Left for him: `covenant/release.md` links the old `release.md` path (a law: the laws division, by pull request), and `AGENTS.md`/`README.md`, `realms/README.md`, `llms.txt` still describe a realm as `lore/` + `reference/` (reliquary and exura keep that shape — not my division). rune-dev's links to lore follow in its own PR.
 
 #### 12:53 - Before stopping: context reset
 anwarachilles asked for a compact description to reset the context. `(upcoming)` rewritten as the hand-over: release 1.21.142 waiting to be published by him, then the realm docs; open #41, #31, #32.
