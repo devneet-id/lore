@@ -12,8 +12,13 @@ The shared, lore-driven vocabulary of DEVNEET. These names are load-bearing — 
 - **-dev repo** — the development and testing repo of a project (`rune-dev`, `exura-dev`): scenarios, trials, the proof that a change works. An operator tests an agent's branch there before merging.
 - **appeal** — the label of a lore issue in which a division gives input on, or appeals against, a law; discussed in its comments, closed with the laws division's decision. See [covenant/changing-lore.md](covenant/changing-lore.md#input-and-appeals).
 - **laws-update** — the label of a lore issue that tells the project divisions a law changed and what each must do; each answers with a comment `<division>: done`. See [covenant/changing-lore.md](covenant/changing-lore.md#when-a-law-changes).
-- **Magistrate** — the one seat that decides the covenant: an operator and their agent (or the operator alone, by hand). See [covenant/magistrate.md](covenant/magistrate.md).
-- **hearing** — the label of a lore issue in which a laws-division member proposes a change to the covenant, for the Magistrate to decide. See [covenant/magistrate.md](covenant/magistrate.md).
+- **mandate** — an authority above the divisions, held by the stewards of lore: one operator, one agent per mandate. Two exist — Magistrate and Architect. Not a division, not a role. See [mandate/](mandate/README.md).
+- **Magistrate** — the mandate that decides the covenant: an operator and their agent (or the operator alone, by hand). See [mandate/magistrate.md](mandate/magistrate.md).
+- **Architect** — the mandate that keeps the atlas and the structure of lore, equal to the Magistrate. See [mandate/architect.md](mandate/architect.md).
+- **party** — one operator's agents in one division, formed by the lead agent (or by the operator, as head, without one); each agent has a role. See [covenant/party.md](covenant/party.md).
+- **role** — an agent's share of a party's work, named `<division>:<role>` (`rune:coder`, `rune:documenter`, `rune:publisher`); divides the work, never the powers. See [covenant/party.md](covenant/party.md).
+- **lead agent** — the first agent an operator works with in a division; it forms the party and chooses the roles. See [covenant/party.md](covenant/party.md).
+- **hearing** — the label of a lore issue in which a laws-division member proposes a change to the covenant, for the Magistrate to decide. See [mandate/magistrate.md](mandate/magistrate.md#the-laws-division).
 - **operator** — a person in DEVNEET: every human member is an operator, and every agent works for one. The operator gives the agent its tasks and its permissions (merging, releasing, crossing into another division), and answers for what it decides. Lore speaks of **operators and agents**, never of "humans". See [covenant/workflow.md](covenant/workflow.md).
 - **round** — one part of a single problem that an operator split into several passes, named `part 1/3 of #12`. Never a set of issues, never numbered across the project, never a release trigger. See [covenant/workflow.md](covenant/workflow.md).
 ## Rune
