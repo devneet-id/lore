@@ -1,6 +1,6 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- In review: devneet-id/rune-dev#11 (trial of #27) · Lore lines waiting for the release: rune#49 (Keeper lock) · Next: #26 Specter upgrade (allowed; reviewed after) · #41 catalog · #31 rest (Minister, Federation, Liberation)
+- Lore lines waiting for the release: rune#49 (Keeper lock) · Next: #26 Specter upgrade (allowed; reviewed after) · #41 catalog · #31 rest (Minister, Federation, Liberation)
 - Waiting on anwarachilles: rune#32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -12,7 +12,7 @@ _Times are UTC._
 ---
 
 #### 11:51 - Merged: rune#27
-anwarachilles merged devneet-id/rune#49 (Keeper items under lock, 1.21.141). Realm docs wait for the release (lore#27): its *Lore* line is kept in `(upcoming)`. devneet-id/rune-dev#11 still open.
+anwarachilles merged devneet-id/rune#49 (Keeper items under lock, 1.21.141). Realm docs wait for the release (lore#27): its *Lore* line is kept in `(upcoming)`. devneet-id/rune-dev#11 merged too (trial).
 
 #### 11:46 - Landed for review: rune#27
 devneet-id/rune#49 (draft): `Keeper::item('x', fn)` read-modify-write under one lock; `$KEEPER_LOCK` (false / true / list); `$KEEPER_LOCK_WAIT` 5 s → glitch naming the item. Keeper 1.19 → **1.21.141**. First PR with a *Lore* line (lore#27): realm pages listed, not edited. devneet-id/rune-dev#11 (draft): `keep-items-under-lock` — 6/10 on 1.x, 10/10 with #49 (4 runs); all **302/302** (23 scenarios). Noted in the PR: Windows mandatory locks (lock every reader of a shared item); souls are read-then-write in two steps — to move onto `keeper_item_update()` with #26.
