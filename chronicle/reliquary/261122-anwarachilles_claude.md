@@ -1,5 +1,4 @@
 (upcoming)
-- Waiting on anwarachilles: review and merge the flat realm + *Working on this realm* (branch `claude/brave-feynman-x4977r`); then answer lore#40 and lore#42 with the commit on `main`
 - Confirm with anwarachilles: the testing way written in *Working on this realm* — `--local` on every cast that writes, `AnwarAchilles/reliquary` as the test reliquary; then guide him through it once
 - To settle with anwarachilles: do the relic repos (`relic-cli`, `relic-web`, `relic-web-exura`, `relic-web-exura-vercel`) belong to this division? `reliquary-skill` is empty — fill it now or later?
 - Follow lore#33 (`-dev` repo → `dev` branch): it does not bind a realm without a `-dev` repo, but may shape ours
@@ -8,6 +7,9 @@
 _Times are UTC._
 
 ---
+
+#### 19:07 - Permission: commit to lore `main` without a pull request
+**anwarachilles decided**, as operator: this agent does not need a pull request for lore — it commits the reliquary division's lore work (realm, atlas page, chronicle) **straight to `main`**, as covenant/changing-lore.md allows a project division. Scope: devneet-id/lore, standing; revocable by him. devneet-id/lore#43 (draft) is landed on `main` this way; lore#40 and lore#42 answered with the commit.
 
 #### 19:03 - Realm flattened; Working on this realm written (lore#42, lore#40)
 anwarachilles: the structure of `realms/` changed — fix it, and check the laws-update issues.
