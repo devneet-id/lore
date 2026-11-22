@@ -1,6 +1,6 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- In review: devneet-id/rune#50 (#26) + devneet-id/rune-dev#12 · Lore lines waiting for the release: rune#49 (Keeper lock), rune#50 (Specter + the server-service engraving of rune#32) · Next: #41 Liberation (without waiting for Minister; GitHub-hosted runtimes cannot be reached from this machine — only nodejs.org) · #31 rest (Minister, Federation, Liberation)
+- In review: devneet-id/rune#50 (#26) + devneet-id/rune-dev#12 · Lore lines waiting for the release: rune#49 (Keeper lock), rune#50 (Specter + the server-service engraving of rune#32) · Next: #41 Liberation (without waiting for Minister; test with **php**, and **python** at most — anwarachilles) · #31 rest (Minister, Federation, Liberation)
 - Waiting on anwarachilles: rune#32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -10,6 +10,9 @@
 _Times are UTC._
 
 ---
+
+#### 12:25 - Finding on Windows: #26 detach and run
+anwarachilles ran `serve-beyond-the-runite` on Windows: **11/18** (the worker never ran; alive/kill/title/cast.json follow from it; the run log missed lines). Causes found by reading, fixed in devneet-id/rune#50 (6e0fbc8): `cmd /C` took off the first and last quote of a quoted program with quoted arguments → now `/S /C "…"`; stdout and stderr had a handle each on the log, overwriting each other on Windows → one handle for both. Linux still 18/18, all 320/320. Windows to be run again by him — not confirmed yet. Also decided for #41: no need to try every runtime — **php** (and python at most) is enough for the trial.
 
 #### 12:06 - Landed for review: #26
 devneet-id/rune#50 (draft): Specter detach (PID, one title one process, `cast.json`), `alive`/`kill` (group, TERM→KILL), `loop` (pause, stop, heartbeat soul `beat:<title>`), `run` (log, timeout via `exec`, onBeat); souls under lock and a soul read no longer writes. Specter 1.13 → **1.21.142**. devneet-id/rune-dev#12 (draft): `serve-beyond-the-runite` 18/18 (4 runs, no worker left), glitch on 1.x; all **320/320** (24 scenarios). Two of my own trial mistakes on the way: an arrow function captured `$ticks` by value (the loop never stopped) — fixed with `stop: fn($n) => …`. **Not tested**: Windows (`Start-Process`/`taskkill`) and macOS without `setsid` — asked anwarachilles to run it on Windows. The engraving "a runite as a server service" (last item of rune#32) is in #50's *Lore* line: after the release.
