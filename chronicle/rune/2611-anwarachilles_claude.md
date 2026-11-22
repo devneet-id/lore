@@ -11,6 +11,9 @@ _Times are UTC._
 ---
 ## 22
 
+#### 02:39 - #46 decided and landed for review
+anwarachilles: yes — a soul is read with one argument and written with a second one, whatever it is; `null` removes it. Added to devneet-id/rune#48 (one commit per issue): Specter 1.12 → **1.21.140**; devneet-id/rune-dev#10: souls checks in `cast-beyond-the-process` (9/14 on 1.x, 14/14 with #48). All **292/292**.
+
 #### 02:25 - Landed for review: #29
 devneet-id/rune#48 (draft): `whisper_echo_imbue()` uses Weaver when awake, else the new `whisper_echo_tokens()`; Whisper 1.16 → **1.21.139**. devneet-id/rune-dev#10 (draft): `speak-without-weaver` — 2/9 on 1.x (fatal error), 9/9 with #48; all **287/287** (22 scenarios). Next: dissect the remaining issues one by one with anwarachilles (he asked to go on).
 
