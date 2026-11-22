@@ -3,6 +3,7 @@
 - Waiting on anwarachilles: how exurajs production hides every error — `setTimeout` 5 s + `console.clear()` (his idea) or catching them (`error` / `unhandledrejection` + `try/catch`, optional `onError`, my proposal); then update devneet-id/exurajs#3 and this chronicle
 - Worked only when asked: devneet-id/exurajs#3, devneet-id/exuraphp#9 (mode); devneet-id/exuracss#4–#6, devneet-id/exurajs#2, devneet-id/exuraphp#3–#8 (findings)
 - Tint fix: move AnwarAchilles/exuracss#1 to a branch of devneet-id/exuracss for devneet-id/exuracss#4, then close the fork PR
+- Waiting on anwarachilles: devneet-id/exura#1 links follow the flat realm (updated)
 - To do with anwarachilles: guide him once through *Working on this realm* (clone, `php exura`, test a branch) and record it
 - Waiting on anwarachilles: review/merge devneet-id/exura#1 (removes the docs moved to lore)
 - Realm docs follow the release (lore#27): each exura PR carries a *Lore* line; `realms/exura/` is updated after a release
@@ -11,6 +12,12 @@
 _Times are UTC._
 
 ---
+
+#### 19:03 - Realm flattened (lore#42); Working on this realm checked (lore#40)
+anwarachilles: the shape of lore/realms changed, fix it; check the laws-update issues.
+- **lore#42** — `realms/exura/` is flat: `git mv reference/exuracss|exurajs|exuraphp` to the realm root (history kept); `lore/README.md` and `reference/README.md` merged into the realm README (the story, the series, the documentation index, versioning, shaped with Rune) with a *How the pages are laid out* section; the *Next* line no longer names `lore/` / `reference/`. Broken-link check: none.
+- **lore#40** — *Working on this realm* is in place (written at 18:3x today): project repos (exuracss, exurajs, exuraphp on `1.x`; exura), the development repo (exura-dev), `exura-skill` (not yet), clone and initialise, test an agent's branch. The user paragraph now opens the README.
+- devneet-id/exura#1 links pointed to `realms/exura/reference/…`: updated to the flat paths.
 
 #### 18:48 - devneet-id/exura#1 opened
 Removes `exuracss/`, `exurajs/`, `exuraphp/` from the umbrella repo (no page of the website reads them) and points its README to `realms/exura/`. Draft, waiting on anwarachilles.

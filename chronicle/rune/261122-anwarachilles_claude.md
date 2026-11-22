@@ -10,6 +10,9 @@ _Times are UTC._
 
 ---
 
+#### 19:05 - Laws: lore#42 and lore#40 done
+anwarachilles: new laws came in — the realm flattening we did at 18:29 was before them, the Magistrate saw it and wrote it into law (`covenant/workflow.md`, *The shape of a realm*; lore#41 also fixed the `covenant/release.md` link I had left). Rune's share: **lore#42** — the broken anchor in Act 1 `keeper.md` → `sentinel.md#keeper-needs-begin-and-end` fixed (anchors of the whole realm checked: none broken); the realm README gets *How the pages are laid out* (story: `paradigm.md`, `acts/`, `engravings/` · technical: `runes/`, `runites/`, `modes.md`, `glossary.md`). **lore#40** — checked: user paragraph and *Working on this realm* (rune, rune-dev, rune-skill, clone and initialise, test an agent's branch) already there. Answered both issues.
+
 #### 18:29 - Landed: realm rune flattened
 anwarachilles: take the contents of `realms/rune/lore/` and `realms/rune/reference/` out, level with the realm. Now `realms/rune/` holds `acts/`, `engravings/`, `paradigm.md`, `runes/`, `runites/`, `modes.md`, `glossary.md`; the two folder READMEs merged into the realm README (Acts, Look it up, Runes and Runites, Laws). Every relative link rewritten and checked — none broken inside the realm; root `glossary.md` and `llms.txt` pointed to the new glossary. Structure only, no content change (realm docs still wait for 1.21.142). Left for him: `covenant/release.md` links the old `release.md` path (a law: the laws division, by pull request), and `AGENTS.md`/`README.md`, `realms/README.md`, `llms.txt` still describe a realm as `lore/` + `reference/` (reliquary and exura keep that shape — not my division). rune-dev's links to lore follow in its own PR.
 
