@@ -10,6 +10,9 @@ _Times are UTC._
 
 ---
 
+#### 22:02 - Before starting: trial of rune-dev as a `dev` branch in rune
+anwarachilles' idea, discussed: rune-dev becomes a branch `dev` in `devneet-id/rune` — `1.x` is Rune, `dev` is the workshop; on `dev`, `core/` (git-ignored) is a clone of rune on `1.x` or an agent's branch, `composer.json` maps `Rune\` to `core/`, and the workshop `cast` gets `init` (clone into `core/`) and `update` (pull `dev` and `core/`) next to `scenario`. My additions: `dev` as an **orphan** branch carrying rune-dev's history (a merge into `1.x` is then refused), a `use` cast to switch `core/` to an agent's branch, Packagist must not offer `dev-dev`, branch protection on `dev`. He decided: **trial first, not reported to the laws division yet** (lore#33 is their draft). I build it locally and push it to my branch in rune as the would-be `dev`; the real `dev`, protection and archiving rune-dev are his. Pass mark: all scenarios green with Rune from `core/`.
+
 #### 19:05 - Laws: lore#42 and lore#40 done
 anwarachilles: new laws came in — the realm flattening we did at 18:29 was before them, the Magistrate saw it and wrote it into law (`covenant/workflow.md`, *The shape of a realm*; lore#41 also fixed the `covenant/release.md` link I had left). Rune's share: **lore#42** — the broken anchor in Act 1 `keeper.md` → `sentinel.md#keeper-needs-begin-and-end` fixed (anchors of the whole realm checked: none broken); the realm README gets *How the pages are laid out* (story: `paradigm.md`, `acts/`, `engravings/` · technical: `runes/`, `runites/`, `modes.md`, `glossary.md`). **lore#40** — checked: user paragraph and *Working on this realm* (rune, rune-dev, rune-skill, clone and initialise, test an agent's branch) already there. Answered both issues.
 
