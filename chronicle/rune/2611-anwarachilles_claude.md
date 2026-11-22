@@ -1,7 +1,8 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Next: discuss #29; #41 later · #43 `--runic-create` `_arise()` · #22 · #26 · #27 · #31
-- Waiting on anwarachilles: close #23 (`Keeper::env`) as not planned? · #32's last item (engraving: a runite as a server service) — still wanted?
+- In review: devneet-id/rune#47 (#43, #45, #22) + devneet-id/rune-dev#9 (#31) → after merge: lore (1.21.138, spell values as given, Sentinel evolution)
+- Next: #46 · #26 Specter upgrade (allowed; reviewed after) · #27 build after the operator picks an example · #29 decide the wrap · #41 catalog
+- Waiting on anwarachilles: #32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
 - Waiting on anwarachilles: the design of Minister (it will carry Liberation's runtimes; `@liberation/cast.bat` / `cast.sh` anchored to the root `.echoes/`) — still being studied
@@ -10,6 +11,13 @@ _Times are UTC._
 
 ---
 ## 22
+
+#### 02:07 - Landed for review: #43, #22, #45; #31 coverage
+- devneet-id/rune#47 (draft): #43 templates without `_arise()`; **#45** (new, found by the trial: `--runic-delete` left the rune in the runite — a regression of #21: revoke now runs before the folder goes); #22 a spell value is read as given (command line kept as typed, a cast in code decodes `%20` once, chains and `Chanter::spell(k, v)` unchanged). Chanter 1.18 → **1.21.138**.
+- devneet-id/rune-dev#9 (draft): `evolve-a-rune`, `seal-and-open-a-relic`, `read-the-arcane` new; souls in `cast-beyond-the-process`; values in `read-spells-and-flags`. On 1.x: evolve 10/14, spells 13/17 (relic/arcane/souls pass on 1.x — measured). With #47: **278/278**, 21 scenarios; coverage 73/299 (24%). I first wrote 293 in the README before measuring — corrected to 278 before the commit.
+- Finding: **#46** `Specter::soul()` cannot store `0`/`''`/`false` (filed, not fixed).
+- #23 closed (not planned). #31 stays open: Minister, Federation, Liberation (network) not covered.
+- Studied for the operator: #29 (Whisper calls Weaver in one place only: `whisper_echo_imbue()` → `weaver_bind_multiple()`), #27 usage examples, #41 concept.
 
 #### 01:58 - Decided: #43, #22, #31 now; #23 closed; the rest studied
 anwarachilles, on the open issues:
