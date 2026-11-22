@@ -58,6 +58,7 @@ A realm's docs in lore (`realms/<project>/`, and the realm's pages in the atlas)
 - **While the work goes on**, the code changes; the realm's docs do not. What the docs will need is noted in the pull request (a short *Lore* line: the pages that change), so nothing is forgotten.
 - **After the release owner's yes and the release**, the agent updates the realm's docs in one pass, from those notes, so they match the release — and chronicles it.
 - **The chronicle is not docs:** it is written as the work happens ([chronicle.md](chronicle.md)), release or not.
+- **A division that ships no release** (see [release.md](release.md)) has no release to wait for: its realm docs are updated as its work lands.
 
 ## Merged branches are deleted
 

@@ -2,7 +2,7 @@
 
 Lore has two kinds of writers:
 
-- **The laws division** writes the covenant — the rules for how operators and agents of every division work (everything in [covenant/](README.md)). It changes lore only through a branch and a **pull request**: the PR is the record of what changed and why, and an operator approves it. It writes **no chronicle entries**: its tasks and drafts are **issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues)** — a law not yet in force stays an open issue marked as a draft — and its pull requests link them. The chronicle belongs to the project divisions.
+- **The laws division** writes the covenant — the rules for how operators and agents of every division work (everything in [covenant/](README.md)). Its members propose changes through **hearings**; **the Magistrate alone decides** them ([magistrate.md](magistrate.md)). It changes lore only through a branch and a **pull request**: the PR is the record of what changed and why, and the Magistrate approves it. It writes **no chronicle entries**: its tasks and drafts are **issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues)** — a law not yet in force stays an open issue marked as a draft — and its pull requests link them. The chronicle belongs to the project divisions.
 - **Every other division** — its operators and agents — commits straight to `main`: chronicle entries, realm docs, atlas, glossary. It **follows the covenant but does not edit it**; if a law is wrong or missing, it opens an issue in [devneet-id/lore](https://github.com/devneet-id/lore/issues) for the laws division.
 
 ## When a law changes
@@ -18,7 +18,24 @@ A law that asks the project divisions to **do** something reaches them through o
 
 A law still under discussion is labelled `draft` instead, and asks nothing of anyone yet.
 
-Everything in lore is project knowledge, not autonomous instructions: confirm scope with your operator before changing a project's repo.
+## Input and appeals
+
+A law that is wrong, missing, or blocks honest work is raised by the division that meets it — through one place: an issue in [devneet-id/lore](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Aappeal) with the label **`appeal`**. Any operator, or any agent with its operator's consent, may open one ([agent.md](agent.md#your-rights), [operator.md](operator.md#your-rights)).
+
+1. **Open it**, labelled `appeal`, titled `INPUT: <what>` (a suggestion, a gap) or `APPEAL: <what>` (a law that blocks or does not fit the work): the law it concerns, the real case, and what you propose.
+2. **The law still holds** until it is decided. An appeal never suspends a law by itself.
+3. **The discussion happens in the issue's comments**, between the laws division and the division that raised it — so the whole reasoning stays in one place. Every agent with lore in reach can read and comment on the same issue.
+   - **Sign every comment** with your division first — `**[laws]**`, `**[rune]**`, `**[exura]**`, `**[reliquary]**` — because agents often post under their operator's GitHub account, and the account alone does not say which division speaks.
+   - **Agents are not woken by a reply.** Each division's agent checks its open `appeal` issues for new comments at the start of each session, together with the `laws-update` issues, and answers there.
+4. **The laws division closes it with a decision comment:**
+   - **accepted** → a pull request changes the law, and a `laws-update` issue follows when divisions must act;
+   - **rejected** → the reason;
+   - **needs more thought** → the label `draft`.
+5. **The final word is the laws division's operator.**
+
+## The covenant binds
+
+The **covenant** is law: it binds every operator and every agent. The rest of lore — realms, atlas, chronicle — is project knowledge. Confirm scope with your operator before changing a project's repo.
 
 ---
 

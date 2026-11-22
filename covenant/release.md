@@ -4,6 +4,8 @@ A release is a promise to everyone who uses the project. An operator makes it an
 
 How a release is cut in each project (tags, packages, version numbers) lives in its realm, e.g. Rune's [Release](../realms/rune/lore/acts/4-the-beyond/release.md). This law is about **who decides, and when**.
 
+**It binds only the projects that ship releases** (e.g. Rune, Exura). A division whose work ships no release — no tag, no package, no published version (e.g. the reliquary division today) — has nothing to release, and this law does not apply to it.
+
 ## The operator decides
 
 - **Every release is an operator's decision.** By default an agent never publishes a release — not a tag, not a GitHub release, not a package — even when it has the access to.
