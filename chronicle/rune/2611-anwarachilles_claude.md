@@ -11,6 +11,9 @@ _Times are UTC._
 ---
 ## 22
 
+#### 02:25 - Landed for review: #29
+devneet-id/rune#48 (draft): `whisper_echo_imbue()` uses Weaver when awake, else the new `whisper_echo_tokens()`; Whisper 1.16 → **1.21.139**. devneet-id/rune-dev#10 (draft): `speak-without-weaver` — 2/9 on 1.x (fatal error), 9/9 with #48; all **287/287** (22 scenarios). Next: dissect the remaining issues one by one with anwarachilles (he asked to go on).
+
 #### 02:22 - #29 decided: Weaver is a complement to Whisper
 anwarachilles, after the explanation (Whisper calls Weaver in one place only; Whisper's own tokens need no Weaver): **yes** — Whisper→Weaver becomes a **soft bond**. `whisper_echo_imbue()` asks `aether_has_entity('weaver_bind_multiple')`; without Weaver, a new `whisper_echo_tokens()` replaces Whisper's own tokens itself (no fatal error); the user's own bonds stay Weaver's. Trial first in rune-dev, then rune, Phantasm, lore.
 
