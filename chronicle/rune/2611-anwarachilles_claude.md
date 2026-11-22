@@ -11,6 +11,9 @@ _Times are UTC._
 ---
 ## 22
 
+#### 02:22 - #29 decided: Weaver is a complement to Whisper
+anwarachilles, after the explanation (Whisper calls Weaver in one place only; Whisper's own tokens need no Weaver): **yes** — Whisper→Weaver becomes a **soft bond**. `whisper_echo_imbue()` asks `aether_has_entity('weaver_bind_multiple')`; without Weaver, a new `whisper_echo_tokens()` replaces Whisper's own tokens itself (no fatal error); the user's own bonds stay Weaver's. Trial first in rune-dev, then rune, Phantasm, lore.
+
 #### 02:13 - Merged; lore follows 1.21.138
 anwarachilles merged devneet-id/rune#47 and devneet-id/rune-dev#9. Lore (`main`): Version 1.21.138, versioning table (Chanter 1.18); spell values read as given (Chanter reference, Act 1 cast-and-spell, Traps); `--runic-delete` order (Sentinel reference); `_arise` gone from the templates (Decisions); Known Issues (fixed in 1.21.138; #46 open, with a workaround).
 
