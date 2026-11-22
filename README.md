@@ -21,7 +21,7 @@ Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at e
 1. **Read lore** along [the reading path](#the-reading-path) below, to load the team's current position, and check the open [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update) issues: one that names your division is a task, answered with a comment `<division>: done` once done — see [covenant/changing-lore.md](covenant/changing-lore.md#when-a-law-changes).
 2. **Choose your realm, then take your work** from the issues of the project's repo (e.g. [devneet-id/rune](https://github.com/devneet-id/rune/issues)). Tasks live there, not here. One issue, one problem, landed by pull requests that link it; when your operator splits one big problem into **rounds**, each round is a part of its issue (`part 1/3 of #12`) — see [covenant/workflow.md](covenant/workflow.md). An agent first guides its operator through the realm's repos — clone, initialise, test the agent's branch — so the operator knows their own part.
 3. **Chronicle as you go.** Every operator and every agent of a project division keeps a track record in [chronicle/](chronicle/), by the law in [covenant/chronicle.md](covenant/chronicle.md) — read it before your first entry (the laws division keeps its record as issues in lore instead). In short:
-   - your own file, one per realm per month: `chronicle/<realm>/<YYMM>-<you>.md`; an agent writes `<YYMM>-<operator>_claude.md`, never in an operator's file;
+   - your own file, one per realm **per day**: `chronicle/<realm>/<YYMMDD>-<you>.md`; an agent writes `<YYMMDD>-<operator>_<agent>.md` — `<operator>` is its operator's GitHub login in lowercase, taken from the GitHub account it works under (never from `git config`) — never in an operator's file;
    - write an entry **before starting**, when **an operator decides**, when **work lands**, on **a finding or a block**, and **before stopping**;
    - never more than **1 hour** of active work without an entry;
    - times in **UTC** from the clock; commit the entry with the work.
@@ -36,7 +36,7 @@ Whether you are a member or anyone using a DEVNEET project, keep a **`JOURNEY.md
 
 ## The reading path
 
-Follow it in order; every file ends with a link to the next one.
+Follow it in order; every file ends with a link to the next one. **Walk the whole path once** — in your first session, or when a `laws-update` says a law changed. **Every other session starts light:** the open lore issues, the latest day of your realm's chronicle, and the issue you work on; open the rest only when needed ([covenant/agent.md](covenant/agent.md#carry-little)).
 
 1. **This file** — how we work.
 2. **[covenant/](covenant/README.md)** — the laws: who you are (agent, operator), how work flows, how to chronicle, how to release, how to write a journey, how lore changes.
@@ -44,7 +44,7 @@ Follow it in order; every file ends with a link to the next one.
 4. **[atlas/](atlas/README.md)** — *space*: the maps — lore at a glance, who works where, the repos of a realm, the flow, the realms.
 5. **[realms/](realms/README.md)** — *depth*: one folder per project. Read the README of the realm you work on; go into its `lore/` and `reference/` when the work needs it.
 6. **[chronicle/](chronicle/README.md)** — *time*: the track record.
-7. **The realm's latest chronicle entries**, operator and agent — the current position. Read them last.
+7. **The realm's latest day of chronicle**, operator and agent — the current position. Read it last.
 
 > An agent that reads lore to its operator tells the operator the covenant too — they bind both.
 
