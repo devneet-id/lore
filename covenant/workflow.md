@@ -12,13 +12,13 @@ How work moves from an issue to merged code in a project's repo. Workflow is **h
 
 ## Choose your realm
 
-Work starts by choosing **the realm** (project) you take it from. A realm is more than one repo:
+Work starts by choosing **the realm** (project) you take it from. **Every division that keeps a realm is a project division** — whatever its shape: one repo or several, with releases or without ([release.md](release.md)), code or mostly docs. A realm is more than one repo:
 
-- **the project repo** — the code that ships (e.g. `devneet-id/rune`);
-- **its `-dev` repo** — where it is developed and tested (e.g. `devneet-id/rune-dev`, `devneet-id/exura-dev`): scenarios, trials, the proof that a change works;
+- **the project repo(s)** — what ships (e.g. `devneet-id/rune`; or several, like `reliquary`, `relic-cli`, `relic-web`);
+- **the repos used to develop and test it** — where a change is proved. A `-dev` repo (e.g. `devneet-id/rune-dev`, `devneet-id/exura-dev`: scenarios, trials) is **one way, not a must**: a realm without one names whatever it develops and tests with — another repo, a fork, a test instance, a local setup — and **brings those repos along** in its README;
 - and, where there is one, **its `-skill` repo** — what an agent needs to *use* the project.
 
-Every realm's README in lore has a section **"Working on this realm"**: its repos, how to clone and initialise them, and how to test an agent's branch. The project division writes and keeps it; the laws division only requires it.
+Every realm's README in lore has a section **"Working on this realm"**: its repos — the project repos and the repos used to develop it — how to clone and initialise them, and how to test an agent's branch. The project division writes and keeps it; the laws division only requires it.
 
 ## Guide the operator first
 
@@ -26,13 +26,13 @@ The operator answers for what is merged and released — so they must know **the
 
 So, **at the start of the work with an operator**, the agent walks them through the realm's "Working on this realm", until they can do it alone:
 
-1. **Clone** the related repos — the project and its `-dev` repo.
+1. **Clone** the related repos — the project and the repos used to develop and test it (its `-dev` repo, where there is one).
 2. **Initialise** them — setup, dependencies, the first run.
 3. **Test the agent's work** — check out the agent's branch in their local copy, `git pull`, run the scenarios/trials.
 4. **Decide** — merge the pull request when it is good enough, or send it back with what is wrong.
 5. **Clean up** — after the merge, go back to `main`, `git pull`, and delete the agent's branch from the local copy (`git branch -d <branch>`).
 
-Once is enough; the agent records it in the chronicle (*operator guided through rune-dev*) and does not repeat it, unless the operator asks or the setup changed. An operator who already knows says so, and the agent records that instead.
+Once is enough; the agent records it in the chronicle (*operator guided through rune-dev*, or through the realm's own development repos) and does not repeat it, unless the operator asks or the setup changed. An operator who already knows says so, and the agent records that instead.
 
 ## Issues are the unit of work
 
@@ -109,7 +109,7 @@ Both sides have a part in every step.
 | 2. **Guide** (first time) | walks the operator through clone, initialise, test | clones, initialises, learns to test |
 | 3. **Take an issue** | confirms its scope; chronicles before starting ([chronicle.md](chronicle.md)) | confirms the scope |
 | 4. **Do the work** | in one pass, or in rounds; findings go back to the issues | picks each round's batch, when split |
-| 5. **Open pull requests** | in the project repo, and its scenario in the `-dev` repo; links the issue; chronicles it | — |
+| 5. **Open pull requests** | in the project repo, and its proof in the development repo (the scenario in `-dev`, where there is one); links the issue; chronicles it | — |
 | 6. **Evaluate** | says how to test it: branch, commands, what to look for | checks out the agent's branch, `git pull`, runs it |
 | 7. **Merge** | never, unless the operator allowed it | merges, or sends it back; the agent chronicles the landing |
 | 8. **Clean up** | starts its next work on a fresh branch from the latest `main` | back to `main`, `git pull`, deletes the merged branch locally |

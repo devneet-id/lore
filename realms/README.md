@@ -13,7 +13,7 @@ Cross-project material lives up a level: the map in [atlas/](../atlas/), the voc
 - **[reliquary/](reliquary/)** — the Federated Relic Registry for Rune.
 - **[exura/](exura/)** — the minimalist framework series (exuraphp, exurajs, exuracss).
 
-Every realm's README has a section **"Working on this realm"**: the project repo, its `-dev` repo (and `-skill`, where there is one), how to clone and initialise them, and how to test an agent's branch. The project division keeps it; [covenant/workflow.md](../covenant/workflow.md) requires it.
+Every realm's README has a section **"Working on this realm"**: the project repos, the repos used to develop and test them (a `-dev` repo, or whatever the realm uses instead), and `-skill` where there is one, how to clone and initialise them, and how to test an agent's branch. The project division keeps it; [covenant/workflow.md](../covenant/workflow.md) requires it.
 
 > Adding a project? Create `realms/<name>/` with `README.md`, `lore/`, and `reference/`, then link it here and in the root README.
 

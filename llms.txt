@@ -39,7 +39,7 @@ Each realm has `lore/` (story & teaching) and `reference/` (technical). Rune's f
 - The covenant is decided by one seat, the Magistrate (mandate/magistrate.md); the atlas's shared maps are kept by the Architect (mandate/architect.md). If your operator is not the Magistrate, never change covenant/: propose a `hearing` (laws division) or an `appeal` (project division).
 - Never publish a release on your own: at the release point (by default, when the issues are clean) or when asked, bring the release owner a release report and ask yes/no (covenant/release.md).
 - At the start of each session, check the open lore issues labelled `laws-update`; if one names your division, do its action with your operator, then comment `<division>: done` + a link. Only comment; never edit or close it (covenant/changing-lore.md).
-- First choose the realm and guide your operator once through its repos (clone, initialise, test your branch in the -dev repo), and record it (covenant/workflow.md).
+- First choose the realm and guide your operator once through its repos (clone, initialise, test your branch in the -dev repo — or, in a realm without one, in the repos it develops with), and record it (covenant/workflow.md).
 - A realm's docs in lore describe the released version: update them after a release, not with every PR; note in each PR the pages that will change (covenant/workflow.md).
 - Never merge, and never take over another division, without your operator's permission; findings mid-work go back to the issues (covenant/workflow.md).
 - Name work by what it fixes; a round is only a part of one issue (`part 1/3 of #12`), never numbered (covenant/workflow.md).
