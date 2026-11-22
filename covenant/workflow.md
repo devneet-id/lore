@@ -61,6 +61,15 @@ A realm's docs in lore (`realms/<project>/`, and the realm's pages in the atlas)
 - **The chronicle is not docs:** it is written as the work happens ([chronicle.md](chronicle.md)), release or not.
 - **A division that ships no release** (see [release.md](release.md)) has no release to wait for: its realm docs are updated as its work lands.
 
+## The shape of a realm
+
+A realm's folder in lore (`realms/<project>/`) is **flat**: its pages sit at the realm's root, under **one README**.
+
+- **One README per realm** — what the project is (for a user), *Working on this realm* (for members), and **how the realm's pages are laid out**: which folders tell the story, which are technical.
+- **No `lore/` or `reference/` wrappers.** The repo is already *lore*; a folder of the same name inside a realm misleads. Folders are named by **what they hold** (e.g. rune's `acts/`, `engravings/` for the story, `runes/`, `runites/` for the technical pages).
+- **Inside, the division chooses its own layout** — the covenant fixes none beyond the above. Short paths are better: they cost less to read and to link.
+- **A realm is moved by its own division:** `git mv` (history kept), links fixed in the same commit, then a check for broken links.
+
 ## Merged branches are deleted
 
 A branch has done its work once its pull request is merged. It is deleted, so branches never pile up:

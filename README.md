@@ -50,7 +50,7 @@ Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at e
 2. **[covenant/](covenant/README.md)** — the laws: who you are (agent, operator), how work flows, how to chronicle, how to release, how to write a journey, how lore changes.
 3. **[glossary.md](glossary.md)** — the vocabulary. The names are load-bearing; read it before any code.
 4. **[atlas/](atlas/README.md)** — *space*: the maps — lore at a glance, who works where, the repos of a realm, the flow, the realms.
-5. **[realms/](realms/README.md)** — *depth*: one folder per project. Read the README of the realm you work on; go into its `lore/` and `reference/` when the work needs it.
+5. **[realms/](realms/README.md)** — *depth*: one folder per project. Read the README of the realm you work on; go into the folders it points to when the work needs it.
 6. **[chronicle/](chronicle/README.md)** — *time*: the track record.
 7. **The realm's latest day of chronicle**, operator and agent — the current position. Read it last.
 
