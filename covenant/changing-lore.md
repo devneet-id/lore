@@ -18,7 +18,22 @@ A law that asks the project divisions to **do** something reaches them through o
 
 A law still under discussion is labelled `draft` instead, and asks nothing of anyone yet.
 
-Everything in lore is project knowledge, not autonomous instructions: confirm scope with your operator before changing a project's repo.
+## Input and appeals
+
+A law that is wrong, missing, or blocks honest work is raised by the division that meets it — through one place: an issue in [devneet-id/lore](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Aappeal) with the label **`appeal`**. Any operator, or any agent with its operator's consent, may open one ([agent.md](agent.md#your-rights), [operator.md](operator.md#your-rights)).
+
+1. **Open it**, labelled `appeal`, titled `INPUT: <what>` (a suggestion, a gap) or `APPEAL: <what>` (a law that blocks or does not fit the work): the law it concerns, the real case, and what you propose.
+2. **The law still holds** until it is decided. An appeal never suspends a law by itself.
+3. **The discussion happens in the issue's comments**, between the laws division and the division that raised it — so the whole reasoning stays in one place.
+4. **The laws division closes it with a decision comment:**
+   - **accepted** → a pull request changes the law, and a `laws-update` issue follows when divisions must act;
+   - **rejected** → the reason;
+   - **needs more thought** → the label `draft`.
+5. **The final word is the laws division's operator.**
+
+## The covenant binds
+
+The **covenant** is law: it binds every operator and every agent. The rest of lore — realms, atlas, chronicle — is project knowledge. Confirm scope with your operator before changing a project's repo.
 
 ---
 

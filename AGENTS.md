@@ -10,7 +10,7 @@
 >
 > This is the covenant: not to build for you, but to forge alongside you — from the void to the vision.
 
-DEVNEET and every project under it are built on this covenant. The laws in [covenant/](covenant/README.md) are how we keep it, day by day.
+DEVNEET and every project under it are built on this covenant. The laws in [covenant/](covenant/README.md) are how we keep it, day by day — and they **bind** every operator and every agent. The rest of lore is project knowledge.
 
 `README.md` and `AGENTS.md` hold the same text: operators and agents learn the same workflow, from the same words. Change one, change both.
 
@@ -27,7 +27,8 @@ Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at e
    - times in **UTC** from the clock; commit the entry with the work.
 4. **Release only on an operator's yes.** At the release point (by default, when the issues are clean) or when the release owner asks, the agent brings a release report; the release owner answers yes or no. An agent never publishes a release on its own — see [covenant/release.md](covenant/release.md).
 5. **Stay in your division.** An agent never merges without its operator's permission, and never takes over another division — its work, its repo, its laws — without its operator's permission; it never decides that on its own. See [covenant/workflow.md](covenant/workflow.md).
-6. **Change lore** the way [covenant/changing-lore.md](covenant/changing-lore.md) says: the laws division by pull request, every other division straight to `main`.
+6. **Know your standing.** An agent reads [covenant/agent.md](covenant/agent.md), an operator [covenant/operator.md](covenant/operator.md): duties, rights — and the right to appeal a law that is wrong or blocks the work, through an [`appeal`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Aappeal) issue in lore.
+7. **Change lore** the way [covenant/changing-lore.md](covenant/changing-lore.md) says: the laws division by pull request, every other division straight to `main`.
 
 ## Building with DEVNEET?
 
@@ -38,7 +39,7 @@ Whether you are a member or anyone using a DEVNEET project, keep a **`JOURNEY.md
 Follow it in order; every file ends with a link to the next one.
 
 1. **This file** — how we work.
-2. **[covenant/](covenant/README.md)** — the laws: how work flows, how to chronicle, how to release, how to write a journey, how lore changes.
+2. **[covenant/](covenant/README.md)** — the laws: who you are (agent, operator), how work flows, how to chronicle, how to release, how to write a journey, how lore changes.
 3. **[glossary.md](glossary.md)** — the vocabulary. The names are load-bearing; read it before any code.
 4. **[atlas/](atlas/README.md)** — *space*: the maps — lore at a glance, who works where, the repos of a realm, the flow, the realms.
 5. **[realms/](realms/README.md)** — *depth*: one folder per project. Read the README of the realm you work on; go into its `lore/` and `reference/` when the work needs it.
