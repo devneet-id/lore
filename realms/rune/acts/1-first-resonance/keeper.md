@@ -22,7 +22,7 @@ Then call `notes_keep();` after each add, edit and remove.
 - `Keeper::item('notes', $data)` writes `notes.json`.
 - Write `(object) $NOTES` so `notes.json` is always a JSON object, whatever the keys — even when the list is empty (`{}`). (`Keeper::item()` reads only when the second argument is left out; the Entity `keeper_item()` treats any empty value as a read.)
 
-Make sure `Keeper::begin()` / `Keeper::end()` are in place ([Sentinel](sentinel.md#the-trap-keeper-needs-begin-and-end)).
+Make sure `Keeper::begin()` / `Keeper::end()` are in place ([Sentinel](sentinel.md#keeper-needs-begin-and-end)).
 
 ## It remembers
 ```bash

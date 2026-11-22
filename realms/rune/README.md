@@ -6,7 +6,14 @@
 
 Rune is the foundation of the DEVNEET ecosystem — lightweight, lazy-loaded, process-based. No bootstrapping; each rune awakens only when invoked. Its documentation is alive: every rune describes itself in its **Phantasm**, read by the Grimoire, instead of Reflection.
 
-## This folder
+## How the pages are laid out
+
+The realm is flat — every page sits here, under this README:
+
+| Side | Pages | What they hold |
+|---|---|---|
+| **Story** — read in order | [`paradigm.md`](paradigm.md), [`acts/`](#the-acts--learn-step-by-step), [`engravings/`](engravings/README.md) | why Rune exists, the five Acts step by step, recipes and traps |
+| **Technical** — look things up | [`runes/`](runes/README.md), [`runites/`](runites/README.md), [`modes.md`](modes.md), [`glossary.md`](glossary.md) | the ten origin runes (generated from each Phantasm), the built-in runites, the modes, every Rune word |
 
 Start with the [Paradigm](paradigm.md): why Rune exists and the rules it keeps. Then walk the Acts.
 
