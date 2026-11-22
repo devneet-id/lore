@@ -10,6 +10,9 @@ _Times are UTC._
 
 ---
 
+#### 22:36 - Merged: main as a backup of 1.x
+anwarachilles merged devneet-id/rune#51 (merge commit 651bbb1). Checked: `main` holds all of `1.x`, the trees are identical (empty diff). From now on `main` follows `1.x` by a plain PR. Branches of rune: `1.x` (product), `main` (its backup), `dev` (the workshop, orphan), `archive` (the early Rune).
+
 #### 22:35 - Landed for review: main as a backup of 1.x
 anwarachilles kept the early Rune in a new branch `archive` (= old `main`, dce9adc) and asked for a PR bringing `1.x` into `main`, so `1.x` can be restored from `main` if it is ever overwritten. `main` had no common history with `1.x` (a PR from `1.x` is refused), so devneet-id/rune#51 (draft) is `1.x` plus one merge commit (`-s ours`): tree exactly `1.x` (empty diff), `main` as second parent — merged, `main` follows `1.x` by fast-forward. Must not be squashed. Earlier: he asked about `dev` from a clean state — GitHub cannot create an orphan branch, so his copy then my overwrite was the way; recreating it would change nothing. GitHub's "recent pushes" banner fades on its own; a ruleset on `dev` (restrict deletions, later block force pushes) suggested.
 
