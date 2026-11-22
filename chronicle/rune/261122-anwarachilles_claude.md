@@ -2,7 +2,7 @@
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
 - Lore lines waiting for the release: rune#49 (Keeper lock), rune#50 (Specter + the server-service engraving of rune#32) · Next: #41 Liberation (without waiting for Minister; test with **php**, and **python** at most — anwarachilles) · #31 rest (Minister, Federation, Liberation)
 - Waiting on anwarachilles: rune#32's last item (engraving: a runite as a server service) — still wanted?
-- Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
+- Release: **v1.21.142 report brought** — waiting for anwarachilles' yes/no on it
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
 - Waiting on anwarachilles: the design of Minister (it will carry Liberation's runtimes; `@liberation/cast.bat` / `cast.sh` anchored to the root `.echoes/`) — still being studied
 - Realm docs: from now on they follow the release (lore#27) — each rune PR carries a *Lore* line. The realm is already at 1.21.140 (updated before the law; latest tag 1.21.117) — proposed to leave it, the next release aligns it.
@@ -10,6 +10,9 @@
 _Times are UTC._
 
 ---
+
+#### 12:33 - Release point: report for 1.21.142
+anwarachilles: "the issues are clear — release, following the earlier releases". Recorded as his **permission for this one release** (scope: 1.21.142) — per covenant/release.md it belongs in his own chronicle file too, which only he writes. The release point is his call: #31, #32, #41 stay open and are not in this release. Brought the release report (trials on 1.x merge `ebabc16`: **320/320**, 24 scenarios, Linux; Windows last 199/199 on 1.21.133 and 11/18 on `serve-beyond-the-runite` before the fix — the re-run not reported). The Rune page says tag `v1.21.142`, the last release used `1.21.117` (no `v`) — asked which. I cannot publish a GitHub release from here (no release tool, pushes only to my branch): he publishes with the drafted notes, or allows me to push the tag.
 
 #### 12:32 - Merged: #26
 anwarachilles merged devneet-id/rune#50 (Specter long-running, with the Windows fix 6e0fbc8) and devneet-id/rune-dev#12. Version 1.21.142. Windows re-run of `serve-beyond-the-runite` not reported to me yet. Realm docs wait for the release; #50's *Lore* line (incl. the server-service engraving) stays in `(upcoming)`. Next: #41 — dissecting step 3 (running a cast with a kept runtime) with him first, since Minister was to carry it.
