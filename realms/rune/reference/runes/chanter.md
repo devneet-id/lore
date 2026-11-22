@@ -6,7 +6,7 @@ Chanter is the gate of the command line. A **cast** is a command, a **spell** is
 
 | | |
 |---|---|
-| **Version** | `1.17` |
+| **Version** | `1.18` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 0 · The Void |
@@ -97,11 +97,11 @@ Globals — state that changes as the flow goes on.
 | `$CHANTER_ECHO` | Holds text or data to be echoed after cast execution |
 
 ## Notes
-- A flag is `true` (bool), a value is a string: test a flag with `=== true` (or truthiness), never with `'1'` — before 1.21.137 a bare flag was `'1'` (devneet-id/rune#17). `chanter_spell_chain()` hands a flag on as a bare `--x`.
+- A flag is `true` (bool), a value is a string: test a flag with `=== true` (or truthiness), never with `'1'` — before 1.21.138 a bare flag was `'1'` (devneet-id/rune#17). `chanter_spell_chain()` hands a flag on as a bare `--x`.
 - `Chanter::begin()` loads the built-in runites (rune, grimoire, sentinel, reliquary); `Chanter::end()` runs the cast asked on the command line.
-- Spell values keep `0` and `+`; use quotes or `%20` for spaces.
+- A spell value is read as given: on the command line it is kept as typed (`--api=https://x/a%2Fb` stays `a%2Fb`, `50%25` stays `50%25`); in a cast written in code (`Chanter::cast('greet --name=Rune%20Lore')`) a space is written `%20` and decoded once. Values keep `0` and `+`; cast-in-cast and `Chanter::spell(k, v)` hand values on unchanged (devneet-id/rune#22, 1.21.138).
 - A spell set from code (`Chanter::spell('x', 'v')`) is read on the next cast — by design.
 - `--zero-trust` runs the cast with the arcane off and the output drained.
 
 ---
-*Generated from `Chanter/Phantasm.php` (version 1.17). Read it live with `php cast grimoire --runic=Chanter`.*
+*Generated from `Chanter/Phantasm.php` (version 1.18). Read it live with `php cast grimoire --runic=Chanter`.*

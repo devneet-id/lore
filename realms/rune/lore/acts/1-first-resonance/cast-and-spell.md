@@ -33,7 +33,7 @@ php cast
  ♦ php8 cast greet --name --loud
     ≈ Greet someone. --name=Anwar --loud
 
-◇Version=1.21.137: ϟExecute=0.0038s, ΞMemory=926.56KB - ^1.10MB
+◇Version=1.21.138: ϟExecute=0.0038s, ΞMemory=926.56KB - ^1.10MB
 ```
 
 - **DEFAULT** — the built-in runites every runite has: [grimoire](../../../reference/runites/grimoire.md), [reliquary](../../../reference/runites/reliquary.md), [sentinel](../../../reference/runites/sentinel.md). The main hall itself is the hidden cast [rune](../../../reference/runites/rune.md).
@@ -69,7 +69,7 @@ Inside the cast, `Chanter::spell('name')` reads it:
 | `--name=1` | `'1'` (a value, not a flag) |
 
 ## Spaces
-On the command line, use quotes: `--name="Rune Lore"`. When you cast from code (you will in [Chanter](chanter.md)), write the space as `%20`: `'greet --name=Rune%20Lore'`.
+On the command line, use quotes: `--name="Rune Lore"`. When you cast from code (you will in [Chanter](chanter.md)), write the space as `%20`: `'greet --name=Rune%20Lore'`. Only a cast written in code is decoded: on the command line `--api=https://x/a%2Fb` stays exactly as typed.
 
 ## Zero trust
 Add `--zero-trust` to any cast to run it with the arcane off and its output drained, then shown at once.

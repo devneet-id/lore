@@ -19,7 +19,7 @@ Sentinel guards your runite. It unlocks the modes, writes runes into the runite 
 | Spell | Does |
 |---|---|
 | `sentinel --runic-create=Ledger` | creates `@evolution/Ledger/` with the five files (origin names are refused) |
-| `sentinel --runic-delete=Ledger` | deletes it and removes it from the runite |
+| `sentinel --runic-delete=Ledger` | removes it from the runite, then deletes its folder |
 | `sentinel --phantasm-upgrade=Ledger` | raises its minor version by one (`0.9` → `0.10`); refuses an unknown rune or a version that is not `<major>.<minor>` |
 | `sentinel --phantasm-repair=Ledger` | node + link + note at once, then raises the version only if one of them changed |
 | `sentinel --phantasm-repair=Ledger --mode=node` | only rebuilds the node list from the code (`--mode=note` copies every `#NOTE`, `--mode=link` finds which runes it uses) |
@@ -56,7 +56,7 @@ vendor/
 ## Notes
 - An unlocked mode is not unlocked twice: Sentinel only tells you. To close a mode, delete its line by hand.
 - Sentinel writes at `#sentinel-manifest`, `#sentinel-awaken`, `#sentinel-flow-begin` and `#sentinel-flow-end`. Keep the markers.
-- A rune whose Phantasm has `$flow = true` (Aether, Chanter, Keeper) needs `X::begin()` / `X::end()`: insert writes them above the flow markers (once), remove takes them out. A runite without the flow markers (made before 1.21.137) gets a warning and nothing is guessed — add the markers, or the two lines, by hand.
+- A rune whose Phantasm has `$flow = true` (Aether, Chanter, Keeper) needs `X::begin()` / `X::end()`: insert writes them above the flow markers (once), remove takes them out. A runite without the flow markers (made before 1.21.138) gets a warning and nothing is guessed — add the markers, or the two lines, by hand.
 - Sentinel keeps the runite's own line ending (CRLF or LF).
 - Rune names are matched whatever their case (`ledger` → `Ledger`).
 - `--altar` (the GUI) and `--inspect` are still there, hidden while in development.

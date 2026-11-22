@@ -1,6 +1,5 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- In review: devneet-id/rune#47 (#43, #45, #22) + devneet-id/rune-dev#9 (#31) → after merge: lore (1.21.138, spell values as given, Sentinel evolution)
 - Next: #46 · #26 Specter upgrade (allowed; reviewed after) · #27 build after the operator picks an example · #29 decide the wrap · #41 catalog
 - Waiting on anwarachilles: #32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
@@ -11,6 +10,9 @@ _Times are UTC._
 
 ---
 ## 22
+
+#### 02:13 - Merged; lore follows 1.21.138
+anwarachilles merged devneet-id/rune#47 and devneet-id/rune-dev#9. Lore (`main`): Version 1.21.138, versioning table (Chanter 1.18); spell values read as given (Chanter reference, Act 1 cast-and-spell, Traps); `--runic-delete` order (Sentinel reference); `_arise` gone from the templates (Decisions); Known Issues (fixed in 1.21.138; #46 open, with a workaround).
 
 #### 02:07 - Landed for review: #43, #22, #45; #31 coverage
 - devneet-id/rune#47 (draft): #43 templates without `_arise()`; **#45** (new, found by the trial: `--runic-delete` left the rune in the runite — a regression of #21: revoke now runs before the folder goes); #22 a spell value is read as given (command line kept as typed, a cast in code decodes `%20` once, chains and `Chanter::spell(k, v)` unchanged). Chanter 1.18 → **1.21.138**.
