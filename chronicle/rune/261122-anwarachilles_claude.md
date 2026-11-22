@@ -10,6 +10,9 @@ _Times are UTC._
 
 ---
 
+#### 22:19 - Trial pushed to `dev` in rune
+anwarachilles created `dev` in devneet-id/rune (a copy of `1.x`, ebabc16) and said: put our idea there — then "iya timpa" (overwrite it). Pushed 94e36c5 to `dev` with force-with-lease on ebabc16 (nothing lost: the same commit as `1.x`). `dev` now carries rune-dev's history, no common history with `1.x`. Measured from a fresh clone (`git clone --branch dev`): `init` → `core/` on `1.x`, `update` (pull `dev` and `core/`, autoload) works, **320/320**. Not tested: Windows. Still his: branch protection on `dev` (no deletion, no merge into `1.x`), what happens to devneet-id/rune-dev (archive; rune-dev#13 then moot), and whether this goes to the laws division (lore#33) — not reported there yet.
+
 #### 22:04 - Trial built locally; block on the push
 The would-be `dev` branch is built (local commit 94e36c5 on rune-dev's history, no common history with `1.x`): `core/` git-ignored, `composer.json` named `devneet/rune-dev` mapping `Rune\` to `core/`, the workshop `cast` with `init` (plain PHP before Rune exists: clone into `core/`, `composer dump-autoload`), `use --branch=` (switch `core/`, none = `1.x`) and `update` (pull `dev` and `core/`, autoload again), README and scenario README rewritten. Measured: without `core/` the cast says to run `init`; `init` cloned `1.x` (ebabc16); **320/320**, 23 runites, with Rune from `core/`; `use` to my branch and back works, an unknown branch is refused. **Not tested:** `update` (needs the branch pushed, to have an upstream), Windows. **Block:** my branch in rune still points at 6e0fbc8 (already merged in #50); putting the orphan history there needs a force push, which was refused here. Asked anwarachilles: delete that merged branch on GitHub (then a normal push works) or allow the force push.
 
