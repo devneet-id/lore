@@ -7,13 +7,15 @@ How every operator and agent keeps the [chronicle](../chronicle/README.md) — t
 One log file per realm, **per month**, per author:
 
 ```
-chronicle/<realm>/<YYMM>-<author>.md          an operator
-chronicle/<realm>/<YYMM>-<author>_claude.md   the agent working with that operator
+chronicle/<realm>/<YYMM>-<operator>.md           an operator
+chronicle/<realm>/<YYMM>-<operator>_<agent>.md   the agent working for that operator
 ```
 
 e.g. `chronicle/rune/2611-anwarachilles.md` and `chronicle/rune/2611-anwarachilles_claude.md` (26 = 2026, 11 = November)
 
-- **`<author>`** is the operator's handle. An agent never logs in an operator's file: it writes its own file named after the operator it works with, plus `_<ai>` (`_claude`). Operator and agent work stay apart yet side by side.
+- **`<operator>`** is the operator's **GitHub login, in lowercase** (`AnwarAchilles` → `anwarachilles`). An agent works under its operator's GitHub account, so it takes the login from **that account's identity** (e.g. the GitHub tools' "who am I", or `gh api user`) — **never from `git config` or a commit's author**, which may name the agent itself. If it cannot be sure, it asks its operator; it never guesses.
+- **`<agent>`** is the agent's own name, in lowercase: `claude`, `chatgpt`, …
+- **An agent never logs in an operator's file:** it writes its own `<operator>_<agent>` file. Operator and agent work stay apart yet side by side.
 - **`YYMM`** (year first) so files sort chronologically. Never `MMYY` — months from different years interleave.
 - **One file per month** keeps the count balanced even across multi-day work.
 - The **month/year is in the filename**; the **day and time** go inside each entry.
@@ -70,7 +72,7 @@ Write an entry on each of these events — don't save them up:
 ## How it's used
 
 0. Check the open [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update) issues: one that names your division is a task, answered with `<division>: done` once done ([changing-lore.md](changing-lore.md#when-a-law-changes)).
-1. Pick a realm; open your current month file (`<YYMM>-<you>.md`, or `<YYMM>-<operator>_claude.md` for an agent; create it if new month).
+1. Pick a realm; open your current month file (`<YYMM>-<you>.md`, or `<YYMM>-<operator>_<agent>.md` for an agent; create it if new month).
 2. Read the realm's files top-down — the operators' and the agents' — to load the current thinking.
 3. Before doing something, write it; then log on every event in [When to write](#when-to-write) — newest on top.
 
