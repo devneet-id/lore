@@ -1,6 +1,6 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Next: #46 · #26 Specter upgrade (allowed; reviewed after) · #27 build after the operator picks an example · #29 decide the wrap · #41 catalog
+- Next: #27 flock (dissect, then build) · #26 Specter upgrade (allowed; reviewed after) · #41 catalog · #31 rest (Minister, Federation, Liberation)
 - Waiting on anwarachilles: #32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -10,6 +10,9 @@ _Times are UTC._
 
 ---
 ## 22
+
+#### 02:44 - Merged; lore follows 1.21.140
+anwarachilles merged devneet-id/rune#48 and devneet-id/rune-dev#10. Lore (`main`): Version 1.21.140, versioning table (Specter 1.12, Whisper 1.16); Whisper→Weaver a soft bond (Runes lean on runes, Whisper reference + `whisper_echo_tokens()`); souls keep any value, `null` removes (Specter reference, Act 3); Known Issues (fixed in 1.21.140). Next: dissect #27 (flock) with anwarachilles.
 
 #### 02:39 - #46 decided and landed for review
 anwarachilles: yes — a soul is read with one argument and written with a second one, whatever it is; `null` removes it. Added to devneet-id/rune#48 (one commit per issue): Specter 1.12 → **1.21.140**; devneet-id/rune-dev#10: souls checks in `cast-beyond-the-process` (9/14 on 1.x, 14/14 with #48). All **292/292**.

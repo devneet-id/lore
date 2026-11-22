@@ -1,6 +1,6 @@
 # Rune
 
-**Repo:** `devneet-id/rune` · **Package:** `devneet/rune` · **Language:** PHP (8.1+) · **License:** MIT · **Current:** v1.21.138 (untagged; last tag v1.21.117)
+**Repo:** `devneet-id/rune` · **Package:** `devneet/rune` · **Language:** PHP (8.1+) · **License:** MIT · **Current:** v1.21.140 (untagged; last tag v1.21.117)
 
 > A lore-driven, modular concept beneath PHP that responds to development rather than dictating it.
 

@@ -5,7 +5,9 @@
 Rune is not finished. The work itself lives in the **[issues of devneet-id/rune](https://github.com/devneet-id/rune/issues)** — each bug there names its file and the rune-dev trial that proves it. This page keeps the short list. Pick one, write its trial, fix it — see [Contributing](contributing.md).
 
 ## Bugs
-Tracked as issues, e.g. Specter souls (devneet-id/rune#46).
+Tracked as [issues](https://github.com/devneet-id/rune/issues).
+
+Fixed in 1.21.140 (devneet-id/rune#48): Whisper speaks without Weaver — Weaver is a soft bond (#29) · `Specter::soul()` keeps `0`, `''`, `false`; `null` removes (#46).
 
 Fixed in 1.21.138 (devneet-id/rune#47): `--runic-create` writes no `_arise()` (#43) · `--runic-delete` takes the rune out of the runite (#45) · a spell value is read as given — a `%2F` on the command line stays (#22).
 
@@ -18,9 +20,7 @@ Fixed in 1.21.126 (devneet-id/rune#40): a warning silenced with `@` is no longer
 Fixed in 1.21.123 (devneet-id/rune#38): shard paths with `\` on Windows — the cause of the Exura relics that opened oddly on Linux; an older relic's `\` is now read as `/` (#37) · `weaver_min_php()` changing strings (#33) · Crafter writing an empty file when no template fits (#34) · `ENCRYPTION gzip` (#35) · a failed spark leaking into the next build (#36).
 
 ## Open
-| Issue | What happens |
-|---|---|
-| `Specter::soul('x', 0)` keeps the old value (devneet-id/rune#46) | `0`, `''` and `false` are read as "no value". Store a non-empty value (e.g. `'0'` is also lost — use `'zero'` or an array) until fixed. |
+No open bug with a workaround to note here — see the [issues](https://github.com/devneet-id/rune/issues).
 
 ## Planned work
 | Task | State | Plan |
@@ -30,4 +30,4 @@ Fixed in 1.21.123 (devneet-id/rune#38): shard paths with `\` on Windows — the 
 ## Not tested yet
 - Specter on macOS (Terminal via `osascript`) — written, never run on a Mac.
 - Minister against a real familiar (URL + token).
-- The rune-dev trials run on Linux (the agent's bench) and on Windows (the administrator's, 199/199 on 1.21.133); on 1.21.138 the 278 trials (21 scenarios) pass on Linux; macOS not yet.
+- The rune-dev trials run on Linux (the agent's bench) and on Windows (the administrator's, 199/199 on 1.21.133); on 1.21.140 the 292 trials (22 scenarios) pass on Linux; macOS not yet.

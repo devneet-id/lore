@@ -56,7 +56,7 @@ vendor/
 ## Notes
 - An unlocked mode is not unlocked twice: Sentinel only tells you. To close a mode, delete its line by hand.
 - Sentinel writes at `#sentinel-manifest`, `#sentinel-awaken`, `#sentinel-flow-begin` and `#sentinel-flow-end`. Keep the markers.
-- A rune whose Phantasm has `$flow = true` (Aether, Chanter, Keeper) needs `X::begin()` / `X::end()`: insert writes them above the flow markers (once), remove takes them out. A runite without the flow markers (made before 1.21.138) gets a warning and nothing is guessed — add the markers, or the two lines, by hand.
+- A rune whose Phantasm has `$flow = true` (Aether, Chanter, Keeper) needs `X::begin()` / `X::end()`: insert writes them above the flow markers (once), remove takes them out. A runite without the flow markers (made before 1.21.140) gets a warning and nothing is guessed — add the markers, or the two lines, by hand.
 - Sentinel keeps the runite's own line ending (CRLF or LF).
 - Rune names are matched whatever their case (`ledger` → `Ledger`).
 - `--altar` (the GUI) and `--inspect` are still there, hidden while in development.

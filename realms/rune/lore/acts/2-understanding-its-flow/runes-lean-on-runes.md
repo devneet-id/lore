@@ -52,7 +52,7 @@ Specter appears in some links; you meet it in [Act 3](../3-evolution-of-eidos/RE
 
 Not every link is a must.
 
-- **Soft:** the rune asks first. Aether prints a plain footer when Whisper is not awake; Chanter and Keeper only call Specter when it is there.
+- **Soft:** the rune asks first. Aether prints a plain footer when Whisper is not awake; Chanter and Keeper only call Specter when it is there; Whisper replaces its own tokens itself when Weaver is not awake (only a user's own `{{name}}` bond needs Weaver).
 
   ```php
   // Aether/Entity.php — aether_exit()

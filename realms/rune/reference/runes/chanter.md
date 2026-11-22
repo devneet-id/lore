@@ -97,9 +97,9 @@ Globals — state that changes as the flow goes on.
 | `$CHANTER_ECHO` | Holds text or data to be echoed after cast execution |
 
 ## Notes
-- A flag is `true` (bool), a value is a string: test a flag with `=== true` (or truthiness), never with `'1'` — before 1.21.138 a bare flag was `'1'` (devneet-id/rune#17). `chanter_spell_chain()` hands a flag on as a bare `--x`.
+- A flag is `true` (bool), a value is a string: test a flag with `=== true` (or truthiness), never with `'1'` — before 1.21.140 a bare flag was `'1'` (devneet-id/rune#17). `chanter_spell_chain()` hands a flag on as a bare `--x`.
 - `Chanter::begin()` loads the built-in runites (rune, grimoire, sentinel, reliquary); `Chanter::end()` runs the cast asked on the command line.
-- A spell value is read as given: on the command line it is kept as typed (`--api=https://x/a%2Fb` stays `a%2Fb`, `50%25` stays `50%25`); in a cast written in code (`Chanter::cast('greet --name=Rune%20Lore')`) a space is written `%20` and decoded once. Values keep `0` and `+`; cast-in-cast and `Chanter::spell(k, v)` hand values on unchanged (devneet-id/rune#22, 1.21.138).
+- A spell value is read as given: on the command line it is kept as typed (`--api=https://x/a%2Fb` stays `a%2Fb`, `50%25` stays `50%25`); in a cast written in code (`Chanter::cast('greet --name=Rune%20Lore')`) a space is written `%20` and decoded once. Values keep `0` and `+`; cast-in-cast and `Chanter::spell(k, v)` hand values on unchanged (devneet-id/rune#22, 1.21.140).
 - A spell set from code (`Chanter::spell('x', 'v')`) is read on the next cast — by design.
 - `--zero-trust` runs the cast with the arcane off and the output drained.
 

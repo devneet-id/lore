@@ -37,7 +37,7 @@ Chanter::cast('build', function() {
 ```html
 <!DOCTYPE html>
 <html>
-<!-- RUNE 1.21.138 | Created By @anwarachilles -->
+<!-- RUNE 1.21.140 | Created By @anwarachilles -->
 <head>
 <title>Ember</title>
   <style>
@@ -152,7 +152,7 @@ Crafter::shard('src/hello.php');
 
 ```php
 <?php
-/* RUNE 1.21.138 | Created By @anwarachilles */
+/* RUNE 1.21.140 | Created By @anwarachilles */
 function hello( $name ) {
   return "Hello, $name.";
 }

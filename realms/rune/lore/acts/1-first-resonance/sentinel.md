@@ -51,7 +51,7 @@ Keeper::end();        // before Aether::end()
 Aether::end();
 ```
 
-What opens later closes earlier. A runite made before 1.21.138 has no flow markers: Sentinel warns and writes nothing — add the two lines by hand, as above.
+What opens later closes earlier. A runite made before 1.21.140 has no flow markers: Sentinel warns and writes nothing — add the two lines by hand, as above.
 
 ## Take a rune out
 ```bash

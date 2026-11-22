@@ -8,7 +8,7 @@ Old names still hide in comments, Altar and old relics. When you meet one, this 
 | Before | Now | Why |
 |---|---|---|
 | main file `rune.php` | `cast` | A runite is a CLI app; `php cast greet` reads like speech. Leftovers: Altar (`.echoes/rune.php/`), `ai.txt`. |
-| `arise()` / `_arise()` / `_aether_end()` | `begin()` / `end()` | A pair that opens and closes the flow. The `_arise` hooks are gone from the origin runes (1.21.133) and from the `--runic-create` templates (1.21.138). |
+| `arise()` / `_arise()` / `_aether_end()` | `begin()` / `end()` | A pair that opens and closes the flow. The `_arise` hooks are gone from the origin runes (1.21.133) and from the `--runic-create` templates (1.21.140). |
 | `@ethereal/`, `@liberations/`, `<repo>/@bindrune/`, then `@liberation/` | `@evolution/` | Many names meant your runes were missing from Grimoire and the footer. One name now, singular like every mode folder. |
 | liberation mode (runes of your own) | evolution mode — *The Evolution of Eidos* | Making runes is rebuilding Rune's form (*eidos*). *Liberation* now means freedom from the host's PHP: a runtime of your own. |
 | `@bindrune/` (and `@bindrune/chanter/`) | `@runite/` | The built-in runites are runites; one flat folder, no special case when listing runes. |

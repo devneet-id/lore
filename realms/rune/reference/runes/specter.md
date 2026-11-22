@@ -6,7 +6,7 @@ Specter works beyond the main flow. It keeps a **soul** that outlives a run, cas
 
 | | |
 |---|---|
-| **Version** | `1.11` |
+| **Version** | `1.12` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles |
 | **Introduced in** | Act 3 · Evolution of Eidos |
@@ -14,7 +14,7 @@ Specter works beyond the main flow. It keeps a **soul** that outlives a run, cas
 | **Awaken** | `use Rune\Specter\Manifest as Specter;` · `Specter::ether()::essence()::entity();` |
 
 ## When to use
-- Soul: `Specter::soul('name', $value)` / `Specter::soul('name')`.
+- Soul: `Specter::soul('name', $value)` writes any value (`0`, `''`, `false` too) / `Specter::soul('name')` reads / `Specter::soul('name', null)` removes.
 - Another window: `Specter::cast('{{self}} serve', ['visible' => true])`.
 - Dev server: `Specter::devserver(['port' => 8000, 'file' => ...])`.
 
@@ -45,7 +45,7 @@ Call from your runite: `Specter::name(...)`.
 | `end()` | Final phase of the class lifecycle, called after all manifest components are registered and ready. |
 | `observer( $repo, $callback )` | Start observing changes in a directory and trigger callback on modification |
 | `devserver( $configure )` | Launch a local PHP development server with configurable host, port, and router |
-| `soul( String $name, Mixed $value = NULL )` | Store or retrieve a named soul value (persistent memory) |
+| `soul( String $name, Mixed ...$value )` | Store or retrieve a named soul value (persistent memory): one argument reads; a second one writes any value (0, "" and false too); null removes it |
 | `cast( String $arg, Array $options = [] )` | Register or run a terminal command cast with optional behavior settings |
 | `seer( ?Callable $callback )` | Start a visual loop animation until a stop condition or glitch is met |
 | `exit( String $arg )` | Mark a previously casted command as inactive (used to exit the cast lifecycle) |
@@ -93,7 +93,7 @@ Globals — state that changes as the flow goes on.
 - `{{self}}` becomes `php <runite>`.
 - Visible casts open `cmd` on Windows, Terminal on macOS, `gnome-terminal` on Linux (no other Linux terminal yet — devneet-id/rune#26).
 - `'blocking' => false` returns at once; hidden on Linux and macOS the command runs with `nohup sh -c '…' &`, so it goes on when the runite ends.
-- The soul lives in `.echoes/<runite>/soul.json`, so Keeper must be engraved.
+- The soul lives in `.echoes/<runite>/soul.json`, so Keeper must be engraved. One argument reads (`false` when not there), a second one writes whatever it is, `null` removes (devneet-id/rune#46, 1.21.140).
 
 ---
-*Generated from `Specter/Phantasm.php` (version 1.11). Read it live with `php cast grimoire --runic=Specter`.*
+*Generated from `Specter/Phantasm.php` (version 1.12). Read it live with `php cast grimoire --runic=Specter`.*

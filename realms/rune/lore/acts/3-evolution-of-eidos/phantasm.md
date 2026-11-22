@@ -68,7 +68,7 @@ php cast sentinel --phantasm-upgrade=Ledger
 `0.2` → `0.3`. The minor number grows by one, and the last number of the footer grows with it — versions are counted as whole numbers ([Versioning](../4-the-beyond/versioning.md)):
 ```
 ◇Version=1.21.119   Ledger 0.2
-◇Version=1.21.138   Ledger 0.3
+◇Version=1.21.140   Ledger 0.3
 ```
 After `.9` comes `.10` (`0.9` → `0.10`), and the footer still moves up by one. A version must be `<major>.<minor>`; anything else (`1.2.3`) is refused and must be fixed by hand. A rune that does not exist answers *Rune not found*.
 

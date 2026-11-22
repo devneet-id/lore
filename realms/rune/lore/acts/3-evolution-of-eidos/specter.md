@@ -33,7 +33,7 @@ The soul lives in `.echoes/<runite>/soul.json`:
 }
 ```
 - `Specter::soul('name')` returns the value, or `false` when it is not there.
-- An empty value (`''`, `0`, `'0'`) is not written — `Specter::soul('x', 0)` only reads.
+- Any value is written — `Specter::soul('count', 0)` keeps `0`, `false` keeps `false`; `Specter::soul('x', null)` removes the soul.
 
 ## Cast — beside the flow
 `Specter::cast()` runs a command outside this flow. `{{self}}` becomes `php <runite>`.

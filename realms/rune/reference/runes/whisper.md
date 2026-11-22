@@ -6,11 +6,11 @@ Whisper is the voice of the runite. Everything the user reads passes through it:
 
 | | |
 |---|---|
-| **Version** | `1.15` |
+| **Version** | `1.16` |
 | **Mark** | `VOID` |
 | **By** | Anwar Achilles, Kuro Kid |
 | **Introduced in** | Act 0 · The Void |
-| **Uses** | [Aether](aether.md) (entity), [Weaver](weaver.md) (entity) |
+| **Uses** | [Aether](aether.md) (entity), [Weaver](weaver.md) (entity, soft — used when awake) |
 | **Awaken** | `use Rune\Whisper\Manifest as Whisper;` · `Whisper::ether()::essence()::entity();` |
 
 ## When to use
@@ -62,6 +62,7 @@ The logic. Other runes call these functions too.
 | `whisper_echo_get( String $message )` | Return a string with applied whisper styles (colors, icons, labels) |
 | `whisper_echo_set( String $message )` | Print the formatted message or route to drain if enabled |
 | `whisper_echo_imbue( String $text )` | Apply all whisper formatting to the text (colors, icons, labels); without colour the ANSI codes are left out |
+| `whisper_echo_tokens( String $text, Array $maps )` | Replace the own tokens of Whisper ({{nl}}, {{color-x}}, {{icon-x}}…, lower or upper case) without Weaver |
 | `whisper_color()` | Whether Whisper speaks in colour: `$WHISPER_COLOR` is not false and `NO_COLOR` is not set in the environment. |
 | `whisper_call( String $prompt )` | Prompt user for input via terminal with styled message |
 | `whisper_drain_start()` | Start buffering whisper output instead of printing directly |
@@ -100,6 +101,7 @@ Globals — state that changes as the flow goes on.
 - Style tokens: `{{nl}}` `{{tab}}` `{{bold}}` `{{end}}` `{{php}}`, and `{{color-X}}` `{{text-X}}` `{{bg-X}}` `{{icon-X}}` `{{label-X}}` where X is primary, secondary, success, warning, info, danger, error, failed, debug, default, end.
 - Icons: `[√]` success · `[!]` warning · `[x]` danger/error/failed · `[i]` info · `[~]` primary · `[#]` secondary · `[^]` debug.
 - Whisper's style values are not kept in the Weaver bond.
+- Weaver is a complement (soft bond, devneet-id/rune#29): without Weaver, Whisper replaces its own tokens itself (`{{nl}}`, `{{color-x}}`… — not the spaced `{{ nl }}`); a user's own bond (`{{name}}` from `Weaver::bond`) is woven only when Weaver is awake.
 
 ---
-*Generated from `Whisper/Phantasm.php` (version 1.15). Read it live with `php cast grimoire --runic=Whisper`.*
+*Generated from `Whisper/Phantasm.php` (version 1.16). Read it live with `php cast grimoire --runic=Whisper`.*
