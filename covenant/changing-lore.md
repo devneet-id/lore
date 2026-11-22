@@ -34,6 +34,15 @@ A law that is wrong, missing, or blocks honest work is raised by the division th
    - **needs more thought** → the label `draft`.
 5. **The final word is the laws division's operator.**
 
+## Reports
+
+A change that happened **inside one division** — something the others, or the stewards of lore, should know — is reported through an issue in [devneet-id/lore](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Areport) with the label **`report`**. A report asks for **no decision**: it is a record, not an appeal. Any operator, or any agent with its operator's consent, may open one.
+
+1. **Open it**, labelled `report`, titled `REPORT: <what changed>`: what changed, where (links to the commits, pull requests or pages), and why.
+2. **Sign it** with your division first — `**[rune]**`, `**[exura]**`, …
+3. **The Magistrate reads it**, and closes it once it is recorded — or followed up: a `laws-update` when a law must follow the change, an issue for the [Architect](../mandate/architect.md) when a map must, an `appeal` when the change meets a law.
+4. **A report never stands in for a law.** If the change needs a law to change, it is an `appeal`.
+
 ## The covenant binds
 
 The **covenant** is law: it binds every operator and every agent. The rest of lore — realms, atlas, chronicle — is project knowledge. Confirm scope with your operator before changing a project's repo.
