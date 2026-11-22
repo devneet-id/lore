@@ -34,7 +34,7 @@ Lore, the issues and the chronicle are your memory outside your context. Do not 
 - the covenant in full, the glossary, the atlas, and your realm's README.
 
 **Only when needed:**
-- deeper realm pages (`acts/`, `reference/`, …);
+- deeper realm pages (the folders its README points to, e.g. `acts/`, `runes/`);
 - older chronicle days, to cross-check — search by issue number, never read them all;
 - a law's details when you reach its moment (e.g. [release.md](release.md) at the release point).
 

@@ -22,7 +22,7 @@ Machine-oriented index.
 - [realms/reliquary/README.md](realms/reliquary/README.md)
 - [realms/exura/README.md](realms/exura/README.md)
 
-Each realm has `lore/` (story & teaching) and `reference/` (technical). Rune's full vocabulary: [realms/rune/glossary.md](realms/rune/glossary.md).
+Each realm is flat: one README (what it is, Working on this realm, how its pages are laid out), pages in folders named by what they hold; no lore/ or reference/ wrappers (covenant/workflow.md). Rune's full vocabulary: [realms/rune/glossary.md](realms/rune/glossary.md).
 
 ## Current position
 
