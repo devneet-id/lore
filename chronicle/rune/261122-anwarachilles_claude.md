@@ -1,7 +1,7 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- In progress: rune#27 flock · Next: #26 Specter upgrade (allowed; reviewed after) · #41 catalog · #31 rest (Minister, Federation, Liberation)
-- Waiting on anwarachilles: #32's last item (engraving: a runite as a server service) — still wanted?
+- In review: devneet-id/rune#49 (#27) + devneet-id/rune-dev#11 · Next: #26 Specter upgrade (allowed; reviewed after) · #41 catalog · #31 rest (Minister, Federation, Liberation)
+- Waiting on anwarachilles: rune#32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
 - Waiting on anwarachilles: the design of Minister (it will carry Liberation's runtimes; `@liberation/cast.bat` / `cast.sh` anchored to the root `.echoes/`) — still being studied
@@ -10,6 +10,9 @@
 _Times are UTC._
 
 ---
+
+#### 11:46 - Landed for review: rune#27
+devneet-id/rune#49 (draft): `Keeper::item('x', fn)` read-modify-write under one lock; `$KEEPER_LOCK` (false / true / list); `$KEEPER_LOCK_WAIT` 5 s → glitch naming the item. Keeper 1.19 → **1.21.141**. First PR with a *Lore* line (lore#27): realm pages listed, not edited. devneet-id/rune-dev#11 (draft): `keep-items-under-lock` — 6/10 on 1.x, 10/10 with #49 (4 runs); all **302/302** (23 scenarios). Noted in the PR: Windows mandatory locks (lock every reader of a shared item); souls are read-then-write in two steps — to move onto `keeper_item_update()` with #26.
 
 #### 11:42 - rune#27 decided: flock as an option
 anwarachilles: **agreed** to the dissection — essence `$KEEPER_LOCK` (`false` default / `true` all items / a list of item names); read-modify-write through a callback `Keeper::item('x', fn($old) => $new)` that always locks; a lock wait with a limit, and past it a **glitch** naming the item. He gave no number: I take **5 s**, set by the essence `$KEEPER_LOCK_WAIT`. Trial first in rune-dev (concurrent processes), then rune, Phantasm; the PR carries a *Lore* line (docs after the release).
