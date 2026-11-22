@@ -1,6 +1,6 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Lore lines waiting for the release: rune#49 (Keeper lock) · In progress: #26 Specter long-running, #41 Liberation (without waiting for Minister) · Next: #31 rest (Minister, Federation, Liberation)
+- In review: devneet-id/rune#50 (#26) + devneet-id/rune-dev#12 · Lore lines waiting for the release: rune#49 (Keeper lock), rune#50 (Specter + the server-service engraving of rune#32) · Next: #41 Liberation (without waiting for Minister; GitHub-hosted runtimes cannot be reached from this machine — only nodejs.org) · #31 rest (Minister, Federation, Liberation)
 - Waiting on anwarachilles: rune#32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -10,6 +10,9 @@
 _Times are UTC._
 
 ---
+
+#### 12:06 - Landed for review: #26
+devneet-id/rune#50 (draft): Specter detach (PID, one title one process, `cast.json`), `alive`/`kill` (group, TERM→KILL), `loop` (pause, stop, heartbeat soul `beat:<title>`), `run` (log, timeout via `exec`, onBeat); souls under lock and a soul read no longer writes. Specter 1.13 → **1.21.142**. devneet-id/rune-dev#12 (draft): `serve-beyond-the-runite` 18/18 (4 runs, no worker left), glitch on 1.x; all **320/320** (24 scenarios). Two of my own trial mistakes on the way: an arrow function captured `$ticks` by value (the loop never stopped) — fixed with `stop: fn($n) => …`. **Not tested**: Windows (`Start-Process`/`taskkill`) and macOS without `setsid` — asked anwarachilles to run it on Windows. The engraving "a runite as a server service" (last item of rune#32) is in #50's *Lore* line: after the release.
 
 #### 11:56 - Decided: #26 and #41 now
 anwarachilles: **do #26** (Specter long-running: detach, alive/kill, loop, run; souls onto `keeper_item_update()`), and **do #41 too, without waiting for Minister** (the catalog of runtimes found by version, and running a cast with a runtime from `@liberation/`). Asked again what rune#32 is. Trials first in rune-dev; PRs carry a *Lore* line.
