@@ -2,7 +2,7 @@
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
 - Lore lines waiting for the release: rune#49 (Keeper lock), rune#50 (Specter + the server-service engraving of rune#32) · Next: #41 Liberation (without waiting for Minister; test with **php**, and **python** at most — anwarachilles) · #31 rest (Minister, Federation, Liberation)
 - Waiting on anwarachilles: rune#32's last item (engraving: a runite as a server service) — still wanted?
-- Release: **v1.21.142 report brought** — waiting for anwarachilles' yes/no on it
+- Release: **yes** on 1.21.142 — tag `1.21.142`, title `v1.21.142 — Beyond the Flow`; waiting for anwarachilles to publish it on GitHub, then the realm docs in one pass (lore#27)
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
 - Waiting on anwarachilles: the design of Minister (it will carry Liberation's runtimes; `@liberation/cast.bat` / `cast.sh` anchored to the root `.echoes/`) — still being studied
 - Realm docs: from now on they follow the release (lore#27) — each rune PR carries a *Lore* line. The realm is already at 1.21.140 (updated before the law; latest tag 1.21.117) — proposed to leave it, the next release aligns it.
@@ -10,6 +10,9 @@
 _Times are UTC._
 
 ---
+
+#### 12:48 - Release 1.21.142: yes
+anwarachilles answered the report: **tag `1.21.142`** (no `v`, like 1.21.117), **title `v1.21.142 — …`**, the title a short recap of the work — I chose **"Beyond the Flow"** (Specter beyond the runite, Keeper locks, output for machines, flags and flows). Taken as the yes on this release. Known issues carried into the notes: Specter detach/kill confirmed on Linux only (Windows re-run after 6e0fbc8 not reported, macOS never), Minister `VOID`. He publishes on GitHub (I have no release tool); after it, I update the realm docs in one pass from the *Lore* lines.
 
 #### 12:33 - Release point: report for 1.21.142
 anwarachilles: "the issues are clear — release, following the earlier releases". Recorded as his **permission for this one release** (scope: 1.21.142) — per covenant/release.md it belongs in his own chronicle file too, which only he writes. The release point is his call: #31, #32, #41 stay open and are not in this release. Brought the release report (trials on 1.x merge `ebabc16`: **320/320**, 24 scenarios, Linux; Windows last 199/199 on 1.21.133 and 11/18 on `serve-beyond-the-runite` before the fix — the re-run not reported). The Rune page says tag `v1.21.142`, the last release used `1.21.117` (no `v`) — asked which. I cannot publish a GitHub release from here (no release tool, pushes only to my branch): he publishes with the drafted notes, or allows me to push the tag.
