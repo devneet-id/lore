@@ -3,13 +3,23 @@
 - Waiting on anwarachilles: how exurajs production hides every error — `setTimeout` 5 s + `console.clear()` (his idea) or catching them (`error` / `unhandledrejection` + `try/catch`, optional `onError`, my proposal); then update devneet-id/exurajs#3 and this chronicle
 - Worked only when asked: devneet-id/exurajs#3, devneet-id/exuraphp#9 (mode); devneet-id/exuracss#4–#6, devneet-id/exurajs#2, devneet-id/exuraphp#3–#8 (findings)
 - Tint fix: move AnwarAchilles/exuracss#1 to a branch of devneet-id/exuracss for devneet-id/exuracss#4, then close the fork PR
-- To do with anwarachilles: `realms/exura/README.md` lacks *Working on this realm* (covenant/workflow.md); guide him once through exura-dev and the packages (clone, `php exura`, test a branch) and record it
+- To do with anwarachilles: guide him once through *Working on this realm* (clone, `php exura`, test a branch) and record it
+- Waiting on anwarachilles: review/merge the PR in devneet-id/exura that removes the docs moved to lore
 - Realm docs follow the release (lore#27): each exura PR carries a *Lore* line; `realms/exura/` is updated after a release
 - Rune: `aether_exit()` exits with a bare `exit` — a runite always returns 0; for the rune division (devneet-id/rune is outside this session)
 
 _Times are UTC._
 
 ---
+
+#### 18:47 - Exura docs moved into the realm; Working on this realm
+**anwarachilles decided:** the docs of the umbrella repo devneet-id/exura move to `realms/exura/` — the docs only, not the website.
+- `reference/exuracss/`, `reference/exurajs/`, `reference/exuraphp/` — the 22 pages, unchanged (their links stay inside each folder).
+- `reference/README.md` — the series table, CDN lines, the documentation index, versioning, shaped with Rune.
+- `lore/README.md` — the story from the umbrella README: principles, the series together, the goal.
+- `README.md` — **Working on this realm**: the repos (three packages on `1.x`, exura-dev, exura, exura-skill not yet), clone and initialise (exura-dev + `php exura`), test an agent's branch, release.
+- **Finding:** `php exura --tags` refuses a `/`, so an agent's branch (`claude/…`) can not be fetched by name; the realm says to use the head commit of the package pull request (jsDelivr serves a commit). Written as the way to test, not changed in exura-dev.
+- Next: a PR in devneet-id/exura removes the moved docs and points its README to lore.
 
 #### 11:46 - Daily files; realm docs follow the release; catching up
 *Written by Claude, with anwarachilles.* Read the latest lore at anwarachilles' request (`agent.md`, `operator.md`, `magistrate.md`, the new chronicle and workflow laws). He said: prepare for the new lore.
