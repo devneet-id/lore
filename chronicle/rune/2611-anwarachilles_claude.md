@@ -9,6 +9,20 @@
 _Times are UTC._
 
 ---
+## 22
+
+#### 01:58 - Decided: #43, #22, #31 now; #23 closed; the rest studied
+anwarachilles, on the open issues:
+- **Do now:** #43 (`--runic-create` `_arise()`), #22 (spell values url-decoded), #31 (wider coverage in rune-dev).
+- **#23 closed** — Rune does not handle env.
+- **#32** — asked what is left (explain).
+- **#29** — study again: every Whisper entity that calls Weaver should be wrapped by the check; if Weaver is only a complement, wrap it (soft bond). To study, not to fix yet.
+- **#27** flock — an **option**, set by configuration; send usage examples first, then build.
+- **#26** Specter long-running — tricky; I may upgrade it, he reviews after.
+- **#41** — explain the concept.
+Branches restarted from the latest `1.x` / `main` (merged branches law).
+
+---
 ## 21
 
 #### 23:07 - Read the new laws; rune's part done
