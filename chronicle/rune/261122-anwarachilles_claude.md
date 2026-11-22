@@ -10,6 +10,9 @@ _Times are UTC._
 
 ---
 
+#### 22:35 - Landed for review: main as a backup of 1.x
+anwarachilles kept the early Rune in a new branch `archive` (= old `main`, dce9adc) and asked for a PR bringing `1.x` into `main`, so `1.x` can be restored from `main` if it is ever overwritten. `main` had no common history with `1.x` (a PR from `1.x` is refused), so devneet-id/rune#51 (draft) is `1.x` plus one merge commit (`-s ours`): tree exactly `1.x` (empty diff), `main` as second parent — merged, `main` follows `1.x` by fast-forward. Must not be squashed. Earlier: he asked about `dev` from a clean state — GitHub cannot create an orphan branch, so his copy then my overwrite was the way; recreating it would change nothing. GitHub's "recent pushes" banner fades on its own; a ruleset on `dev` (restrict deletions, later block force pushes) suggested.
+
 #### 22:19 - Trial pushed to `dev` in rune
 anwarachilles created `dev` in devneet-id/rune (a copy of `1.x`, ebabc16) and said: put our idea there — then "iya timpa" (overwrite it). Pushed 94e36c5 to `dev` with force-with-lease on ebabc16 (nothing lost: the same commit as `1.x`). `dev` now carries rune-dev's history, no common history with `1.x`. Measured from a fresh clone (`git clone --branch dev`): `init` → `core/` on `1.x`, `update` (pull `dev` and `core/`, autoload) works, **320/320**. Not tested: Windows. Still his: branch protection on `dev` (no deletion, no merge into `1.x`), what happens to devneet-id/rune-dev (archive; rune-dev#13 then moot), and whether this goes to the laws division (lore#33) — not reported there yet.
 
