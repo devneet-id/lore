@@ -1,15 +1,21 @@
 (upcoming)
-- Waiting on anwarachilles: the go to push this file to lore `main` and answer lore#27, lore#32, lore#36
-- Discuss with anwarachilles: the flow of work in reliquary — code (`relic`, `nexus`, `hall`, `cast`) by PR, where merge to `main` is what every fork takes with `hall sync`; records (`relic.json`, `nexus.json`) pushed to `main` by the casts themselves; the page (`php cast publish`)
-- Write *Working on this realm* in `realms/reliquary/README.md` (covenant/workflow.md): the repos, clone, `composer install`, how to test an agent's branch with no `-dev` repo (a fork? `--local`?) — then guide anwarachilles once
+- Waiting on anwarachilles: review and merge the flat realm + *Working on this realm* (branch `claude/brave-feynman-x4977r`); then answer lore#40 and lore#42 with the commit on `main`
+- Confirm with anwarachilles: the testing way written in *Working on this realm* — `--local` on every cast that writes, `AnwarAchilles/reliquary` as the test reliquary; then guide him through it once
 - To settle with anwarachilles: do the relic repos (`relic-cli`, `relic-web`, `relic-web-exura`, `relic-web-exura-vercel`) belong to this division? `reliquary-skill` is empty — fill it now or later?
-- Follow the drafts that shape this division: lore#29 (project or documentation division), lore#33 (`-dev` repo → `dev` branch), lore#20 (flatten realms)
-- Finding: `realms/reliquary/reference/` still writes five laws and names `<owner>/<repo>`; the repo has six laws and names `<vendor>/<repo>/<relic>` — to update as our work lands (no release, lore#27)
-- Finding, for the rune division: `realms/rune/lore/acts/4-the-beyond/reliquary.md` and `realms/rune/reference/runites/reliquary.md` still show the old `relic.json` (`how-to-casting`, `<owner>/<repo>`)
+- Follow lore#33 (`-dev` repo → `dev` branch): it does not bind a realm without a `-dev` repo, but may shape ours
+- Finding, for the rune division: `realms/rune/acts/4-the-beyond/reliquary.md` and `realms/rune/runites/reliquary.md` still show the old `relic.json` (`how-to-casting`, `<owner>/<repo>`)
 
 _Times are UTC._
 
 ---
+
+#### 19:03 - Realm flattened; Working on this realm written (lore#42, lore#40)
+anwarachilles: the structure of `realms/` changed — fix it, and check the laws-update issues.
+- **Laws-update:** lore#27, #32, #36 closed by the Magistrate (this division's first file landed through devneet-id/lore#38, merged by anwarachilles). Open for reliquary: **lore#40** (every realm is a project division; a `-dev` repo is one way — write *Working on this realm*) and **lore#42** (a realm is flat, one README). lore#29 closed by #40: reliquary is a project division.
+- **lore#42:** `realms/reliquary/lore/` and `reference/` removed; their text merged into the one README (the Federation of Fides; the laws). No link in lore pointed at them; the README's links checked.
+- **lore#40:** *Working on this realm* — `devneet-id/reliquary`, the relic repos it lists, `AnwarAchilles/reliquary` as the test reliquary, `reliquary-skill`; clone and initialise; test an agent's branch with `--local` (`--api`/`--raw` for a fake GitHub), throw the records away after. Run here before writing it: `composer install`, `php hall analyze` → 9 valid, 0 warning(s), 0 invalid (PHP 8.3, Rune 1.20.114).
+- The finding of 13:39 fixed with it (no release: docs land with the work): the laws are six, named `<vendor>/<repo>/<relic>`.
+- The testing way is my proposal from the runites' own spells — for anwarachilles to confirm.
 
 #### 13:39 - The reliquary division begins; prepared for the latest lore
 *Written by Claude, with anwarachilles.* The first entry of the reliquary division: no division kept this realm before.
