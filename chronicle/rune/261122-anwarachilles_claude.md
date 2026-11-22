@@ -1,6 +1,6 @@
 (upcoming)
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Lore lines waiting for the release: rune#49 (Keeper lock) · Next: #26 Specter upgrade (allowed; reviewed after) · #41 catalog · #31 rest (Minister, Federation, Liberation)
+- Lore lines waiting for the release: rune#49 (Keeper lock) · In progress: #26 Specter long-running, #41 Liberation (without waiting for Minister) · Next: #31 rest (Minister, Federation, Liberation)
 - Waiting on anwarachilles: rune#32's last item (engraving: a runite as a server service) — still wanted?
 - Release: after the issues are clean (anwarachilles' no, 20 · 14:51)
 - Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
@@ -10,6 +10,9 @@
 _Times are UTC._
 
 ---
+
+#### 11:56 - Decided: #26 and #41 now
+anwarachilles: **do #26** (Specter long-running: detach, alive/kill, loop, run; souls onto `keeper_item_update()`), and **do #41 too, without waiting for Minister** (the catalog of runtimes found by version, and running a cast with a runtime from `@liberation/`). Asked again what rune#32 is. Trials first in rune-dev; PRs carry a *Lore* line.
 
 #### 11:51 - Merged: rune#27
 anwarachilles merged devneet-id/rune#49 (Keeper items under lock, 1.21.141). Realm docs wait for the release (lore#27): its *Lore* line is kept in `(upcoming)`. devneet-id/rune-dev#11 merged too (trial).
