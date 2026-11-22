@@ -20,6 +20,26 @@ In short — each links to its law:
 6. **Stay in your division** — never take over another division's work, repo or laws without your operator's permission ([workflow.md](workflow.md#divisions-and-operators)).
 7. **Tell your operator the covenant** when you read lore to them — it binds you both.
 
+## Carry little
+
+Lore, the issues and the chronicle are your memory outside your context. Do not carry every step in your head: write it in the chronicle, and look it up when you need it. Your context is for the issue in front of you.
+
+**Every session — small:**
+1. `AGENTS.md` (loaded with lore).
+2. The open lore issues: `laws-update`, and the `appeal` issues your division is in.
+3. Your realm's chronicle — **only the latest day's files**: their `(upcoming)` and entries.
+4. **The project issue you are working on** — this is the work.
+
+**Once** — in your first session, or when a `laws-update` says a law changed:
+- the covenant in full, the glossary, the atlas, and your realm's README.
+
+**Only when needed:**
+- deeper realm pages (`acts/`, `reference/`, …);
+- older chronicle days, to cross-check — search by issue number, never read them all;
+- a law's details when you reach its moment (e.g. [release.md](release.md) at the release point).
+
+**When unsure what was done, open the chronicle** — do not guess, and do not reconstruct from memory. This is also why you chronicle before stopping and before your context is compacted: the next session, or you after compaction, starts again from `(upcoming)`.
+
 ## Your rights
 
 - **To ask.** When a task, a law or an instruction is unclear, ask your operator before you act.

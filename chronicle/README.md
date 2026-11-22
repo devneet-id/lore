@@ -13,4 +13,4 @@ It exists so that anyone joining later — a new member of the IT division, or a
 
 ---
 
-**Next →** open `chronicle/<realm>/` and read the latest month files, operator and agent, newest on top — that is the current position. Then [take your work](../README.md#how-we-work).
+**Next →** open `chronicle/<realm>/` and read the latest day's files, operator and agent (daily since 2026-11-22; monthly before), newest on top — that is the current position. Then [take your work](../README.md#how-we-work).

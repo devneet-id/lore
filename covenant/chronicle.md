@@ -4,51 +4,47 @@ How every operator and agent keeps the [chronicle](../chronicle/README.md) — t
 
 ## File convention
 
-One log file per realm, **per month**, per author:
+One log file per realm, **per day**, per author — **daily files from 2026-11-22**:
 
 ```
-chronicle/<realm>/<YYMM>-<operator>.md           an operator
-chronicle/<realm>/<YYMM>-<operator>_<agent>.md   the agent working for that operator
+chronicle/<realm>/<YYMMDD>-<operator>.md           an operator
+chronicle/<realm>/<YYMMDD>-<operator>_<agent>.md   the agent working for that operator
 ```
 
-e.g. `chronicle/rune/2611-anwarachilles.md` and `chronicle/rune/2611-anwarachilles_claude.md` (26 = 2026, 11 = November)
+e.g. `chronicle/rune/261122-anwarachilles.md` and `chronicle/rune/261122-anwarachilles_claude.md` (26 = 2026, 11 = November, 22 = the day)
 
 - **`<operator>`** is the operator's **GitHub login, in lowercase** (`AnwarAchilles` → `anwarachilles`). An agent works under its operator's GitHub account, so it takes the login from **that account's identity** (e.g. the GitHub tools' "who am I", or `gh api user`) — **never from `git config` or a commit's author**, which may name the agent itself. If it cannot be sure, it asks its operator; it never guesses.
 - **`<agent>`** is the agent's own name, in lowercase: `claude`, `chatgpt`, …
 - **An agent never logs in an operator's file:** it writes its own `<operator>_<agent>` file. Operator and agent work stay apart yet side by side.
-- **`YYMM`** (year first) so files sort chronologically. Never `MMYY` — months from different years interleave.
-- **One file per month** keeps the count balanced even across multi-day work.
-- The **month/year is in the filename**; the **day and time** go inside each entry.
+- **`YYMMDD`** (year first) so files sort chronologically. The day is the **UTC** day.
+- **One file per day** keeps each file small: a session reads one day, not a month.
+- The **date is in the filename**; the **time** goes inside each entry.
+- **Monthly files before 2026-11-22** (`<YYMM>-…md`) stay as they are, as history. Nothing is moved; new entries go to the daily file.
 
 ## Inside the file
 
-Newest on top. Keep `(upcoming)` pinned at the very top. Group entries under a **day header** (`## DD`), newest day first; within a day, newest time first.
+Newest on top. Keep `(upcoming)` pinned at the very top. No day header — the file *is* the day.
 
 ```markdown
 (upcoming)
 - what's planned next
 
+_Times are UTC._
+
 ---
-## 15
 
 #### 16:18 - Short title of what happened
 Description of the activity. Links: devneet-id/rune#12, devneet-id/rune#13 (PR).
 
-#### 16:14 - Bersiap melakukan perubahan terhadap rune
-_description_
-
----
-## 14
-
-#### 21:40 - Set up the lore repo
+#### 16:14 - Getting ready to change rune
 _description_
 ```
 
 Rules:
 
-- **Newest on top** — new day headers go above older ones; new `#### HH:MM` entries go above older ones within their day.
-- **`(upcoming)`** stays pinned at the very top for what's planned next.
-- **`---`** separates day groups; **`## DD`** is the day; **`#### HH:MM - <title>`** is an entry, with free-form body below.
+- **Newest on top** — a new `#### HH:MM` entry goes above the older ones.
+- **`(upcoming)`** stays pinned at the very top for what's planned next. A new day's file **starts by carrying over** the previous day's `(upcoming)`, updated — so the latest file alone tells where things stand.
+- **`#### HH:MM - <title>`** is an entry, with free-form body below.
 - **Link the issue or PR** an entry works on, when there is one.
 - **Append, don't rewrite.** Old entries are the memory of *why*.
 
@@ -74,8 +70,8 @@ Write an entry on each of these events — don't save them up:
 0. **An agent checks the open issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues) first**, at the start of each session, before its first entry — they carry the latest word from the laws division:
    - [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update): one that names your division is a task, answered with `<division>: done` once done ([changing-lore.md](changing-lore.md#when-a-law-changes));
    - [`appeal`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Aappeal) issues your division is in: new comments to answer ([changing-lore.md](changing-lore.md#input-and-appeals)).
-1. Pick a realm; open your current month file (`<YYMM>-<you>.md`, or `<YYMM>-<operator>_<agent>.md` for an agent; create it if new month).
-2. Read the realm's files top-down — the operators' and the agents' — to load the current thinking.
+1. Pick a realm; open today's file (`<YYMMDD>-<you>.md`, or `<YYMMDD>-<operator>_<agent>.md` for an agent); create it if it is a new day, carrying over the last `(upcoming)`.
+2. **Read only the latest day** of the realm's files — the operators' and the agents': their `(upcoming)` and entries are the current position. Older days are opened only to cross-check, searched by issue number ([agent.md](agent.md#carry-little)).
 3. Before doing something, write it; then log on every event in [When to write](#when-to-write) — newest on top.
 
 ---
