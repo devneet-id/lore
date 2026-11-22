@@ -71,7 +71,9 @@ Write an entry on each of these events — don't save them up:
 
 ## How it's used
 
-0. Check the open [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update) issues: one that names your division is a task, answered with `<division>: done` once done ([changing-lore.md](changing-lore.md#when-a-law-changes)).
+0. **An agent checks the open issues in [devneet-id/lore](https://github.com/devneet-id/lore/issues) first**, at the start of each session, before its first entry — they carry the latest word from the laws division:
+   - [`laws-update`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Alaws-update): one that names your division is a task, answered with `<division>: done` once done ([changing-lore.md](changing-lore.md#when-a-law-changes));
+   - [`appeal`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Aappeal) issues your division is in: new comments to answer ([changing-lore.md](changing-lore.md#input-and-appeals)).
 1. Pick a realm; open your current month file (`<YYMM>-<you>.md`, or `<YYMM>-<operator>_<agent>.md` for an agent; create it if new month).
 2. Read the realm's files top-down — the operators' and the agents' — to load the current thinking.
 3. Before doing something, write it; then log on every event in [When to write](#when-to-write) — newest on top.
