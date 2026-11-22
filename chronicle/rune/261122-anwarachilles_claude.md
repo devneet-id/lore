@@ -1,15 +1,17 @@
 (upcoming)
+- Release 1.21.142: **yes** — tag `1.21.142`, title `v1.21.142 — Beyond the Flow`, description given in chat; anwarachilles publishes on GitHub. After it: realm docs in one pass (lore#27) from the *Lore* lines — `versioning.md` (1.21.142: Aether 1.22, Chanter 1.18, Cipher 1.7, Crafter 1.16, Forger 1.17, Keeper 1.19, Minister 0.4, Specter 1.13, Weaver 1.10, Whisper 1.16), `reference/runes/keeper.md` (#49 lock), `reference/runes/specter.md` + Act 3 `specter.md` (#50), new engraving "a runite as a server service" (rune#32 last item → then close rune#32), `known-issues.md`, realm README "Current".
+- Open in rune: #41 Liberation (catalog: python; running: `@liberation/cast.sh|bat` + a runtime-path function with `Specter::run()` — two questions asked, not answered; test with php, python at most) · #31 rest (Minister, Federation, Liberation need the network) · #32 (closes with the engraving).
+- Windows: `serve-beyond-the-runite` after fix 6e0fbc8 — re-run not reported.
 - Ask: links of dependent runes lag after a partial `--phantasm-repair` — repair all runes before a release?
-- Lore lines waiting for the release: rune#49 (Keeper lock), rune#50 (Specter + the server-service engraving of rune#32) · Next: #41 Liberation (without waiting for Minister; test with **php**, and **python** at most — anwarachilles) · #31 rest (Minister, Federation, Liberation)
-- Waiting on anwarachilles: rune#32's last item (engraving: a runite as a server service) — still wanted?
-- Release: **yes** on 1.21.142 — tag `1.21.142`, title `v1.21.142 — Beyond the Flow`; waiting for anwarachilles to publish it on GitHub, then the realm docs in one pass (lore#27)
-- Planned (to design with anwarachilles, then file): redesign `Whisper::flash` as a real loader → CLI loaders on it
-- Waiting on anwarachilles: the design of Minister (it will carry Liberation's runtimes; `@liberation/cast.bat` / `cast.sh` anchored to the root `.echoes/`) — still being studied
-- Realm docs: from now on they follow the release (lore#27) — each rune PR carries a *Lore* line. The realm is already at 1.21.140 (updated before the law; latest tag 1.21.117) — proposed to leave it, the next release aligns it.
+- Planned (to design with anwarachilles, then file): `Whisper::flash` as a real loader → CLI loaders · Minister design (still his).
+- Each session: lore issues (`laws-update`, `appeal`), this daily file, the issue at hand. Branch `claude/keen-tesla-s6pj53` restarted from `1.x` / `main` for each new work; PRs carry a *Lore* line; realm docs only after a release.
 
 _Times are UTC._
 
 ---
+
+#### 12:53 - Before stopping: context reset
+anwarachilles asked for a compact description to reset the context. `(upcoming)` rewritten as the hand-over: release 1.21.142 waiting to be published by him, then the realm docs; open #41, #31, #32.
 
 #### 12:48 - Release 1.21.142: yes
 anwarachilles answered the report: **tag `1.21.142`** (no `v`, like 1.21.117), **title `v1.21.142 — …`**, the title a short recap of the work — I chose **"Beyond the Flow"** (Specter beyond the runite, Keeper locks, output for machines, flags and flows). Taken as the yes on this release. Known issues carried into the notes: Specter detach/kill confirmed on Linux only (Windows re-run after 6e0fbc8 not reported, macOS never), Minister `VOID`. He publishes on GitHub (I have no release tool); after it, I update the realm docs in one pass from the *Lore* lines.
