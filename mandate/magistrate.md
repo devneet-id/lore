@@ -22,7 +22,7 @@ The seat is held by **one operator and their agent, together**. When the seat ha
 
 The Magistrate keeps no chronicle: its record is the issues in lore and its pull requests ([mandate/](README.md#how-a-mandate-works)). It works the same way every session — and after every fresh start, it begins here instead of a chronicle:
 
-1. **Read the open lore issues** — `laws-update`, `appeal`, `hearing`, then `draft` — and its own open pull requests.
+1. **Read the open lore issues** — `laws-update`, `appeal`, `hearing`, `report`, then `draft` — and its own open pull requests. A `report` is closed once recorded or followed up ([changing-lore.md](../covenant/changing-lore.md#reports)).
 2. **Check each open `laws-update`.** For every division it names, look at the answer and at the division's work (its chronicle, its commits). **Close the issue once every division follows** the law — whether it answered `done`, its work plainly shows it follows, or the law does not reach it yet (e.g. a division with no chronicle or no release). The closing comment names each division and its standing. A division that does not follow yet keeps the issue open: ask in a comment.
 3. **Answer appeals and hearings** in their comments, and close each with a decision: accepted, rejected (the reason), or `draft`.
 4. **Work the operator's task:** an issue in lore (a `draft` until decided) → a fresh branch from the latest `main` → a **draft pull request** that links the issue → the operator tests and merges.
