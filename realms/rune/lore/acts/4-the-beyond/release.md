@@ -44,5 +44,5 @@ Repo `devneet-id/rune`, branch `1.x`.
 - [ ] every trial still passes (`php cast scenario` in rune-dev — on Linux and on Windows)
 - [ ] every changed rune has a higher Phantasm version (whole numbers: `1.9 → 1.10`, see [Versioning](versioning.md))
 - [ ] `php -l` on changed PHP files; LF kept
-- [ ] `lore` updated ([Keeping the Lore](keeping-the-lore.md))
+- [ ] the *Lore* lines of the merged pull requests gathered — the realm is updated **after** the release ([Keeping the Lore](keeping-the-lore.md))
 - [ ] tag = footer `Version=`

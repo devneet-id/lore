@@ -66,4 +66,4 @@ What changes, in two sentences.
 New runes start as **evolution runes** in `@evolution/` ([Create a Rune](../3-evolution-of-eidos/create-rune.md)). An origin rune is added only when an evolution rune has proved a purpose no origin rune has. Propose it in an issue first, with its Phantasm and its runites.
 
 ## Contributing to the lore
-Changed behaviour → change the lore in the same pull request. See [Keeping the Lore](keeping-the-lore.md).
+Changed behaviour → the pull request says which lore pages change (a short *Lore* line); the realm is updated after the release, in one pass. See [Keeping the Lore](keeping-the-lore.md) and the law [docs follow the release](../../../../../covenant/workflow.md#docs-follow-the-release).

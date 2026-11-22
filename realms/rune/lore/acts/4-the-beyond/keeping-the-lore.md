@@ -1,8 +1,8 @@
 # Keeping the Lore
 
-> When the code changes, the lore changes with it.
+> The realm describes the released Rune; every pull request says what it will change.
 
-The `lore` repo (`devneet-id/lore`, realm `realms/rune/`) is how the next person learns Rune without asking. A lore that lies is worse than no lore. Keep it in step with the code.
+The `lore` repo (`devneet-id/lore`, realm `realms/rune/`) is how the next person learns Rune without asking. A lore that lies is worse than no lore. It describes **the released version** — what a user gets — so it is updated **after a release**, in one pass, from the *Lore* lines of the pull requests that went into it ([docs follow the release](../../../../../covenant/workflow.md#docs-follow-the-release)). The chronicle is written as the work happens.
 
 ## What is generated, what is written
 | Part | How it is made |
@@ -26,7 +26,9 @@ The lore intro, "When to use", the example and the notes are written by hand. Ev
 - A new word goes into the [Glossary](../../../reference/glossary.md) first, with the same name as in code.
 
 ## When something changes
-| Change in `rune` | Update in `lore` (`realms/rune/`) |
+Every pull request in `rune` carries a *Lore* line: the pages below that will change. After the release, they are updated together.
+
+| Change in `rune` | Update in `lore` (`realms/rune/`) — after the release |
 |---|---|
 | a node added/removed | its `reference/runes/` page; check Acts that use it |
 | a built-in runite spell | `reference/runites/<name>.md` |
