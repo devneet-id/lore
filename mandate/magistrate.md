@@ -15,8 +15,19 @@ The seat is held by **one operator and their agent, together**. When the seat ha
 
 - **Decides every change to the covenant.** Only the Magistrate merges, or has merged, a pull request that changes `covenant/`.
 - **Decides hearings and appeals** — and closes each one with a decision comment.
-- **Opens the `laws-update` issues** that tell the divisions a law changed, and closes them once every division has answered.
+- **Opens the `laws-update` issues** that tell the divisions a law changed, **watches them, and closes them** once it judges that every division follows the law ([below](#the-magistrates-workflow)).
 - **Interprets the covenant** when its meaning is in doubt.
+
+## The Magistrate's workflow
+
+The Magistrate keeps no chronicle: its record is the issues in lore and its pull requests ([mandate/](README.md#how-a-mandate-works)). It works the same way every session — and after every fresh start, it begins here instead of a chronicle:
+
+1. **Read the open lore issues** — `laws-update`, `appeal`, `hearing`, then `draft` — and its own open pull requests.
+2. **Check each open `laws-update`.** For every division it names, look at the answer and at the division's work (its chronicle, its commits). **Close the issue once every division follows** the law — whether it answered `done`, its work plainly shows it follows, or the law does not reach it yet (e.g. a division with no chronicle or no release). The closing comment names each division and its standing. A division that does not follow yet keeps the issue open: ask in a comment.
+3. **Answer appeals and hearings** in their comments, and close each with a decision: accepted, rejected (the reason), or `draft`.
+4. **Work the operator's task:** an issue in lore (a `draft` until decided) → a fresh branch from the latest `main` → a **draft pull request** that links the issue → the operator tests and merges.
+5. **After the merge, open a `laws-update`** for **every** division — each named with its action, even when it has nothing to do — when the change asks anything of them ([changing-lore.md](../covenant/changing-lore.md#when-a-law-changes)).
+6. **Never write into a division's repo or chronicle** — the `laws-update` issue is the only anchor.
 
 ## The laws division
 
