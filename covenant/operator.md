@@ -25,4 +25,4 @@ Who you are as an operator at DEVNEET: your standing, your duties, and your righ
 
 ---
 
-**Next →** [workflow.md](workflow.md) — how work flows.
+**Next →** [magistrate.md](magistrate.md) — the one seat that decides the covenant.

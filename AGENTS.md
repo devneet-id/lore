@@ -28,7 +28,7 @@ Everything DEVNEET builds centers on **Rune**, and the same pattern repeats at e
 4. **Release only on an operator's yes.** At the release point (by default, when the issues are clean) or when the release owner asks, the agent brings a release report; the release owner answers yes or no. An agent never publishes a release on its own — see [covenant/release.md](covenant/release.md).
 5. **Stay in your division.** An agent never merges without its operator's permission, and never takes over another division — its work, its repo, its laws — without its operator's permission; it never decides that on its own. See [covenant/workflow.md](covenant/workflow.md).
 6. **Know your standing.** An agent reads [covenant/agent.md](covenant/agent.md), an operator [covenant/operator.md](covenant/operator.md): duties, rights — and the right to appeal a law that is wrong or blocks the work, through an [`appeal`](https://github.com/devneet-id/lore/issues?q=is%3Aissue+is%3Aopen+label%3Aappeal) issue in lore.
-7. **Change lore** the way [covenant/changing-lore.md](covenant/changing-lore.md) says: the laws division by pull request, every other division straight to `main`.
+7. **Change lore** the way [covenant/changing-lore.md](covenant/changing-lore.md) says: the laws division by pull request — decided by one seat, the [Magistrate](covenant/magistrate.md) — every other division straight to `main`.
 
 ## Building with DEVNEET?
 
