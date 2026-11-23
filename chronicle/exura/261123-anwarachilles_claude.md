@@ -1,5 +1,5 @@
 (upcoming)
-- Waiting on anwarachilles: test and merge configure — devneet-id/exurajs#4 (Fixes #3), devneet-id/exuraphp#10 (Fixes #9), scenarios in devneet-id/exura-dev#7; then the release decision
+- Waiting on anwarachilles: test and merge configure — devneet-id/exurajs#4 merged; devneet-id/exuraphp#10 (Fixes #9), scenarios in devneet-id/exura-dev#7; then the release decision
 - Worked only when asked: devneet-id/exuracss#4–#6, devneet-id/exurajs#2, devneet-id/exuraphp#3–#8 (findings)
 - Tint fix: move AnwarAchilles/exuracss#1 to a branch of devneet-id/exuracss for devneet-id/exuracss#4, then close the fork PR
 - Waiting on anwarachilles: devneet-id/exura#1 links follow the flat realm (updated)
@@ -11,6 +11,9 @@
 _Times are UTC._
 
 ---
+
+#### 09:30 - devneet-id/exurajs#4 merged
+anwarachilles merged devneet-id/exurajs#4 into `1.x` (closes devneet-id/exurajs#3). Not released: no version bump, no tag. Still open: devneet-id/exuraphp#10, devneet-id/exura-dev#7, devneet-id/exura#1.
 
 #### 09:22 - configure() landed for review: exurajs#4, exuraphp#10, exura-dev#7
 - **devneet-id/exurajs#4** (Fixes #3): `Exura.configure()` rebases the settings (`environment()` kept as the old name); **development is the default** — banner once, `module x() ✓`, warnings for a name used twice, a name like a global, a missing element / watch target; **production** writes nothing, catches errors in effects / router / watch, cancels uncaught errors and rejected promises, hands each to `onError`. dist rebuilt, no version bump.
