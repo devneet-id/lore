@@ -1,5 +1,5 @@
 (upcoming)
-- Waiting on anwarachilles: test and merge configure — devneet-id/exurajs#4 merged; devneet-id/exuraphp#10 (Fixes #9), scenarios in devneet-id/exura-dev#7; then the release decision
+- Waiting on anwarachilles: test and merge configure — devneet-id/exurajs#4 and devneet-id/exuraphp#10 merged; scenarios in devneet-id/exura-dev#7; then the release decision
 - Worked only when asked: devneet-id/exuracss#4–#6, devneet-id/exurajs#2, devneet-id/exuraphp#3–#8 (findings)
 - Tint fix: move AnwarAchilles/exuracss#1 to a branch of devneet-id/exuracss for devneet-id/exuracss#4, then close the fork PR
 - Waiting on anwarachilles: devneet-id/exura#1 links follow the flat realm (updated)
@@ -11,6 +11,9 @@
 _Times are UTC._
 
 ---
+
+#### 10:02 - devneet-id/exuraphp#10 merged
+anwarachilles merged devneet-id/exuraphp#10 into `1.x` (closes devneet-id/exuraphp#9). `configure()` is now in both packages, not released. Still open: devneet-id/exura-dev#7 (the scenarios), devneet-id/exura#1.
 
 #### 09:30 - devneet-id/exurajs#4 merged
 anwarachilles merged devneet-id/exurajs#4 into `1.x` (closes devneet-id/exurajs#3). Not released: no version bump, no tag. Still open: devneet-id/exuraphp#10, devneet-id/exura-dev#7, devneet-id/exura#1.
