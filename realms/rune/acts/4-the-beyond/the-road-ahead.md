@@ -5,7 +5,7 @@
 You came from the void, resonated with each rune, understood the flow, made runes of your own — and now you can keep Rune itself. What is left is not a lesson. It is the road.
 
 ## Near
-- **The open bugs** in [Known Issues](known-issues.md) and the [issues of devneet-id/rune](https://github.com/devneet-id/rune/issues), worked issue by issue — each fix proved by a rune-dev trial.
+- **The open bugs** in [Known Issues](known-issues.md) and the [issues of devneet-id/rune](https://github.com/devneet-id/rune/issues), worked issue by issue — each fix proved by a trial on the `dev` branch.
 - **Phantasm notes** that do not yet tell the truth.
 - **Coverage** beyond 19%: scenarios for Crafter, Specter, Minister, arcane and glitch, relic round trips, evolution, federation.
 

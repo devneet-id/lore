@@ -71,29 +71,33 @@ The full list, with the reason for each, is in [Laws](acts/4-the-beyond/laws.md)
 
 ## Working on this realm
 
-| Repo | What it is |
+One repo, two branches that never merge into each other:
+
+| Where | What it is |
 |---|---|
-| [`devneet-id/rune`](https://github.com/devneet-id/rune) | the product — default branch `1.x`; issues live here |
-| [`devneet-id/rune-dev`](https://github.com/devneet-id/rune-dev) | the workshop — `scenario/` (one runite per scenario, with its trial) and `exploration/` (the modes) |
+| [`devneet-id/rune`](https://github.com/devneet-id/rune) `1.x` | the product — default branch, released to Packagist; issues live here |
+| [`devneet-id/rune`](https://github.com/devneet-id/rune/tree/dev) `dev` | the workshop (development and testing) — `scenario/` (one runite per scenario, with its trial) and `exploration/` (the modes); **no history in common with `1.x`** |
+| `devneet-id/rune` `main` · `archive` | `main`: a backup copy of `1.x` · `archive`: the early Rune |
 | [`devneet-id/rune-skill`](https://github.com/devneet-id/rune-skill) | what an agent needs to *use* Rune — not written yet |
 
-**Clone and initialise** — side by side, rune-dev takes Rune from `../rune`:
-```bash
-git clone https://github.com/devneet-id/rune.git
-git clone https://github.com/devneet-id/rune-dev.git
-cd rune-dev
-composer dump-autoload
-php cast scenario --here
-```
-No `composer require`, no lock file: `dump-autoload` only writes the autoloader. Every scenario must pass.
+On `dev`, Rune itself lives in `core/` (git-ignored): a clone of `devneet-id/rune` on `1.x` or on an agent's branch; `composer.json` maps `Rune\` to `core/`.
 
-**Test an agent's branch** — the agent names it in its pull requests (one in `rune`, its scenario in `rune-dev`):
+**Clone and initialise:**
 ```bash
-cd rune && git fetch origin && git checkout <branch> && git pull
-cd ../rune-dev && git fetch origin && git checkout <branch> && git pull
+git clone --branch dev https://github.com/devneet-id/rune.git rune-dev
+cd rune-dev
+php cast init
 php cast scenario --here
 ```
-A new scenario must fail on `1.x` and pass on the branch; the agent's pull request says the counts. Then merge or send it back, go back to `1.x` / `main`, `git pull`, `git branch -d <branch>`.
+`php cast init` clones Rune into `core/` and runs `composer dump-autoload` (no `require`, no lock file). `php cast update` pulls `dev` and `core/` later. Every scenario must pass.
+
+**Test an agent's branch** — the agent names two branches in its pull requests: `<agent-branch>` (the fix, from `1.x`) and `<agent-branch>-dev` (its scenario, from `dev`):
+```bash
+git fetch origin && git switch <agent-branch>-dev && git pull
+php cast use --branch=<agent-branch>
+php cast scenario --here
+```
+A new scenario must fail on `1.x` (`php cast use`) and pass on the agent's branch; the agent's pull request says the counts. Then merge or send it back, and go home: `git switch dev && git pull`, `php cast use`, `git branch -d <agent-branch>-dev`.
 
 Building something with Rune? Keep a `JOURNEY.md` and share it — see [covenant/journey.md](../../covenant/journey.md).
 

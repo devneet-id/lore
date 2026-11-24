@@ -2,7 +2,7 @@
 
 > Never change Rune without testing it like a user.
 
-Rune is tested the way it is used: through runites. Keep a **workshop** — a folder of your own, next to your clone of `rune`, that loads Rune from disk. Every change is proved there before it is committed. The workshop is yours; it is not part of any repo.
+Rune is tested the way it is used: through runites. Keep a **workshop** — a folder of your own, next to your clone of `rune`, that loads Rune from disk. Every change is proved there before it is committed. The workshop is yours; it is not part of any repo. Rune's own workshop is the **`dev` branch** of `devneet-id/rune`: Rune sits in its `core/`, and `php cast init` / `use` / `update` keep it — see [Working on this realm](../../README.md#working-on-this-realm).
 
 ## Set it up
 ```
@@ -21,7 +21,7 @@ Run `composer dump-autoload` once (and again only when this file changes). Every
 | Folder | Use |
 |---|---|
 | `scenario/` | runites from easy to complex, one folder each, named after the scenario (`keep-notes`, no number); every runite has a `test` cast — its **trial** |
-| a runner | one runite at the root that runs every trial, one by one — in rune-dev: `php cast scenario` (each scenario in a new terminal through Specter, `--here` for the same terminal) — and a coverage runite that counts which Phantasm nodes the scenarios touch |
+| a runner | one runite at the root that runs every trial, one by one — on the `dev` branch: `php cast scenario` (each scenario in a new terminal through Specter, `--here` for the same terminal) — and a coverage runite that counts which Phantasm nodes the scenarios touch |
 | `.proof/` | in every scenario, git-ignored: the proof of its last trial — `report.txt`, `report.json` (read by the runner) and what it made (a Crafter bundle, a report) |
 | an evolution runite | `Rune\Ethereal::evolution();` — for `sentinel --phantasm-*` on the runes you change |
 

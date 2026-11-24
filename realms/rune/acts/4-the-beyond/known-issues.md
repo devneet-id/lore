@@ -2,7 +2,7 @@
 
 > What is still open — and where to start.
 
-Rune is not finished. The work itself lives in the **[issues of devneet-id/rune](https://github.com/devneet-id/rune/issues)** — each bug there names its file and the rune-dev trial that proves it. This page keeps the short list. Pick one, write its trial, fix it — see [Contributing](contributing.md).
+Rune is not finished. The work itself lives in the **[issues of devneet-id/rune](https://github.com/devneet-id/rune/issues)** — each bug there names its file and the trial (on the `dev` branch) that proves it. This page keeps the short list. Pick one, write its trial, fix it — see [Contributing](contributing.md).
 
 ## Bugs
 Tracked as [issues](https://github.com/devneet-id/rune/issues).
@@ -30,4 +30,4 @@ No open bug with a workaround to note here — see the [issues](https://github.c
 ## Not tested yet
 - Specter on macOS (Terminal via `osascript`) — written, never run on a Mac.
 - Minister against a real familiar (URL + token).
-- The rune-dev trials run on Linux (the agent's bench) and on Windows (the administrator's, 199/199 on 1.21.133); on 1.21.140 the 292 trials (22 scenarios) pass on Linux; macOS not yet.
+- The trials (`dev` branch) run on Linux (the agent's bench) and on Windows (the administrator's, 199/199 on 1.21.133); on 1.21.140 the 292 trials (22 scenarios) pass on Linux; macOS not yet.
